@@ -7,21 +7,25 @@
     </head>
     <body class="body">
         <div style="width:auto">
-            <div  class="header">
-                <h1 class="style1">Jurusan Teknik Perencanaan Tata Kota</h1>
+            <div>
+                <h1 class="header">Jurusan Teknik Perencanaan Tata Kota</h1>
             </div>
-              <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
-                <b>Menu</b><br/>
-			Profil<br />
+            <div id="menu" class="left_menu">
+                	Profil<br />
 			CSS<br />
 			Java Script<br />
             </div>
-            <div id="content" width:float:right;">
-			Content Goes Here
-        </div>
-        <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+            <div>
+                <div class="content1">
+                    test1
+                </div>
+                <div class="content2">
+                    test2
+                </div>
+            </div>
+            <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
 			copyrght 2011
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
