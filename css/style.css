@@ -8,3 +8,25 @@
     font-family: Arial, Helvetica, sans-serif;
     color:#666600;
 }
+.left_menu{
+    background-color: transparent;
+    height: auto;
+    width: 130px;
+    float: left;
+    color: #fff;
+    font-family:Geneva,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+}
+.content1{
+    width: auto;
+    float: left;
+    text-align: left;
+    color: #fff;
+}
+.content2{
+    width: auto;
+    float: right;
+    text-align: right;
+    color: #fff;
+}
+
