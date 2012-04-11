@@ -7,7 +7,38 @@
             <link href="<?php echo base_url() ?>css/layout.css" rel="stylesheet" type="text/css" />
             <link href="<?php echo base_url() ?>css/reset.css" rel="stylesheet" type="text/css" />
             <link href="<?php echo base_url() ?>css/structure.css" rel="stylesheet" type="text/css" />
-    </head><body>
+            <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css"  />
+            <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/left_sidebar.css"  />
+            <script type="text/javascript" src=<?php echo base_url(); ?>js/jquery.min.js></script>
+            <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
+            <script type="text/javascript">
+
+
+                ddaccordion.init({
+                    headerclass: "silverheader", //Shared CSS class name of headers group
+                    contentclass: "submenu", //Shared CSS class name of contents group
+                    revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+                    mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+                    collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+                    defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+                    onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+                    animatedefault: false, //Should contents open by default be animated into view?
+                    persiststate: true, //persist state of opened contents within browser session?
+                    toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+                    togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+                    animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+                    oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+                        //do nothing
+                    },
+                    onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+                        //do nothing
+                    }
+                })
+
+
+            </script>
+    </head>
+    <body>
 
         <title>Program Studi Perencanaan Wilayah Tata &amp; Kota</title>
         <script type="text/javascript">
@@ -57,6 +88,7 @@
             </div>
             <!-- /#commonHeader -->
         </div>
+
         <!-- /#commonHeaderWrapper -->
 
         <!-- #wrapper -->
@@ -64,25 +96,48 @@
 
 
             <div id="hasGravure" style="display:none;">0</div>
-            <div class="contentWrapper">
-                <div class="contentInner tourArea">
 
-                    <div class="tour">
-                        <h1>&nbsp;</h1>
-                        <p>&nbsp;</p>
-                    </div>
-
-
-
-                </div>
-                <!-- /.contentInner -->
-            </div>
             <!-- /.contentWrapper -->
 
             <div class="contentWrapper">
+                <div class="leftmenu">
+                    <div id="menu" class="left_menu">
+                        <div class="applemenu">
+                            <div class="silverheader"><a href="">Home</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                            <div class="silverheader"><a href="" >Profil</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                            <div class="silverheader"><a href="">Civitas Akademika</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                            <div class="silverheader"><a href="">Sumber Daya</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                            <div class="silverheader"><a href="">Jalur Penerimaan</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                            <div class="silverheader"><a href="">Berita & Agenda</a></div>
+                            <div class="submenu">
+                                Some random content here<br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="contentInner InfoArea clearfix">
                     <div class="infoL">
-                        <h3>&nbsp;</h3>
+                        <center>
+                            <video width="350" height="240" border="1px" controls="controls">
+                                <source src="<?php echo base_url() ?>gallery/FILE018.MP4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </center>
                     </div>
 
                     <div class="infoR">
@@ -105,12 +160,7 @@
                     <hr class="hr01">
 
                         <ul class="list">
-                            <li><a target="_osdefaultbrowser" href="localhost/#">Home</a>
-                            </li>
-                            <li><a target="_osdefaultbrowser" href="localhost/#">Profile</a>
-                            </li>
-                            <li><a target="_osdefaultbrowser" href="localhost/#">Contact US</a></li>
-                            <li><a target="_osdefaultbrowser" href="localhost/#">Help</a>Copyright 2012 @DTS</li>
+                            <li>Copyright 2012 @DTS</li>
                         </ul>
                 </div>
                 <!-- /.contentInner -->
