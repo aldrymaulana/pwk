@@ -17,11 +17,11 @@
 01: background [get image for sprite]
 -------------------------------------*/
 .unify{
-background:url(/webg/images/common/common.png) no-repeat;
+    background:url(/webg/images/common/common.png) no-repeat;
 }
 /* [ for IE6 ] */
 .unify{
-_background:url(/webg/images/common/common.gif) no-repeat;
+    _background:url(/webg/images/common/common.gif) no-repeat;
 }
 
 /*
@@ -29,57 +29,57 @@ _background:url(/webg/images/common/common.gif) no-repeat;
 -------------------------------------*/
 
 .imgNew{
-background-position: 0 0;
-height:45px;
-left:-7px;
-_left:0px;
-position: absolute;
-top: 0;
-width:30px;
+    background-position: 0 0;
+    height:45px;
+    left:-7px;
+    _left:0px;
+    position: absolute;
+    top: 0;
+    width:30px;
 }
 
 ul.thumbnails li img.imgNew{
-left:0px;
+    left:0px;
 }
 
 .arrow01 {
-background-position:-30px 0px;
-height:12px;
-width: 8px;
-padding-bottom:7px;
+    background-position:-30px 0px;
+    height:12px;
+    width: 8px;
+    padding-bottom:7px;
 }
 
 .arrow01,x:-moz-any-link{
-padding-bottom:0px;
+    padding-bottom:0px;
 }
 
 .arrow02 {
-background-position:-40px  0px;
-height: 14px;
-width: 10px;
+    background-position:-40px  0px;
+    height: 14px;
+    width: 10px;
 }
 
 .arrow03 {
-background-position:-52px  0px;
-height: 41px;
-width: 26px;
+    background-position:-52px  0px;
+    height: 41px;
+    width: 26px;
 }
 
 .moreDetail{
-background-position:-30px -32px;
-height: 9px;
-width: 18px;
+    background-position:-30px -32px;
+    height: 9px;
+    width: 18px;
 }
 
 .closeDetail{
-background-position:-30px -20px;
-height: 9px;
-width: 18px;
+    background-position:-30px -20px;
+    height: 9px;
+    width: 18px;
 }
 
 .rank01,.rank02,.rank03,.rank04,.rank05,.rank06,
 .rank07,.rank08,.rank09,.rank10,.rank11,.rank12 {
-height: 56px;width: 66px;
+    height: 56px;width: 66px;
 }
 .rank01 {background-position: 0 -45px;}
 .rank02 {background-position: -67px -45px;}
@@ -96,7 +96,7 @@ height: 56px;width: 66px;
 
 .Brank01,.Brank02,.Brank03,.Brank04,.Brank05,.Brank06,
 .Brank07,.Brank08,.Brank09,.Brank10,.Brank11,.Brank12 {
-height: 84px;width:100px;
+    height: 84px;width:100px;
 }
 .Brank01 {background-position: 0 -132px;}
 .Brank02 {background-position: -100px -132px;}
