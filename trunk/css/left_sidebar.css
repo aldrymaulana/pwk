@@ -1,0 +1,46 @@
+/* 
+    Document   : left_sidebar
+    Created on : Apr 3, 2012, 4:07:00 AM
+    Author     : aulia
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.applemenu{
+    margin: 10px 10;
+    padding: 0;
+    width: 150px;
+    border: 0px solid #9A9A9A;
+	
+}
+.applemenu div.silverheader a{
+    background: blue url(http://localhost/pwk/gallery/silvergradient.gif) repeat-x center left;
+    font:normal 12px Tahoma,Lucida Grande,Trebuchet MS,helvetica,Sans-Serif;
+    color: white;
+    display: block;
+    position: relative;
+    width:auto;
+    padding:  5px 0;
+    padding-left: 8px;
+    text-decoration: none;
+	
+}
+.applemenu div.silverheader a:visited,.applemenu div.silverheader a:active{
+    color: white;
+}
+.applemenu div.selected a, .applemenu div.silverheader a:hover{
+    background-image: url(http://localhost/pwk/gallery/silvergradientover.gif);
+    color: white;
+}
+.applemenu div.submenu{
+    background: black;
+    padding: 0px;
+    height: 170px;
+    color: white;
+
+}
