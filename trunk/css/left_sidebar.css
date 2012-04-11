@@ -14,8 +14,11 @@
 .applemenu{
     margin: 10px 10;
     padding: 0;
-    width: 150px;
+    width: 190px;
     border: 0px solid #9A9A9A;
+    position: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 	
 }
 .applemenu div.silverheader a{
