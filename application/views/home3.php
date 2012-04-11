@@ -11,6 +11,7 @@
             <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/left_sidebar.css"  />
             <script type="text/javascript" src=<?php echo base_url(); ?>js/jquery.min.js></script>
             <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
+            <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
             <script type="text/javascript">
 
 
@@ -39,7 +40,6 @@
             </script>
     </head>
     <body>
-
         <title>Program Studi Perencanaan Wilayah Tata &amp; Kota</title>
         <script type="text/javascript">
             function recordOutboundLink(link, category, action, width, height) {
@@ -66,18 +66,38 @@
             <!-- #commonHeader -->
             <div id="commonHeader" class="clearfix">
                 <div class="logo"> </div>
-                <ul class="link"><li></li></ul>
+                <ul class="link"><li>
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="122" height="63" align="bottom" id="FlashID">
+                            <param name="movie" value="<?php echo base_url() ?>gallery/logo.swf" />
+                            <param name="quality" value="high" />
+                            <param name="wmode" value="opaque" />
+                            <param name="swfversion" value="8.0.35.0" />
+                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                            <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                            <!--[if !IE]>-->
+                            <object data="<?php echo base_url() ?>gallery/logo.swf" type="application/x-shockwave-flash" width="122" height="63" align="bottom">
+                                <!--<![endif]-->
+                                <param name="quality" value="high" />
+                                <param name="wmode" value="opaque" />
+                                <param name="swfversion" value="8.0.35.0" />
+                                <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                                <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                                <div>
+                                    <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                                </div>
+                                <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                        </object>
+                    </li>
+                </ul>
 
                 <!-- .navi -->
-                <div class="navi">
-
-                    <ul class="globalLink">
-                        <li id="dummy">&nbsp;</li>
-                    </ul>
-
-                    <!-- .iconInfo -->
-                    <ul class="iconInfo">
-                        <li>Program Studi Perencanaan Wilayah Tata &amp; Kota</li>
+                <div class="navi"> <!-- .iconInfo --><ul class="iconInfo">
+                        <li style="border-top: 10px">
+                            Program Studi Perencanaan Wilayah Tata &amp; Kota                        </li>
                     </ul>
                     <!-- /.iconInfo -->
 
@@ -132,8 +152,9 @@
                 </div>
                 <div class="contentInner InfoArea clearfix">
                     <div class="infoL">
+                        <h1 align="center">Department Tour</h1>
                         <center>
-                            <video width="350" height="240" border="1px" controls="controls">
+                            <video align="left" width="350" height="240" border="1px" controls="controls">
                                 <source src="<?php echo base_url() ?>gallery/FILE018.MP4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -143,6 +164,9 @@
                     <div class="infoR">
                         <h3>&nbsp;</h3>
                     </div>
+                    <p class="mgnB30">
+                        test
+                    </p>
 
                 </div>
                 <!-- /.contentInner -->
@@ -150,7 +174,7 @@
             <!-- /.contentWrapper -->
             <!-- #commonFooter -->
             <div id="commonFooter" class="contentWrapper">
-                <div class="contentInner"><!-- /.leaderboardAd --><script type="text/javascript"><!--
+                <div class="contentInner2"><!-- /.leaderboardAd --><script type="text/javascript"><!--
 
                     /* APAC Web SuperPass 728x90 image_111102 */
 
@@ -168,6 +192,7 @@
             <!-- /#commonFooter -->
         </div>
         <!-- /#wrapper -->
-
-
+        <script type="text/javascript">
+            swfobject.registerObject("FlashID");
+        </script>
     </body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>
