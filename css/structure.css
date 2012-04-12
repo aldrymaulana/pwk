@@ -130,7 +130,7 @@ div#commonHeader ul.link li a.selected{
 }
 
 div#commonHeader div.navi{
-    float:right;
+    float:left;
 }
 
 div#commonHeader div.navi ul{
