@@ -12,7 +12,7 @@
             <script type="text/javascript" src=<?php echo base_url(); ?>js/jquery.min.js></script>
             <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
             <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-            <script type="text/javascript">
+        <script type="text/javascript">
 
 
                 ddaccordion.init({
@@ -38,7 +38,7 @@
 
 
             </script>
-    </head>
+</head>
     <body>
         <title>Program Studi Perencanaan Wilayah Tata &amp; Kota</title>
         <script type="text/javascript">
@@ -66,17 +66,20 @@
             <!-- #commonHeader -->
             <div id="commonHeader" class="clearfix">
                 <div class="logo"> </div>
-                <ul class="link"><li>
-                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="122" height="63" align="bottom" id="FlashID">
-                            <param name="movie" value="<?php echo base_url() ?>gallery/logo.swf" />
-                            <param name="quality" value="high" />
-                            <param name="wmode" value="opaque" />
-                            <param name="swfversion" value="8.0.35.0" />
-                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
-                            <param name="expressinstall" value="Scripts/expressInstall.swf" />
-                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
-                            <!--[if !IE]>-->
-                            <object data="<?php echo base_url() ?>gallery/logo.swf" type="application/x-shockwave-flash" width="122" height="63" align="bottom">
+
+                <!-- .navi -->
+          <div class="navi"> <!-- .iconInfo --><ul class="iconInfo">
+                        <li style="border-top: 10px">
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="122" height="63" align="bottom" id="FlashID">
+                              <param name="movie" value="<?php echo base_url() ?>gallery/logo.swf" />
+                              <param name="quality" value="high" />
+                              <param name="wmode" value="opaque" />
+                              <param name="swfversion" value="8.0.35.0" />
+                              <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                              <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                              <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                              <!--[if !IE]>-->
+                              <object data="<?php echo base_url() ?>gallery/logo.swf" type="application/x-shockwave-flash" width="122" height="63" align="bottom">
                                 <!--<![endif]-->
                                 <param name="quality" value="high" />
                                 <param name="wmode" value="opaque" />
@@ -84,24 +87,18 @@
                                 <param name="expressinstall" value="Scripts/expressInstall.swf" />
                                 <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                                 <div>
-                                    <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-                                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                                  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
                                 </div>
                                 <!--[if !IE]>-->
+                              </object>
+                              <!--<![endif]-->
                             </object>
-                            <!--<![endif]-->
-                        </object>
-                    </li>
-                </ul>
-
-                <!-- .navi -->
-                <div class="navi"> <!-- .iconInfo --><ul class="iconInfo">
-                        <li style="border-top: 10px">
-                            Program Studi Perencanaan Wilayah Tata &amp; Kota                        </li>
+                          Program Studi Perencanaan Wilayah Tata &amp; Kota                        </li>
                     </ul>
                     <!-- /.iconInfo -->
 
-                </div>
+    </div>
                 <!-- /.navi -->
 
 
@@ -178,20 +175,18 @@
                     <div class="infoR">
                         <h3>&nbsp;</h3>
                     </div>
-                   
+
                     <ul class="mgnB30">
                         <p>
-                            <h3>Membership Fee:</h3>
+                            <h1>&nbsp;</h1>
                             <table border="1">
                                 <tr>
-                                    <td width="30%" class="bold"><span class="iconF">F</span>Facebook</td>
-                                    <td width="30%" class="bold"><span class="iconS">S</span>Twitter</td>
-                                    <td width="40%" class="bold"><span class="iconU">U</span>Google+</td>
+                                    <td colspan="3" class="bold">Follow Us</td>
                                 </tr>
                                 <tr>
-                                    <td>f</td>
-                                    <td>t</td>
-                                    <td>g</td>
+                                    <td width="30%"><a href="http://facebook.com"><img src="<?php echo base_url();?>gallery/fb.png" width="94" height="94" /></a></td>
+                                    <td width="30%"><a href="http://twitter.com"><img src="<?php echo base_url();?>gallery/twitter.png" width="94" height="94" /></a></td>
+                                    <td width="40%"><a href="http://plus.google.com"><img src="<?php echo base_url();?>gallery/googleplus.png" width="94" height="94" /></a></td>
                                 </tr>
                             </table>
                         </p>
@@ -221,7 +216,7 @@
             <!-- /#commonFooter -->
         </div>
         <!-- /#wrapper -->
-        <script type="text/javascript">
-            swfobject.registerObject("FlashID");
+    <script type="text/javascript">
+swfobject.registerObject("FlashID");
         </script>
     </body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>
