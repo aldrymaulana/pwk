@@ -452,6 +452,11 @@ div.right div.synopsisMenu{
     display:table-cell;
     vertical-align:bottom;
 }
+.content1{
+    float: left;
+    align="center";
+
+}
 
 /*---------------- menu text link -----------------*/
 
