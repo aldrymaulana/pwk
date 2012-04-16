@@ -1,0 +1,150 @@
+/* CSS Document */
+body{
+	padding:0;
+	margin:12px 0 0;
+	font:12px "Trebuchet MS",Arial, Helvetica, sans-serif;
+	color:#7D7D7D;
+	background-color: #edeff1;
+	background-image: url(images/main-bg.gif);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	text-align:center;
+}
+
+div, p, ul, h1, h2, h3, h4, h5, img{
+	margin:0px; 
+	padding:0px;
+}
+
+ul{
+	list-style-type:none;
+}
+
+#mainpanel{
+	width:760px;
+	background-color:#ffffff;
+	margin:auto;
+	
+}
+
+#panel1{
+	background-image:url(../images/login/pendaftaran1.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:394px;
+	height:310px;
+}
+
+#panel2{
+	background-image:url(../images/login/pendaftaran2.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:361px;
+	height:310px;
+}
+
+#panel3{
+	background-image:url(../images/login/pendaftaran3.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:397px;
+	height:76px;
+}
+
+#panel4{
+	background-image:url(../images/login/pendaftaran4.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:359px;
+	height:76px;
+}
+
+#panel5{
+	background-image:url(../images/login/pendaftaran5.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:756px;
+	height:116px;
+}
+
+#panel6{
+	background-image:url(../images/login/login_08.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:270px;
+	height:126px;
+}
+
+#panel7{
+	background-image:url(../images/login/login_09.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:263px;
+	height:206px;
+}
+
+#panel8{
+	background-image:url(../images/login/login_10.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:300px;
+	height:206px;
+}
+
+#panel9{
+	background-image:url(../images/login/login_11.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:270px;
+	height:206px;
+}
+
+#panel10{
+	background-image:url(../images/login/login_12.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:263px;
+	height:95px;
+}
+
+#panel11{
+	background-image:url(../images/login/login_13.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:300px;
+	height:95px;
+}
+
+#panel12{
+	background-image:url(../images/login/login_14.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:270px;
+	height:95px;
+}
+
+#login{
+	text-align:right;
+	font-weight:bold;
+	font-family:Trebuchet MS;
+	font-size:13px;
+	margin-top:2px;
+	margin-right:30px;
+}
+
+#login label,input.text{
+	display:block;
+	float:left;
+	width:150px;
+	margin-top:3px;
+}
+
+#login label {
+	text-align:right;
+	width:150px;
+	padding-right:20px;
+}
+
+#login br{
+	clear:left;
+}

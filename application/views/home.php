@@ -98,8 +98,12 @@
                             </object>
                             Program Studi Perencanaan Wilayah Tata &amp; Kota                        </li>
                     </ul>
+<<<<<<< .mine
+					<!-- /.iconInfo -->
+=======
 
                     <!-- /.iconInfo -->
+>>>>>>> .r10
                     <div class="navi">
                         <ul class="menu">
                             <li>
@@ -135,6 +139,7 @@
                         </ul>
                     </div>
                 </div>
+	<div align="right"><a href="<?= base_url() ?>index.php/admin/home">Login</a></div>
                 <!-- /.navi -->
 
 
@@ -201,7 +206,7 @@
                         <h1 >Department Tour</h1>
                         
                             <video class="content1" align="center" width="330" height="380" border="1px" controls="controls">
-                                <source src="<?php echo base_url() ?>gallery/FILE018.MP4" type="video/mp4" />
+                                <source src="<?php echo base_url() ?>gallery/KOPLO.MP4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         

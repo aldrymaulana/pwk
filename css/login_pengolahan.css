@@ -1,0 +1,122 @@
+/* CSS Document */
+body{
+	padding:0;
+	margin:12px 0 0;
+	font:12px "Trebuchet MS",Arial, Helvetica, sans-serif;
+	color:#7D7D7D;
+	
+	text-align:center;
+}
+
+div, p, ul, h1, h2, h3, h4, h5, img{
+	margin:0px; 
+	padding:0px;
+}
+
+ul{
+	list-style-type:none;
+}
+
+#mainpanel{
+	width:605px;
+	height:400px;
+	background-color:#ffffff;
+	margin:auto;
+	padding-top:15px;
+    
+	
+}
+
+
+#panel1{
+	background-image:url(../images/login_pengolahan/login.png);
+	background-repeat: no-repeat;
+	
+	width:605px;
+	height:400px;
+	color:#FFFFFF;
+	
+	padding-left:120px;
+}
+
+#panel2{
+	background-image:url(../images/login_pengolahan/2.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:289px;
+	height:118px;
+}
+
+#panel3{
+	background-image:url(../images/login_pengolahan/3.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:316px;
+	height:97px;
+}
+
+#panel4{
+	background-image:url(../images/login_pengolahan/4.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:289px;
+	height:97px;
+}
+
+#panel5{
+	background-image:url(../images/login_pengolahan/5.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:316px;
+	height:102px;
+}
+
+#panel6{
+	background-image:url(../images/login_pengolahan/6.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:289px;
+	height:102px;
+}
+
+#panel7{
+	background-image:url(../images/login_pengolahan/7.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:316px;
+	height:83px;
+}
+
+#panel8{
+	background-image:url(../images/login_pengolahan/8.png);
+	background-repeat: no-repeat;
+	float:left;
+	width:289px;
+	height:83px;
+}
+
+#login{
+	text-align:right;
+	font-weight:bold;
+	font-family:Trebuchet MS;
+	font-size:14px;
+	margin-top:12px;
+	margin-right:30px;
+}
+
+#login label,input.text{
+	display:block;
+	float:left;
+	width:100px;
+	margin-top:5px;
+}
+
+#login label {
+	text-align:right;
+	width:150px;
+	padding-right:10px;
+}
+
+#login br{
+	clear:left;
+}
