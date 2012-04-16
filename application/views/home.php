@@ -202,23 +202,19 @@
                     </div>
                 </div>
                 <div class="contentInner InfoArea" >
-                    <ul class="infoL">
+                    <ul class="content1">
                         <h1 >Department Tour</h1>
-                        
-                            <video class="content1" align="center" width="330" height="380" border="1px" controls="controls">
+                            <video class="content1" align="center" width="360" height="270" border="1px" controls="controls">
                                 <source src="<?php echo base_url() ?>gallery/KOPLO.MP4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
-                        
                     </ul>
-                    <ul class="infol content2">
+                    <ul class="content2">
                         <center>
                             <p>Find us @googleMaps</p>
-                            <iframe width="330" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h" style="color:#0000FF;text-align:right"></a></small>
+                            <iframe width="330" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h" style="color:#0000FF;text-align:right"></a></small>
                         </center>
                     </ul>
-
-
                 </div>
                 <div class="contentInner InfoArea clearfix">
                     <div class="infoL">

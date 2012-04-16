@@ -52,6 +52,8 @@ body {
     background-image:url(../../images/common/bc_black_001.jpg);
     background-repeat:repeat-x;
     background-position:0px 40px;
+	margin-left:18%;
+	margin-right:18%;
 }
 
 /*
@@ -63,7 +65,7 @@ div#commonHeaderWrapper{
     background-position:center top;
     text-align:center;
     width:100%;
-    min-width:970px;
+    /*min-width:970px;*/
     margin-bottom:7px;
 
 }
@@ -73,9 +75,9 @@ div#commonHeaderWrapper{
 }
 
 div#commonHeader{
-    margin:0 auto;
-    width:1000px;
-    padding:0 5px;
+    margin:0;
+    width:100%;
+    padding:0;
     text-align:center;
 }
 div#commonHeader{min-height:70px;height:auto !important;height:70px;}
@@ -860,7 +862,6 @@ div.tourArea div.tour p.detail{
 div.InfoArea{
     background:url(../../images/common/img_tour002.jpg) no-repeat right top;
     background-color: #515151;
-    
 }
 
 div.InfoArea div.infoR,div.InfoArea div.infoL{
