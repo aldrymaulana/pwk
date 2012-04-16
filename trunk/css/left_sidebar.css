@@ -23,7 +23,7 @@
 }
 .applemenu div.silverheader a{
     background: blue url(http://localhost/pwk/gallery/silvergradient.gif) repeat-x center left;
-    font:normal 12px Tahoma,Lucida Grande,Trebuchet MS,helvetica,Sans-Serif;
+    font:normal 14px Tahoma,Lucida Grande,Trebuchet MS,helvetica,Sans-Serif;
     color: white;
     display: block;
     position: relative;
@@ -47,5 +47,6 @@
     padding: 0px;
     height: 170px;
     color: white;
+	font-size:12px;
 
 }
