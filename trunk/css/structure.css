@@ -65,7 +65,7 @@ div#commonHeaderWrapper{
     width:100%;
     min-width:970px;
     margin-bottom:7px;
-    
+
 }
 
 div#commonHeaderWrapper{
@@ -74,7 +74,7 @@ div#commonHeaderWrapper{
 
 div#commonHeader{
     margin:0 auto;
-    width:970px;
+    width:1000px;
     padding:0 5px;
     text-align:center;
 }
@@ -162,10 +162,12 @@ div#commonHeader ul.iconInfo{
     border-radius: 5px;
     padding:4px 7px 4px 0px;
     border:1px solid #565656;
+    float: left;
 }
 
 ul.iconInfo .iconF,ul.iconInfo .iconS,ul.iconInfo .iconU{
     vertical-align:baseline;
+    float: left;
 }
 
 ul.globalLink{
@@ -317,8 +319,8 @@ div#header ul.categoriesList{
     margin:0 auto;
     display:inline-block;
     padding: 10px 0 7px 7px;
-    /padding: 10px 0 7px 65px;
-    /margin: 10px 0 7px 65px;
+    padding: 10px 0 7px 65px;
+    margin: 10px 0 7px 65px;
 }
 
 
@@ -334,7 +336,7 @@ div#wrapper {
 }
 /* >>> content <<<-----------*/
 div.contentWrapper {
-    width:970px;
+    width:1150px;
     background: #373737;
     padding:7px 6px 7px 7px;
     margin-bottom:7px;
@@ -343,7 +345,7 @@ div.contentWrapper {
     -moz-border-radius: 5px;
     border-radius: 5px;
     float: right;
-    
+
 
 }
 
@@ -399,7 +401,7 @@ div.leftmenu {
     -moz-border-radius: 5px;
     border-radius: 5px;
     float:left;
-    
+
 }
 
 /*
@@ -794,7 +796,7 @@ div.tourArea{
     background-color:#16171b;
     box-shadow: 0 0 30px #a7bcce inset;
     text-shadow: 1px 1px 1px #000000;
-    
+
 }
 
 div.tourArea div.tour{
@@ -858,12 +860,14 @@ div.tourArea div.tour p.detail{
 div.InfoArea{
     background:url(../../images/common/img_tour002.jpg) no-repeat right top;
     background-color: #515151;
+    
 }
 
 div.InfoArea div.infoR,div.InfoArea div.infoL{
-    float:left;
-    width:430px;
+    float:right;
+    width:420px;
     padding:10px 20px !important;
+    margin-left: 2px;
 }
 
 div.InfoArea h3{
@@ -887,10 +891,11 @@ div.InfoArea a{
 
 div.InfoArea p.bold{
     font-size:1.6em;
+    font-style: bold;
 }
 
 div.InfoArea div.infoR{
-    margin-top:380px;
+    margin-top:320px;
 }
 
 div.InfoArea div.infoR ul li{
@@ -1484,7 +1489,7 @@ div.notice div.noticeBox{
 
 div.notice p.btn{
     margin:0 0 20px 30px;
-    _	margin:0 0 20px 20px;
+    margin:0 0 20px 20px;
     width:100px;
     height:36px;
     line-height:36px;
