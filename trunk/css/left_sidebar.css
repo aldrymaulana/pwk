@@ -42,11 +42,12 @@
     background-image: url(http://localhost/pwk/gallery/silvergradientover.gif);
     color: white;
 }
-.applemenu div.submenu{
+.applemenu div.submenus{
     background: black;
     padding: 0px;
     height: 170px;
     color: white;
 	font-size:12px;
+
 
 }
