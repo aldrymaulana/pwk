@@ -52,9 +52,19 @@ body {
     background-image:url(../../images/common/bc_black_001.jpg);
     background-repeat:repeat-x;
     background-position:0px 40px;
-	margin-left:18%;
-	margin-right:18%;
+    margin-left:18%;
+    margin-right:18%;
 }
+
+/*tes header*/
+
+/*.headeratas
+{
+margin:0 auto;
+width:1161px;
+height:50px;
+background-color: #677667;
+}*\
 
 /*
 01.  commonHeader
@@ -67,11 +77,14 @@ div#commonHeaderWrapper{
     width:100%;
     /*min-width:970px;*/
     margin-bottom:7px;
+    margin-left:18%;
+	margin-right:18%;
 
 }
 
 div#commonHeaderWrapper{
-    background-image:url(../../images/common/head_bc001.jpg);
+    background-image:url(../../images/common/head_bc001.jpg) no-repeat;
+    margin: 0 auto;	
 }
 
 div#commonHeader{
@@ -79,8 +92,13 @@ div#commonHeader{
     width:100%;
     padding:0;
     text-align:center;
+    margin-left:1px auto;
+    margin-right:1px auto;
 }
-div#commonHeader{min-height:70px;height:auto !important;height:70px;}
+div#commonHeader{
+min-height:70px;
+height:auto !important;
+height:70px;}
 
 
 div#commonHeader a{
@@ -133,6 +151,7 @@ div#commonHeader ul.link li a.selected{
 
 div#commonHeader div.navi{
     float:left;
+    margin-left:2px auto;
 }
 
 div#commonHeader div.navi ul{
@@ -141,7 +160,7 @@ div#commonHeader div.navi ul{
 
 div#commonHeader div.navi ul li {
     display: inline;
-    margin-left:10px;
+    margin-left:40px;
 }
 
 ul.globalLink{
@@ -341,7 +360,7 @@ div.contentWrapper {
     width:1150px;
     background: #373737;
     padding:7px 6px 7px 7px;
-    margin-bottom:7px;
+    margin:0 auto;
     text-align:left;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

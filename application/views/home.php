@@ -62,7 +62,7 @@
             }
         </script>
 
-
+		<div class="headeratas"></div>
         <!-- #commonHeaderWrapper -->
         <div id="commonHeaderWrapper">
             <!-- #commonHeader -->
@@ -98,12 +98,9 @@
                             </object>
                             Program Studi Perencanaan Wilayah Tata &amp; Kota                        </li>
                     </ul>
-<<<<<<< .mine
-					<!-- /.iconInfo -->
-=======
 
-                    <!-- /.iconInfo -->
->>>>>>> .r10
+					<!-- /.iconInfo -->
+
                     <div class="navi">
                         <ul class="menu">
                             <li>
@@ -204,10 +201,12 @@
                 <div class="contentInner InfoArea" >
                     <ul class="content1">
                         <h1 >Department Tour</h1>
-                            <video class="content1" align="center" width="360" height="270" border="1px" controls="controls">
-                                <source src="<?php echo base_url() ?>gallery/KOPLO.MP4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
+
+                        <video class="content1" align="center" width="480" height="380" border="1px" controls="controls">
+                            <source src="<?php echo base_url() ?>gallery/FILE018.MP4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
                     </ul>
                     <ul class="content2">
                         <center>
