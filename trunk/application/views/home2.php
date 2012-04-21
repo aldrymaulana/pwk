@@ -153,18 +153,7 @@
             </div>
         </div>
     </nav>
-   <section class="adv-content">
-    	<div class="container">
-        <ul class="breadcrumbs">
-        	
-        </ul>
-        <form action="" id="search-form">
-          <fieldset>
-          	<input type="text" value=""><input type="submit" value="">
-          </fieldset>
-        </form>
-      </div>
-    </section>
+  
 </header>
 <section id="content">
     <div class="top">
@@ -229,7 +218,7 @@
                             <h3 class="menuheader expandable">Lainnya</h3>
                             <ul class="categoryitems">
                                 <li><a href="" >Jalur Penerimaan</a></li>
-                                <li><a href="">Berita</a></li>
+                                <li><a href="<?echo base_url()?>">Berita</a></li>
                             </ul>
                         </div>
 
