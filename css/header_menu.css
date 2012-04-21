@@ -1,0 +1,72 @@
+
+/* >>> header menu <<<----------------------*/
+
+#header .disclaimer a {	color:#003399;}
+ul.menu {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+    float: right;
+    width: 920px;
+    background: #222;
+    font-size: 0.9em;
+    background: url(../gallery/topnav_bg.gif) repeat-x;
+}
+ul.menu li {
+    float: right;
+    margin: 0;
+    padding: 0 15px 0 0;
+    position: relative;
+}
+ul.menu li a{
+    padding: 10px 5px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    float: left;
+}
+ul.menu li a:hover{
+    background: url(../gallery/topnav_hover.gif) no-repeat center top;
+}
+ul.menu li span {
+    width: 17px;
+    height: 35px;
+    float: left;
+    background: url(../gallery/subnav_btn.gif) no-repeat center top;
+}
+ul.menu li span.subhover {background-position: center bottom; cursor: pointer;}
+ul.menu li ul.submenu {
+    list-style: none;
+    position: absolute;
+    left: 0; top: 35px;
+    background: #333;
+    margin: 0; padding: 0;
+    display: inline;
+    float: right;
+    width: 170px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border: 1px solid #111;
+    font-size: 1.0em;
+}
+ul.menu li ul.submenu li{
+    margin: 0; padding: 0;
+    border-top: 1px solid #252525;
+    border-bottom: 1px solid #444;
+    clear: both;
+    width: 170px;
+}
+html ul.menu li ul.submenu li a {
+    float: right;
+    width: 145px;
+    background: #333 url(../gallery//dropdown_linkbg.gif) no-repeat 10px center;
+    padding-left: 20px;
+}
+html ul.menu li ul.submenu li a:hover {
+    background: #222 url(../gallery//dropdown_linkbg.gif) no-repeat 10px center;
+}
+#header img {
+    margin: 20px 0 10px;
+}
