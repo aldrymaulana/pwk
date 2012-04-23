@@ -1,10 +1,11 @@
-<?php 
+<?php
 
-class Home extends CI_Controller {
+class Artikel extends CI_Controller {
 
 	public function __construct()
 	{
-		parent::__construct();	
+		parent::__construct();
+		$this->load->model('artikel_model');
 	}//end Main
 	
 	
@@ -24,8 +25,19 @@ class Home extends CI_Controller {
 		
 	}//end index
 	
-	public function test(){
-		$this->load->view('test');
+	function form(){
+		$data['failed'] = false;			
+		$data['aa']='';
+		$data['content'] = $this->load->view('admin/add_artikel',$data,true);
+		$this->load->view('admin/main',$data);
+	}
+	
+	function add(){
+		$data = array(
+		'JUDUL' => $this->input->post('judul'),
+		'ISI' => $this->input->post('isi')
+		);
+		$this->artikel_model->insert($data);
 	}
 	
 	
