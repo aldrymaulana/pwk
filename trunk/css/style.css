@@ -31,19 +31,19 @@ header{
 
 }
 #content .top {
-    background:#fff;
+    background:#FFC;
     padding:29px 0 35px 0;
 }
 #content .middle {
     border-top:6px solid #f4f4f4;
-    background:#FFF;
+    background:#FFC;
     padding:44px 0 50px 0;
 }
 #content .bottom {
     border-top:6px solid #171717;
     background:url(../images/images/content-pattern.gif) #212121;
     padding:30px 0 40px 0;
-    color:#5c5c5c;
+    color:#fff;
 }
 
 
@@ -61,7 +61,7 @@ header{
 .wrapper { 
     width:100%;
     overflow:hidden;
-    
+
 }
 
 
@@ -328,7 +328,7 @@ h6 {
 
 /*===== header =====*/
 header h1 {
-    
+
     padding:2px 0 0 38px;
     font-family: 'ColaborateThinRegular';
     font-size:26px;
@@ -610,7 +610,7 @@ header .breadcrumbs li {
     color:#fff;
 }
 #content .bottom a.alt {
-    color:#06cbe2;
+    color:#fff;
 }
 
 .list1 li {
