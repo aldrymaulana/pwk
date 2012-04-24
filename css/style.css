@@ -31,12 +31,12 @@ header{
 
 }
 #content .top {
-    background:#FFC;
+    background:#FFF;
     padding:29px 0 35px 0;
 }
 #content .middle {
     border-top:6px solid #f4f4f4;
-    background:#FFC;
+    background:#FFF;
     padding:44px 0 50px 0;
 }
 #content .bottom {
@@ -359,10 +359,9 @@ header h3 {
 	top: 35px;
 }
 
-
-
 header nav {
     padding:0px 5% 0px 5%;
+	height: 80px;
 }
 header nav ul {
     float:right;

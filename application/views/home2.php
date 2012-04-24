@@ -114,7 +114,7 @@
 <header>
     <nav>
         <div class="container">
-            <div class="header" align="left" style="float: left; color: #D4D0C8;">
+            <div class="header" align="left" style="color: #D4D0C8; position: fixed">
                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
                     <param name="quality" value="high">
@@ -140,21 +140,17 @@
                     <!--<![endif]-->
                 </object>
             </div>
-            <div class="wrapper">
+            <div class="wrapper" style="padding-left: 120px">
 
     <h1 ><a href="<? echo base_url() ?>"><strong>
-
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
-							
 							
                 <ul>
                     <li><a href="#" class="current">Lab Kota</a></li>
                     <li><a href="#" >Lab Wilayah</a></li>
                     <li><a href="#" >Lab Perencanaan</a></li>
-					
                 </ul>
 				<h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
-				
             </div>
         </div>
     </nav>
