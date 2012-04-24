@@ -218,7 +218,7 @@
                             <h3 class="menuheader expandable">Lainnya</h3>
                             <ul class="categoryitems">
                                 <li><a href="" >Jalur Penerimaan</a></li>
-                                <li><a href="<?echo base_url()?>">Berita</a></li>
+                                <li><a href="<?echo base_url()?>index.php/berita_c">Berita</a></li>
                             </ul>
                         </div>
 
