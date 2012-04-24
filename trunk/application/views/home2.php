@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
-        <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
         <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
@@ -115,7 +115,7 @@
     <nav>
         <div class="container">
             <div class="header" align="left" style="float: left; color: #D4D0C8;">
-                <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="97" height="65">
+                <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
                     <param name="quality" value="high">
                     <param name="wmode" value="opaque">
@@ -124,7 +124,7 @@
                     <param name="expressinstall" value="Scripts/expressInstall.swf">
                     <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
                     <!--[if !IE]>-->
-                    <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="97" height="65">
+                    <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="110" height="80">
                         <!--<![endif]-->
                         <param name="quality" value="high">
                         <param name="wmode" value="opaque">
@@ -145,11 +145,16 @@
     <h1 ><a href="<? echo base_url() ?>"><strong>
 
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
+							
+							
                 <ul>
                     <li><a href="#" class="current">Lab Kota</a></li>
-                    <li><a href="#" >Lab wilayah</a></li>
-                    <li><a href="#" >lab perencanaan</a></li>
+                    <li><a href="#" >Lab Wilayah</a></li>
+                    <li><a href="#" >Lab Perencanaan</a></li>
+					
                 </ul>
+				<h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
+				
             </div>
         </div>
     </nav>

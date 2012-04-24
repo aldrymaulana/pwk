@@ -329,13 +329,14 @@ h6 {
 /*===== header =====*/
 header h1 {
 
-    padding:2px 0 0 38px;
+    padding:10px 0 0 10px;
     font-family: 'ColaborateThinRegular';
     font-size:26px;
     line-height:1.2em;
     color:#black;
     font-weight:normal;
     float:left;
+	
 }
 header h1 a {
     color:#fff;
@@ -346,13 +347,26 @@ header h1 strong {
     font-weight:normal;
 }
 
+header h3 {
+	padding:10px 0 0 10px;
+    font-size:18px;
+    line-height:1.2em;
+    font-family: 'ColaborateRegular';
+    font-weight:normal;
+	margin-bottom: 0px;
+	float:left;
+	position: absolute;
+	top: 35px;
+}
+
+
 
 header nav {
-    padding:7px 0 10px 0;
+    padding:0px 5% 0px 5%;
 }
 header nav ul {
     float:right;
-    padding:2px 0 0 0;
+    padding: 8px 10% 0 0;
 }
 header nav ul li {
     float:left;
@@ -361,7 +375,7 @@ header nav ul li {
 header nav ul li a {
     position:relative;
     float:left;
-    font-size:14px;
+    font-size:12px;
     color:#fff;
     text-decoration:none;
     font-family: 'ColaborateThinRegular';
@@ -369,7 +383,7 @@ header nav ul li a {
     height:32px;
     line-height:32px;
     background-color:#181717;
-    padding:0 36px 0 10px;
+    padding:0 27px 0 10px;
     border-radius:17px;
     -moz-border-radius:17px;
     -webkit-border-radius:17px;
