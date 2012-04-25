@@ -30,8 +30,8 @@ $this->load->helper('html'); ?>
 				
 				<p class="menu_head">Artikel</p>
 				<div class="menu_body">
-					<?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Artikel'); ?>
-					<?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Artikel'); ?>
+					<?= anchor(site_url('admin/artikel/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Artikel'); ?>
+					<?= anchor(site_url('admin/artikel'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Artikel'); ?>
 				</div>
 				
 				<p class="menu_head"><?= anchor(site_url(''),'Keluar'); ?></p>	
