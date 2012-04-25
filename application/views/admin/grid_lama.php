@@ -3,15 +3,15 @@
 <head>
 <title>Flexigrid Implemented in CodeIgniter</title>
 
-
+<script type="text/javascript" src="<?= base_url() ?>js/wufoo.js"></script>
 </head>
 <body>
 <?php
 echo $js_grid;
 ?>
-
 <div id="contentgrid">
 <table id="flex1" style="display:none"></table>
+<?=$this->config->item('petunjuk');?>
 </div>
 </body>
 </html>

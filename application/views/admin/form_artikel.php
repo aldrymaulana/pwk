@@ -4,6 +4,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 $this->load->helper('html'); ?>
 
 
+
 <!-- JavaScript -->
 <script type="text/javascript" src="<?= base_url() ?>js/wufoo.js"></script>
 <script type="text/javascript" src="<?php echo $this->config->item('base_url')?>js/tiny_mce/tiny_mce.js"></script>
@@ -27,27 +28,45 @@ $this->load->helper('html'); ?>
 <fieldset class="fieldset">
 <legend class="legend">
 
-
-
-
-
 		| Halaman Tambah Artikel|</legend>
 
-<div style="border:solid thin #BBBBBB; height:350px; background-color:#F9F9F9; -moz-border-radius: 5px;  padding-top:10px; padding-bottom:0.3px; margin-right:100px; margin-left:100px;">
+<div id="contentform" style="border:solid thin #BBBBBB; height:350px; background-color:#F9F9F9; -moz-border-radius: 5px;  padding-top:10px; padding-bottom:0.3px; margin-right:100px; margin-left:100px;">
+
+<!-- Start value -->
+<?
+    //Setting Value Jika Prosedur yang dilakukan adalah prosedur input biasa.
+	$value = array(
+		'id_artikel'			=> "",
+		'judul'					=> "",
+		'isi'				=> "",
+		'act_form'				=> "admin/artikel/add/"
+	);
+	
+	//Setting Value pada form Jika melakukan prosedur Edit terhadap data tertentu.
+	if($status == "edit"){
+			$value['id_artikel'] = $id_artikel;
+			$value['judul'] = $judul;
+			$value['isi'] = $isi;
+			$value['act_form'] = "admin/artikel/update/".$value['id_artikel'];			
+	}//end if
+?>
+<?= form_open($value["act_form"]); ?>
+<!-- End value -->
+
 <table width="847" border="0" bordercolor="#F0F0F0">
   <tr>
-    <td width="905" height="20">
-        <form id="form1" name="form1" method="post" action="<?=base_url()?>index.php/admin/artikel/add">
+    <td width="905" height="150">
+        <form id="form1" name="form1" method="post">
           <div align="center">
             <table width="850" border="0">
               <tr>
                 <td width="80">Judul Berita</td>
-                <td width="208"><input name="judul" type="text" size="50" /></td>
+                <td width="208"><input name="judul" type="text" size="50" value="<?=$value['judul']?>"/></td>
                       	         </td>
               </tr>
                 <tr >
                   <td ></td>
-                  <td width="208" height="270"><textarea name="isi" style="width:100%;height:100%"/></textarea></td>
+                  <td width="208" height="570"><textarea name="isi" style="width:100%;height:100%"/><?=$value['isi']?></textarea></td>
                 </tr>
                 
               <tr>

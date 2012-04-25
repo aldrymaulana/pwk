@@ -9,7 +9,34 @@ class Artikel_model extends CI_Model {
 	}
 	
 	function insert($data){
+		//$this->db->select("*");
+		//$this->db->from('ARTIKEL');
+		//$this->db->where("STATUS > 0 ");
+		//$query = $this->db->get();
+		//return $query;*/
 		$this->db->insert('ARTIKEL',$data);
+	}
+	
+	//list flexy
+	function get_data_artikel(){
+		//Select table name
+		$table_name = "ARTIKEL";
+		
+		//Build contents query
+		$this->db->select('*')->from($table_name);
+		$this->CI->flexigrid->build_query();
+		
+		//Get contents
+		$return['records'] = $this->db->get();
+		
+		//Build count query
+		$this->db->select('*')->from($table_name);
+		$this->CI->flexigrid->build_query(FALSE);
+		
+		$return['record_count'] = $this->db->count_all_results();
+	
+		//Return all
+		return $return;
 	}
 	
 	
@@ -24,19 +51,22 @@ class Artikel_model extends CI_Model {
 	}
 	
 	
-	
-	
-	function update_user($data,$id_user){
-		$this->db->where('ID_USER',$id_user);
-		$this->db->update('USERS',$data);
+	function delete($id){
+		$this->db->where('ID_ARTIKEL', $id);
+		$this->db->delete('ARTIKEL'); 
 	}
 	
-	function get_user(){
+	function selectone($id){
 		$this->db->select("*");
-		$this->db->from('USERS');
-		$this->db->where("STATUS > 0 ");
+		$this->db->from('ARTIKEL');
+		$this->db->where('ID_ARTIKEL',$id);
 		$query = $this->db->get();
 		return $query;
+	}
+	
+	function update($id, $data){
+		$this->db->where('ID_ARTIKEL',$id);
+		$this->db->update('ARTIKEL',$data);
 	}
 	
 	function get_menteri(){
