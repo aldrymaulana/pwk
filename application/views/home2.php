@@ -195,7 +195,7 @@
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
-                                <li><a href="#">Dosen</a></li>
+                                <li><a href="<?echo base_url()?>index.php/dosen_c">Dosen</a></li>
                                 <li><a href="#">Karyawan</a></li>
                                 <li><a href="#">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
