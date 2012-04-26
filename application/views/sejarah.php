@@ -111,9 +111,11 @@
     <body>
     <header>
         <nav>
+        
             <div class="container">
-                <div class="header" align="left" style="color: #D4D0C8; position: absolute">
-                    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
+            
+<div class="header" align="left" style="color: #D4D0C8; position: absolute">
+<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                         <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
                         <param name="quality" value="high">
                         <param name="wmode" value="opaque">
