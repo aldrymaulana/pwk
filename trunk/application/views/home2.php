@@ -187,7 +187,7 @@
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="#">Visi & Misi</a></li>
-                                <li><a href="<?echo base_url()?>index.php/sejarah_c">Sejarah</a></li>
+                                <li><a href="<?php echo base_url() ?>/index.php/sejarah_c">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
                                 <li><a href="#">Kerja Sama</a></li>
                                 <li><a href="#">Lokasi Kampus</a></li>
@@ -195,7 +195,7 @@
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?echo base_url()?>index.php/dosen_c">Dosen</a></li>
+                                <li><a href="<?php echo base_url() ?>/index.php/dosen_c">Dosen</a></li>
                                 <li><a href="#">Karyawan</a></li>
                                 <li><a href="#">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
