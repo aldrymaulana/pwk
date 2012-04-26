@@ -17,7 +17,7 @@ html, body { height:100%;}
 
 /* Global Structure ============================================================= */
 .container {
-	background:url(../images/black_to_brown.jpg) repeat-y;
+	
     font-size:.75em;
 }
 
@@ -25,6 +25,7 @@ html, body { height:100%;}
 header{
     overflow:hidden;
     background-color: black;
+	background:url(../images/black_to_brown.jpg) repeat-y;
 }
 
 /* Content */
@@ -62,6 +63,7 @@ header{
 .wrapper { 
     width:100%;
     overflow:hidden;
+
 
 }
 
