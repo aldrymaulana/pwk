@@ -8,12 +8,37 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
+        <link href="<?php echo base_url()?>css/movingboxes.css" media="screen" rel="stylesheet">
+		<script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
         <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
-        <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+        <script src="<?php echo base_url()?>js/jquery.movingboxes.js"></script>
+		<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+		
+	<!-- Demo only -->
+	<link href="<?php echo base_url()?>demo/demo.css" media="screen" rel="stylesheet">
+	<style>
+		/* Dimensions set via css in MovingBoxes version 2.2.2+ */
+		#slider { width: 500px; }
+		#slider li { width: 250px; }
+	</style>
+	<script>
+	$(function(){
 
+		$('#slider').movingBoxes({
+			/* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible
+			width: 500,
+			panelWidth: 0.5,
+			*/
+			startPanel   : 1,      // start with this panel
+			wrap         : false,   // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
+			buildNav     : true,   // if true, navigation links will be added
+			navFormatter : function(){ return "&#9679;"; } // function which returns the navigation text for each panel
+		});
+
+	});
+	</script>
 
         <!--[if lt IE 9]>
               <script type="text/javascript" src="js/html5.js"></script>
@@ -159,10 +184,49 @@
             <div class="container">
                 <div class="clearfix">
                     <div class="grid9 first">
-                        <h2>Dosen</h2>
+						<h1>Tenaga Pengajar</h1>
+						<!-- MovingBoxes Slider -->
+	<ul id="slider">
 
-                        
-                        </div>
+		<li>
+			<img src="<?echo base_url()?>images/demo/1.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="http://flickr.com/photos/justbcuz/112479862/">more</a></p>
+		</li>
+
+		<li>
+			<img src="<?echo base_url()?>images/demo/2.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="http://flickr.com/photos/joshuacraig/2698975899/">more</a> and a whole lot more text goes here, so we can see the height adjust.</p>
+		</li>
+
+		<li>
+			<img src="<?echo base_url()?>images/demo/3.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="http://flickr.com/photos/ruudvanleeuwen/468309897/">more</a></p>
+		</li>
+
+		<li>
+			<img src="<?echo base_url()?>images/demo/4.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="http://flickr.com/photos/emikohime/294092478/">more</a></p>
+		</li>
+
+		<li>
+			<img src="<?echo base_url()?>images/demo/5.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="http://www.flickr.com/photos/fensterbme/499006584/">more</a></p>
+		</li>
+
+		<li>
+			<img src="<?echo base_url()?>images/demo/6.jpg" alt="picture">
+			<h2>News Heading</h2>
+			<p>Add a short exerpt here... <a href="#">more</a></p>
+		</li>
+
+	</ul> <!-- end Slider #1 -->
+
+                    </div>
                     <div class="grid3">
 
                         <div class="arrowlistmenu">
@@ -171,7 +235,7 @@
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="#">Visi & Misi</a></li>
-                                <li><a href="<? echo base_url() ?>index.php/sejarah_c">Sejarah</a></li>
+                                <li><a href="<?echo base_url()?>index.php/sejarah_c">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
                                 <li><a href="#">Kerja Sama</a></li>
                                 <li><a href="#">Lokasi Kampus</a></li>
