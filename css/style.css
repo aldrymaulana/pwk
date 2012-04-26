@@ -17,7 +17,7 @@ html, body { height:100%;}
 
 /* Global Structure ============================================================= */
 .container {
-	background-image:url(../../images/black_to_brown.jpg) repeat-y;
+	background:url(../images/black_to_brown.jpg) repeat-y;
     font-size:.75em;
 }
 
