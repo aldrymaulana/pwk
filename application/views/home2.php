@@ -58,13 +58,18 @@
 									-moz-border-radius-topright: 10px;
 									-moz-border-radius-bottomright: 10px;
 									border-top-right-radius: 10px;
-									border-top-bottom-radius: 10px;
+									border-bottom-right-radius: 10px;
                                     margin-bottom: 10px; /*bottom spacing between header and rest of content*/
                                     text-transform: uppercase;
                                     padding: 4px 0 4px 10px; /*header text is indented 10px*/
                                     cursor: hand;
                                     cursor: pointer;
         }
+		
+		.arrowlistmenu .menuheader a{
+			color:#fff;
+			text-decoration:none;
+		}
 
         .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
                                     background-image: url(titlebar-active.png);
@@ -141,7 +146,7 @@
             </div>
             <div class="wrapper" style="padding-left: 120px">
 
-    <h1 ><a href="<? echo base_url() ?>"><strong>
+    <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul>
                     <li><a href="#" class="current">Lab Kota</a></li>
@@ -184,14 +189,12 @@
             <div class="wrapper">
                 <div class="grid3 first">
                     <ul class="categories">
-
                         <div class="arrowlistmenu">
-
-                            <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
+                            <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="#">Visi & Misi</a></li>
-                                <li><a href="<?php echo base_url() ?>/index.php/sejarah_c">Sejarah</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/sejarah_c">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
                                 <li><a href="#">Kerja Sama</a></li>
                                 <li><a href="#">Lokasi Kampus</a></li>
@@ -199,7 +202,7 @@
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?php echo base_url() ?>/index.php/dosen_c">Dosen</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
                                 <li><a href="#">Karyawan</a></li>
                                 <li><a href="#">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
@@ -207,7 +210,7 @@
                             <h3 class="menuheader expandable">Sumber Daya</h3>
                             <ul class="categoryitems">
                                 <li><a href="">Fasilitas</a></li>
-                                <li><a href="<?php echo base_url() ?>/index.php/kurikulum">Kurikulum</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/kurikulum">Kurikulum</a></li>
                                 <li><a href="">Jurnal</a></li>
                                 <li><a href="">Media</a></li>
 								<li><a href="">Budaya Kampus</a></li>

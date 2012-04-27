@@ -38,19 +38,19 @@ header{
 
 }
 #content .top {
-    background:#FFC;
+    background:#FFD;
     padding:29px 0 35px 0;
 }
 #content .middle {
     border-top:6px solid #f4f4f4;
-    background:#FFC;
+    background:#FFD;
     padding:44px 0 50px 0;
 }
 #content .bottom {
     border-top:6px solid #171717;
     background:url(../images/images/content-pattern.gif) #212121;
     padding:30px 0 40px 0;
-    color:#FFC;
+    color:#FFD;
 }
 
 
@@ -135,11 +135,11 @@ input, select, textarea {
 p {margin-bottom:1.5em;}
 
 /*----- txt, links, lines, titles -----*/
-/*a {
+a {
     color:#f24c15;
     outline:none;
 }
-*/
+
 
 a:hover{
     text-decoration:none;
@@ -672,6 +672,11 @@ header .breadcrumbs li {
 .list3 li {
     background:url(../images/images/arrow2.gif) no-repeat 0 7px;
     padding:0 0 6px 17px;
+}
+
+.grid9 {
+	font-size: 12px;
+	color:#000;
 }
 
 /*===== footer =====*/
