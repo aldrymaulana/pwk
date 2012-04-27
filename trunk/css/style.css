@@ -135,10 +135,12 @@ input, select, textarea {
 p {margin-bottom:1.5em;}
 
 /*----- txt, links, lines, titles -----*/
-a {
+/*a {
     color:#f24c15;
     outline:none;
 }
+*/
+
 a:hover{
     text-decoration:none;
 }
@@ -374,6 +376,7 @@ header nav {
 header nav ul {
     float:right;
     padding: 8px 10% 0 0;
+	list-style: none outside none;
 }
 header nav ul li {
     float:left;
