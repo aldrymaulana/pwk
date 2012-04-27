@@ -101,7 +101,7 @@ class Artikel extends CI_Controller {
 					$row->id_artikel,
 					$no = $no+1,
 					$row->judul,
-					'<a href= \''.base_url().'index.php/admin/artikel/test/'.$row->id_artikel.'\''.$new_tab.'><img border=\'0\' src=\''.base_url().'images/grid/page.png\'></a> ',
+					'<a href= \''.base_url().'index.php/artikel/index/'.$row->id_artikel.'\''.$new_tab.'><img border=\'0\' src=\''.base_url().'images/grid/page.png\'></a> ',
 					'<a href=\''.base_url().'index.php/admin/artikel/edit/'.$row->id_artikel.'\'><img border=\'0\' src=\''.base_url().'images/grid/edit.png\'></a> '
 				);
 			}
