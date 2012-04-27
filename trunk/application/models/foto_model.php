@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+//ini masih belum jadi :D
+
 class Foto_model extends CI_Model {
 
 	function __construct()
