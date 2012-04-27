@@ -27,9 +27,10 @@ var{
 		outline: 0;
     vertical-align: top; }
 
-ol, ul {
+/*ol, ul {
 	list-style: none;
-}
+}*/
+
 blockquote, q {
 	quotes: none;
 }
