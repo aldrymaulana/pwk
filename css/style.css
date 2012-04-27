@@ -17,9 +17,14 @@ html, body { height:100%;}
 
 /* Global Structure ============================================================= */
 .container {
+<<<<<<< .mine
+	background-image:url(../images/black_to_brown.jpg) repeat-y;
+=======
 	
+>>>>>>> .r31
     font-size:.75em;
 }
+
 
 /* Header */
 header{
@@ -33,12 +38,12 @@ header{
 
 }
 #content .top {
-    background:#FFF;
+    background:#FFC;
     padding:29px 0 35px 0;
 }
 #content .middle {
     border-top:6px solid #f4f4f4;
-    background:#FFF;
+    background:#FFC;
     padding:44px 0 50px 0;
 }
 #content .bottom {
