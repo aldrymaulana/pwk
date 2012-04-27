@@ -142,7 +142,7 @@
                 </div>
                 <div class="wrapper" style="padding-left: 120px">
 
-                    <h1 ><a href="<? echo base_url() ?>"><strong>
+                    <h1 ><a href="<?php echo base_url() ?>"><strong>
                                 Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
 
                     <ul>
@@ -163,8 +163,8 @@
                     <div class="grid9 first">
                         <h2><strong>Kurikulum</strong></h2>
                         <h4>MATA KULIAH</h4><br>
-						Mata kuliah inti yang akan diberikan selama masa perkuliahan adalah
-						<ol>
+						<p>Mata kuliah inti yang akan diberikan selama masa perkuliahan adalah</p>
+						<ol type="1" start="1">
 							<li>Teori dan proses perencanaan</li>
 							<li>Perencanaan wilayah dan kota</li>
 							<li>Prasarana wilayah dan kota</li>
@@ -177,9 +177,8 @@
 						</ol>
 						<br><br>
 						<h4>KURIKULUM</h4><br>
-							Pendidikan pada jenjang Strata Satu (S-1) Program Studi PWK FTSP-ITS ditempuh dalam waktu 8 semester, dengan beban studi sebanyak 144 sks, yang terdiri dari:
-
-							<ul>
+							<p>Pendidikan pada jenjang Strata Satu (S-1) Program Studi PWK FTSP-ITS ditempuh dalam waktu 8 semester, dengan beban studi sebanyak 144 sks, yang terdiri dari:</p>
+							<ul type="disc">
 							<li>Tahap Persiapan, sebanyak 36 sks</li>
     <li>Tahap Sarjana, sebanyak 108 sks</li>
 						</ul>
@@ -188,7 +187,7 @@
 
                         <div class="arrowlistmenu">
 
-                            <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
+                            <h3 class="menuheader " ><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="#">Visi & Misi</a></li>
