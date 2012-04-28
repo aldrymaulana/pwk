@@ -5,10 +5,9 @@ class berita_c extends CI_Controller{
         parent::__construct();
         $this->load->library('session');
         //model masih dalam pengerjaan
-        
+        $this->load->model('artikel');
         $this->load->helper(array('text','url'));
-        
-        
+                
     }
     function  index(){
         $this->load->view('berita');
