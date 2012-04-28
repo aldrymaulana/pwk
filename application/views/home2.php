@@ -204,7 +204,7 @@
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
                                 <li><a href="#">Karyawan</a></li>
-                                <li><a href="#">Mahasiswa</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/mhs_c">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Sumber Daya</h3>
