@@ -29,8 +29,7 @@ html, body { height:100%;}
 /* Header */
 header{
     overflow:hidden;
-    background-color: black;
-	background:url(../images/black_to_brown.jpg) repeat-y;
+    background:url(../images/black_to_brown.jpg) repeat-y 100%;	
 }
 
 /* Content */
