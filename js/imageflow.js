@@ -48,7 +48,7 @@ function ImageFlow ()
 		ImageFlowID:        'imageflow',    /* Default id of the ImageFlow container */
 		imageFocusM:        1.0,            /* Multiplicator for the focussed image size in percent */
 		imageFocusMax:      4,              /* Max number of images on each side of the focussed one */
-		imagePath:          '',             /* Path to the images relative to the reflect_.php script */
+		imagePath:          './images/img',             /* Path to the images relative to the reflect_.php script */
 		imageScaling:       true,           /* Toggle image scaling */ 
 		imagesHeight:       0.67,           /* Height of the images div container in percent */
 		imagesM:            1.0,            /* Multiplicator for all images in percent */
@@ -62,7 +62,7 @@ function ImageFlow ()
 		reflectionGET:      '',             /* Pass variables via the GET method to the reflect_.php script */
 		reflectionP:        0.5,            /* Height of the reflection in percent of the source image */
 		reflectionPNG:      false,          /* Toggle reflect2.php or reflect3.php */
-		reflectPath:        '',             /* Path to the reflect_.php script */
+		reflectPath:        '/otherscript/',             /* Path to the reflect_.php script */
 		scrollbarP:         0.6,            /* Width of the scrollbar in percent */
 		slider:             true,           /* Toggle slider */
 		sliderCursor:       'e-resize',     /* Slider cursor type - default is 'default' */
