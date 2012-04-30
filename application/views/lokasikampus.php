@@ -184,23 +184,8 @@
             <div class="container">
                 <div class="clearfix">
                     <div class="grid9 first">
-                        <h1>Tenaga Pengajar</h1>
-                        <!-- MovingBoxes Slider -->
-                        <ul id="slider">
-                            <?php
-                            foreach ($path_foto as $row) {
-                            ?>
-                                <li>
-                                    <img src="<?php echo base_url() . $row->foto; ?>" alt="picture">
-                                    <h2><?php echo $row->nama_dosen;?></h2>
-                                    <p><?php echo $row->email;?></p>
-                                </li>
-                            <?php
-                            }
-                            ?>
-
-                        </ul> <!-- end Slider #1 -->
-
+                        <h1>Lokasi Kampus</h1>
+                        <iframe width="650" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h" style="color:#0000FF;text-align:center"></a></small>
                     </div>
                     <div class="grid3">
 

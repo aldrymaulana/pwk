@@ -55,21 +55,21 @@
                                     font: bold 14px Arial;
                                     color: white;
                                     background: black url(titlebar.png) repeat-x center left;
-									-moz-border-radius-topright: 10px;
-									-moz-border-radius-bottomright: 10px;
-									border-top-right-radius: 10px;
-									border-bottom-right-radius: 10px;
+                                    -moz-border-radius-topright: 10px;
+                                    -moz-border-radius-bottomright: 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-right-radius: 10px;
                                     margin-bottom: 10px; /*bottom spacing between header and rest of content*/
                                     text-transform: uppercase;
                                     padding: 4px 0 4px 10px; /*header text is indented 10px*/
                                     cursor: hand;
                                     cursor: pointer;
         }
-		
-		.arrowlistmenu .menuheader a{
-			color:#fff;
-			text-decoration:none;
-		}
+
+        .arrowlistmenu .menuheader a{
+            color:#fff;
+            text-decoration:none;
+        }
 
         .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
                                     background-image: url(titlebar-active.png);
@@ -146,18 +146,18 @@
             </div>
             <div class="wrapper" style="padding-left: 120px">
 
-    <h1 ><a href="<?php echo base_url() ?>"><strong>
+                <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul>
                     <li><a href="#" class="current">Lab Kota</a></li>
                     <li><a href="#" >Lab Wilayah</a></li>
                     <li><a href="#" >Lab Perencanaan</a></li>
                 </ul>
-				<h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
+                <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
             </div>
         </div>
     </nav>
-  
+
 </header>
 <section id="content">
     <div class="top">
@@ -197,7 +197,7 @@
                                 <li><a href="<?php echo base_url() ?>index.php/sejarah_c">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
                                 <li><a href="#">Kerja Sama</a></li>
-                                <li><a href="#">Lokasi Kampus</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/lokasikampus_c">Lokasi Kampus</a></li>
                                 <li><a href="#">Forum Tanya Jawab</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
@@ -213,18 +213,18 @@
                                 <li><a href="<?php echo base_url() ?>index.php/kurikulum">Kurikulum</a></li>
                                 <li><a href="">Jurnal</a></li>
                                 <li><a href="">Media</a></li>
-								<li><a href="">Budaya Kampus</a></li>
+                                <li><a href="">Budaya Kampus</a></li>
                                 <li><a href="">Ormawa</a></li>
                             </ul>
-							<h3 class="menuheader expandable">Jalur Penerimaan</h3>
+                            <h3 class="menuheader expandable">Jalur Penerimaan</h3>
                             <ul class="categoryitems">
                                 <li><a href="http://smits.its.ac.id/">SMITS</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Berita & Agenda</h3>
                             <ul class="categoryitems">
                                 <li><a href="">Berita</a></li>
-								<li><a href="">Highlights</a></li>
-								<li><a href="">Komentar</a></li>
+                                <li><a href="">Highlights</a></li>
+                                <li><a href="">Komentar</a></li>
                             </ul>
                         </div>
 
@@ -232,12 +232,18 @@
                 </div>
                 <div class="grid9">
                     <h2>Sekapur Sirih</h2>
-                    <p>Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede m aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortisissim, pulvinar ac, lorem. Vestibulum sed ante. Donec sagittis euismod purus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. </p>
-                    <p><a href="#" class="more">Read More</a></p>
+                    <p align="justify" >Pembangunan nasional   membutuhkan sumber daya manusia yang berkualitas dan berkemampuan untuk   mengembangkan dan menerapkan ilmu pengetahuan dan teknologi dalam bidang   perencanaan wilayah dan kota.</p>
+                    <p align="justify"> Seiring dengan  pelaksanaan   otonomi daerah, kebutuhan sarjana Perencanaan Wilayah dan Kota juga   meningkat,  khususnya untuk memenuhi kebutuhan di Kawasan Timur&nbsp;   Indonesia. </p>
+                    <p align="justify" >Pendidikan perencanaan  wilayah   dan kota yang dikembangkan di Program Studi Perencanaan Wilayah dan Kota    (PWK) FTSP-ITS, ditujukan untuk  mencetak sarjana PWK yang mempunyai   kompetensi sebagai perencana (planer) tata ruang wilayah  dan kota,   manajer pembangunankota dan pengembangan masyarakat, akademisi,   peneliti, dan membekali  lulusan yang ingin melanjtukan studi jenjang   yang lebih tinggi (S2 dan S3).</p>
+                    <p align="justify" >Bidang kajian yang dikembangkan di Program Studi PWK meliputi :</p>
+                    <p align="justify"> <span class="style4">&bull;	Perencanaan Wilayah  	      (Regional Planning)</span></p>
+                    <p align="justify"> <span class="style4">&bull;	Perencanaan dan Perancangan Kota  		    (Urban Planning and Urban Design) </span></p>
+                    <p align="justify" class="style4">&bull;	Manajemen Perkotaan  		    (Urban Management) </p>        <p align="justify" class="style4">&bull;	Perencanaan dan Pengelolaan Kawasan Pesisir  		    (Urban Planning and Urban Design) </p>
+
                     <section class="images">
-                        <figure><a href="#"><img src="<?php echo base_url() ?>/images/images/1page-img1.jpg" alt=""></a></figure>
-                        <figure><a href="#"><img src="<?php echo base_url() ?>/images/images/1page-img2.jpg" alt=""></a></figure>
-                        <figure><a href="#"><img src="<?php echo base_url() ?>/images/images/1page-img3.jpg" alt=""></a></figure>
+                        <figure><img src="<?php echo base_url() ?>/images/images/1page-img2.jpg" alt=""></figure>
+                        <figure><img src="<?php echo base_url() ?>/images/images/1page-img1.jpg" alt=""></figure>
+                        <figure><img src="<?php echo base_url() ?>/images/images/1page-img3.jpg" alt=""></figure>
                     </section>
                 </div>
             </div>
@@ -256,6 +262,7 @@
                 <div class="grid3">
                     <h3>Quick Links</h3>
                     <ul class="list2">
+                        <li><a href="http://www.its.ac.id">Institut Teknologi Sepuluh November</a></li>
                         <li><a href="#">Dinas Pariwisata</a></li>
                         <li><a href="#">Bapedda Jatim</a></li>
                     </ul>
