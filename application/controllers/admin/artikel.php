@@ -16,8 +16,11 @@ class Artikel extends CI_Controller {
 	function index (){
 		$colModel['no'] = array('No',30,TRUE,'center',0);
 		$colModel['Judul'] = array('Judul Artikel',300,TRUE,'center',1);
+		$colModel['Homepage'] = array('Tampilkan pada Homepage',150,TRUE,'center',0);
+		$colModel['Status'] = array('Status Artikel',90,TRUE,'center',0);
 		$colModel['Detail'] = array('Preview',40,TRUE,'center',0);
 		$colModel['Edit'] = array('Edit',30,TRUE,'center',0);
+		
 		//$colModel['Delete'] = array('Delete',30,TRUE,'center',0);
 		
 		
@@ -101,8 +104,11 @@ class Artikel extends CI_Controller {
 					$row->id_artikel,
 					$no = $no+1,
 					$row->judul,
+					'<a href=\''.base_url().'index.php/admin/artikel/edit/'.$row->id_artikel.'\'><img border=\'0\' src=\''.base_url().'images/grid/show_at_homepage.png\'></a> ',
+					'<a href=\''.base_url().'index.php/admin/artikel/edit/'.$row->id_artikel.'\'><img border=\'0\' src=\''.base_url().'images/grid/aktif.png\'></a> ',
 					'<a href= \''.base_url().'index.php/artikel/index/'.$row->id_artikel.'\''.$new_tab.'><img border=\'0\' src=\''.base_url().'images/grid/page.png\'></a> ',
 					'<a href=\''.base_url().'index.php/admin/artikel/edit/'.$row->id_artikel.'\'><img border=\'0\' src=\''.base_url().'images/grid/edit.png\'></a> '
+					
 				);
 			}
 
