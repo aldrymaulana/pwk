@@ -8,7 +8,9 @@ class Foto extends CI_Controller {
 		$this->load->helper('flexigrid');
 		$this->load->library('flexigrid');
 		$this->load->model('foto_model');
-		$this->load->helper(array('form', 'url', 'html'));
+		$this->load->library('upload');
+		$this->load->helper(array('form', 'url'));
+		//$this->load->helper(array('form', 'url', 'html'));
 		/*$config['upload_path'] = "./file/";
 		//$config['upload_path2'] = "./file/thumb";
 		$config['allowed_types'] ='jpg|png|jpeg|doc|docx|pdf';
@@ -26,15 +28,36 @@ class Foto extends CI_Controller {
 		*/
 	}
 	
-	function cek_session()
-	{	
-		$kode_role = $this->session->userdata('kode_role');
-		if($kode_role == '')
-		{
-			redirect('administrator/login/login_ulang');
-		}
-	}
 
+	
+	
+	 function upload_file()
+	 {
+		  $config['upload_path'] = $_SERVER['DOCUMENT_ROOT'] . '/' . base_url().'file/'; //direktori tempat gambar
+		  $config['allowed_types'] = 'gif|jpg|png'; // jenis file yg boleh di upload
+		  $config['max_size'] = '100'; // max ukuran file
+		  $config['max_width'] = '1024';
+		  $config['max_height'] = '768';
+		  
+		  //$this->upload->initialize($config);
+
+		  $this->load->library('upload', $config); // perintah konfigurasi pada library upload
+		  if ( ! $this->upload->do_upload('fupload')) // perintah upload
+		  {
+		   $error = array('error' => $this->upload->display_errors());
+		   $this->load->view('admin/eror', $error);
+		   //echo $error;
+		  }
+		  else
+		  {
+		   $data = array('upload_data' => $this->upload->data());
+		   $this->load->view('hal_ sukses', $data);
+		  }
+	 }
+
+
+	
+	
 	function index()
 	{
 		$this->grid_daftar();
