@@ -27,7 +27,7 @@ $this->load->helper('html'); ?>
 		'id_artikel'			=> "",
 		'judul'					=> "",
 		'isi'				=> "",
-		'act_form'				=> "admin/foto/upload_file/"
+		'act_form'				=> "admin/foto/upload/"
 	);
 	
 	//Setting Value pada form Jika melakukan prosedur Edit terhadap data tertentu.
@@ -53,7 +53,7 @@ $this->load->helper('html'); ?>
 			</tr>
 			<tr>
 				<td>Foto</td>
-				<td><input type="file" name="foto" size="30" value=""></td>
+				<td><input type="file" name="foto" size="30"/></td>
 				<td></td>
 			</tr>
 			<tr>
