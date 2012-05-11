@@ -38,6 +38,10 @@
 		});
 	});
 	</script>
+	
+	
+	
+	
 	<script> 
 		var outerLayout, middleLayout, innerLayout; 
 		$(document).ready(function () { 
@@ -75,17 +79,18 @@
 			,	east__spacing_closed:	12
 			}); 
 		}); 
-	</script> 
+	</script>
 	<script type="text/javascript" src="<?= base_url() ?>js/jquery.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>js/jquery.ui.all.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>js/jquery.layout.js"></script>
-	
 	<script type="text/javascript" src="<?= base_url() ?>public/js/flexigrid.pack.js"></script>
+	
 	<?
 		if (isset($added_js)){
 			echo $added_js; //attach js flexigrid (jika ada)
 		}//end if
 	?>
+	
 </head>
 <body onload="funcOnLoad();">
 <div class="ui-layout-north">

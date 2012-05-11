@@ -20,23 +20,35 @@ $this->load->helper('html'); ?>
 <div style="float:left" > <!--This is the first division of left-->
   <div id="firstpane" class="menu_list"> <!--Code for menu starts here-->
 		
-				<p class="menu_head"><?= anchor(site_url('admin/home'),'Home'); ?></p>	
-				
-				<p class="menu_head">Pengelolaan Pengguna</p>
-				<div class="menu_body">
-					<?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Pengguna'); ?>
-					<?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Pengguna'); ?>
-				</div>				
-				
-				<p class="menu_head">Artikel</p>
-				<div class="menu_body">
-					<?= anchor(site_url('admin/artikel/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Artikel'); ?>
-					<?= anchor(site_url('admin/artikel'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Artikel'); ?>
-				</div>
-				
-				<p class="menu_head"><?= anchor(site_url(''),'Keluar'); ?></p>	
-	
-			
+        <p class="menu_head"><?= anchor(site_url('admin/home'),'Home'); ?></p>	
+
+        <p class="menu_head">Pengelolaan Pengguna</p>
+        <div class="menu_body">
+                <?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Pengguna'); ?>
+                <?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Pengguna'); ?>
+        </div>				
+
+        <p class="menu_head">Artikel</p>
+        <div class="menu_body">
+                <?= anchor(site_url('admin/artikel/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Artikel'); ?>
+                <?= anchor(site_url('admin/artikel'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Artikel'); ?>
+        </div>
+
+        <p class="menu_head">Dosen</p>
+        <div class="menu_body">
+                <?= anchor(site_url('admin/artikel/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Biodata Dosen'); ?>
+                <?= anchor(site_url('admin/artikel'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Biodata Dosen'); ?>
+        </div>
+        
+        <p class="menu_head">Pengelolaan Foto</p>
+        <div class="menu_body">
+                <?= anchor(site_url('admin/foto/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Foto'); ?>
+                <?= anchor(site_url('admin/foto'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Foto'); ?>
+        </div>
+
+        <p class="menu_head"><?= anchor(site_url(''),'Keluar'); ?></p>	
+
+
 
 	   
   </div>  <!--Code for menu ends here-->
