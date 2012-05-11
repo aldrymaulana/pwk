@@ -11,16 +11,17 @@ class Foto_model extends CI_Model {
 	}
 	
 	function insert($data){
-		$this->db->insert('FOTO_SLIDE',$data);
+		$this->db->insert('FOTO',$data);
 	}
 	
 	//list flexy
-	function get_data_artikel(){
+	function get_data_foto(){
 		//Select table name
-		$table_name = "ARTIKEL";
+		$table_name = "FOTO";
 		
 		//Build contents query
 		$this->db->select('*')->from($table_name);
+                $this->db->where("STATUS > 0 ");
 		$this->CI->flexigrid->build_query();
 		
 		//Get contents
@@ -28,6 +29,7 @@ class Foto_model extends CI_Model {
 		
 		//Build count query
 		$this->db->select('*')->from($table_name);
+                $this->db->where("STATUS > 0 ");
 		$this->CI->flexigrid->build_query(FALSE);
 		
 		$return['record_count'] = $this->db->count_all_results();
@@ -49,21 +51,21 @@ class Foto_model extends CI_Model {
 	
 	
 	function delete($id){
-		$this->db->where('ID_ARTIKEL', $id);
-		$this->db->delete('ARTIKEL'); 
+		$this->db->where('ID_FOTO', $id);
+		$this->db->delete('FOTO'); 
 	}
 	
 	function selectone($id){
 		$this->db->select("*");
-		$this->db->from('ARTIKEL');
-		$this->db->where('ID_ARTIKEL',$id);
+		$this->db->from('FOTO');
+		$this->db->where('ID_FOTO',$id);
 		$query = $this->db->get();
 		return $query;
 	}
 	
 	function update($id, $data){
-		$this->db->where('ID_ARTIKEL',$id);
-		$this->db->update('ARTIKEL',$data);
+		$this->db->where('ID_FOTO',$id);
+		$this->db->update('FOTO',$data);
 	}
 	
 	function get_menteri(){

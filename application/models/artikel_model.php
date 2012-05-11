@@ -24,14 +24,14 @@ class Artikel_model extends CI_Model {
 		
 		//Build contents query
 		$this->db->select('*')->from($table_name);
-		$this->CI->flexigrid->build_query();
+                $this->CI->flexigrid->build_query();
 		
 		//Get contents
 		$return['records'] = $this->db->get();
 		
 		//Build count query
 		$this->db->select('*')->from($table_name);
-		$this->CI->flexigrid->build_query(FALSE);
+                $this->CI->flexigrid->build_query(FALSE);
 		
 		$return['record_count'] = $this->db->count_all_results();
 	
@@ -67,14 +67,6 @@ class Artikel_model extends CI_Model {
 	function update($id, $data){
 		$this->db->where('ID_ARTIKEL',$id);
 		$this->db->update('ARTIKEL',$data);
-	}
-	
-	function get_menteri(){
-		$this->db->select('*');
-		$this->db->from('USERS');
-		$this->db->where('STATUS = 2');
-		$query = $this->db->get();
-		return $query;
 	}
 	
 }
