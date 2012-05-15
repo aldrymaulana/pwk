@@ -3,6 +3,8 @@
     <head>
         <title></title>
         <meta charset="utf-8">
+		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
+		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/grid.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
@@ -12,6 +14,18 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
+		<script src="<?php echo base_url() ?>js/hoverIntent.js"></script> 
+		<script src="<?php echo base_url() ?>js/superfish.js"></script>
+		 
+<script> 
+ 
+    $(document).ready(function(){ 
+        $("ul.sf-menu").superfish({ 
+            pathClass:  'current' 
+        }); 
+    }); 
+ 
+</script>
         <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 
         <!--[if lt IE 9]>
@@ -148,10 +162,25 @@
 
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
-                <ul>
-                    <li><a href="#" class="current">Lab Kota</a></li>
-                    <li><a href="#" >Lab Wilayah</a></li>
-                    <li><a href="#" >Lab Perencanaan</a></li>
+                <ul class="sf-menu sf-navbar">
+                    <li><a class="sf-with-ul current" href="#">Lab Kota</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+					</li>
+                    <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+					</li>
+                    <li><a class="sf-with-ul" href="#" >Lab Perencanaan</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+					</li>
                 </ul>
                 <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
             </div>
