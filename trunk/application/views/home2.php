@@ -132,7 +132,7 @@
 <header>
     <nav>
         <div class="container">
-            <div class="header" align="left" style="color: #D4D0C8; position: absolute">
+            <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
                     <param name="quality" value="high">
@@ -142,7 +142,7 @@
                     <param name="expressinstall" value="Scripts/expressInstall.swf">
                     <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
                     <!--[if !IE]>-->
-                    <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="110" height="80">
+                    <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="137.5" height="100">
                         <!--<![endif]-->
                         <param name="quality" value="high">
                         <param name="wmode" value="opaque">
@@ -158,12 +158,12 @@
                     <!--<![endif]-->
                 </object>
             </div>
-            <div class="wrapper" style="padding-left: 120px">
+            <div class="wrapper" style="padding-left: 135px;padding-top: 10px ">
 
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul class="sf-menu sf-navbar">
-                    <li><a class="sf-with-ul current" href="#">Lab Kota</a>
+                    <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
 							<li><a href="#">Info1</a></li>
 							<li><a href="#aba">Info2</a></li>
@@ -314,7 +314,7 @@
 <footer>
     <div class="container">
         <div class="wrapper">
-            <div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div>
+            <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
             <address class="phone">
         	Hubungi Kami di <strong>1-123-456-7890</strong>
             </address>
