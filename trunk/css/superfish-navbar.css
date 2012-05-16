@@ -2,11 +2,13 @@
 /*** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ***/
 .sf-navbar {
 	/*background:		#BDD2FF;*/
-	height:			1em;
+	height:			2.5em;
 	padding-bottom:	1em;
 	position:		relative;
 	float: right;
-	padding: 8px 10% 0 0;
+	padding: 0px 0px 0 0;
+	top: 8px;
+	right: 10%;
 }
 .sf-navbar li {
 	/*background:		#AABDE6;*/
