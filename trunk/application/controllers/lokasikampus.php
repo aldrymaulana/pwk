@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class lokasikampus_c extends CI_Controller {
+class Lokasikampus extends CI_Controller {
 
     function __construct() {
         parent::__construct();
