@@ -11,7 +11,7 @@
 
 /*** Overall MovingBoxes Slider ***/
 .mb-wrapper {
-	border: 5px solid #ccc;
+	border: 2px solid #000000;
 	margin: 0 auto;
 	position: relative;
 	left: 0;
@@ -41,7 +41,7 @@
 
 /* active slider border highlight */
 .mb-active-slider {
-	border-color: #999bff;
+	border-color: #000000;
 }
 
 /*** Slider panel ***/

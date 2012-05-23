@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Jurusan Perencanaan Wilayah & Kota</title>
         <meta charset="utf-8">
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />

@@ -29,4 +29,12 @@ class upload_foto_dosen extends CI_Controller {
         }
     }
 
+    function form() {
+        $data['status'] = 'new';
+        $data['failed'] = false;
+        $data['aa'] = '';
+        $data['content'] = $this->load->view('admin/foto_dosen', $data, true);
+        $this->load->view('admin/main', $data);
+    }
+
 }
