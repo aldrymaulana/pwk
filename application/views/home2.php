@@ -158,7 +158,7 @@
                     <!--<![endif]-->
                 </object>
             </div>
-            <div class="wrapper" style="padding-left: 135px;padding-top: 10px ">
+            <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
@@ -222,11 +222,11 @@
                             <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="#">Visi & Misi</a></li>
-                                <li><a href="<?php echo base_url() ?>index.php/sejarah_c">Sejarah</a></li>
+                                <li><a href="<?echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
                                 <li><a href="#">Kerja Sama</a></li>
-                                <li><a href="<?php echo base_url() ?>index.php/lokasikampus_c">Lokasi Kampus</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                                 <li><a href="#">Forum Tanya Jawab</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
@@ -265,10 +265,12 @@
                     <p align="justify"> Seiring dengan  pelaksanaan   otonomi daerah, kebutuhan sarjana Perencanaan Wilayah dan Kota juga   meningkat,  khususnya untuk memenuhi kebutuhan di Kawasan Timur&nbsp;   Indonesia. </p>
                     <p align="justify" >Pendidikan perencanaan  wilayah   dan kota yang dikembangkan di Program Studi Perencanaan Wilayah dan Kota    (PWK) FTSP-ITS, ditujukan untuk  mencetak sarjana PWK yang mempunyai   kompetensi sebagai perencana (planer) tata ruang wilayah  dan kota,   manajer pembangunankota dan pengembangan masyarakat, akademisi,   peneliti, dan membekali  lulusan yang ingin melanjtukan studi jenjang   yang lebih tinggi (S2 dan S3).</p>
                     <p align="justify" >Bidang kajian yang dikembangkan di Program Studi PWK meliputi :</p>
-                    <p align="justify"> <span class="style4">&bull;	Perencanaan Wilayah  	      (Regional Planning)</span></p>
-                    <p align="justify"> <span class="style4">&bull;	Perencanaan dan Perancangan Kota  		    (Urban Planning and Urban Design) </span></p>
-                    <p align="justify" class="style4">&bull;	Manajemen Perkotaan  		    (Urban Management) </p>        <p align="justify" class="style4">&bull;	Perencanaan dan Pengelolaan Kawasan Pesisir  		    (Urban Planning and Urban Design) </p>
-
+                    <ul type="disc">	
+						<li>Perencanaan Wilayah  	      (Regional Planning)</li>
+						<li>Perencanaan dan Perancangan Kota  		    (Urban Planning and Urban Design) </li>
+                    <li>Manajemen Perkotaan  		    (Urban Management) </li>        <li>	Perencanaan dan Pengelolaan Kawasan Pesisir  		    (Urban Planning and Urban Design) </li>
+					</ul>
+					<p align="justify" ></p>
                     <section class="images">
                         <figure><img src="<?php echo base_url() ?>/images/images/1page-img2.jpg" alt=""></figure>
                         <figure><img src="<?php echo base_url() ?>/images/images/1page-img1.jpg" alt=""></figure>

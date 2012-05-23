@@ -3,19 +3,26 @@
     <head>
         <title></title>
         <meta charset="utf-8">
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
+		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/grid.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url() ?>css/movingboxes.css" media="screen" rel="stylesheet">
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
-        <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
-        <script src="<?php echo base_url() ?>js/jquery.movingboxes.js"></script>
-        <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-
+		<script src="<?php echo base_url() ?>js/hoverIntent.js"></script> 
+		<script src="<?php echo base_url() ?>js/superfish.js"></script>
+		<script> 
+			$(document).ready(function(){ 
+				$("ul.sf-menu").superfish({ 
+					pathClass:  'current' 
+				}); 
+			}); 
+		</script>
         <!-- Demo only -->
         <link href="<?php echo base_url() ?>demo/demo.css" media="screen" rel="stylesheet">
         <style>
@@ -77,58 +84,67 @@
         <style type="text/css">
 
             .arrowlistmenu{
-                width: 180px; /*width of accordion menu*/
-            }
+            width: 180px; /*width of accordion menu*/
+        }
 
-            .arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
-                                        font: bold 14px Arial;
-                                        color: white;
-                                        background: black url(titlebar.png) repeat-x center left;
-                                        margin-bottom: 10px; /*bottom spacing between header and rest of content*/
-                                        text-transform: uppercase;
-                                        padding: 4px 0 4px 10px; /*header text is indented 10px*/
-                                        cursor: hand;
-                                        cursor: pointer;
-            }
+        .arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+                                    font: bold 14px Arial;
+                                    color: white;
+                                    background: black url(titlebar.png) repeat-x center left;
+                                    -moz-border-radius-topright: 10px;
+                                    -moz-border-radius-bottomright: 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                    margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+                                    text-transform: uppercase;
+                                    padding: 4px 0 4px 10px; /*header text is indented 10px*/
+                                    cursor: hand;
+                                    cursor: pointer;
+        }
 
-            .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
-                                        background-image: url(titlebar-active.png);
-            }
+        .arrowlistmenu .menuheader a{
+            color:#fff;
+            text-decoration:none;
+        }
 
-            .arrowlistmenu ul{ /*CSS for UL of each sub menu*/
-                               list-style-type: none;
-                               margin: 0;
-                               padding: 0;
-                               margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
-            }
+        .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+                                    background-image: url(titlebar-active.png);
+        }
 
-            .arrowlistmenu ul li{
-                padding-bottom: 2px; /*bottom spacing between menu items*/
-            }
+        .arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+                           list-style-type: none;
+                           margin: 0;
+                           padding: 0;
+                           margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+        }
 
-            .arrowlistmenu ul li a{
-                color: #A70303;
-                background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
-                display: block;
-                padding: 2px 0;
-                padding-left: 19px; /*link text is indented 19px*/
-                text-decoration: none;
-                font-weight: bold;
-                border-bottom: 1px solid #dadada;
-                font-size: 90%;
+        .arrowlistmenu ul li{
+            padding-bottom: 2px; /*bottom spacing between menu items*/
+        }
 
-            }
+        .arrowlistmenu ul li a{
+            color: #A70303;
+            background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+            display: block;
+            padding: 2px 0;
+            padding-left: 19px; /*link text is indented 19px*/
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid #dadada;
+            font-size: 100%;
 
-            .arrowlistmenu ul li a:visited{
-                color: #A70303;
-                font-family: ColaborateThinRegular;
-            }
+        }
 
-            .arrowlistmenu ul li a:hover{ /*hover state CSS*/
-                                          color: #A70303;
-                                          background-color: #F3F3F3;
-                                          font-family: ColaborateThinRegular;
-            }
+        .arrowlistmenu ul li a:visited{
+            color: #A70303;
+            font-family: ColaborateThinRegular;
+        }
+
+        .arrowlistmenu ul li a:hover{ /*hover state CSS*/
+                                      color: #A70303;
+                                      background-color: #F3F3F3;
+                                      font-family: ColaborateThinRegular;
+        }
 
         </style>
     </head>
@@ -163,15 +179,28 @@
                         <!--<![endif]-->
                     </object>
                 </div>
-                <div class="wrapper" style="padding-left: 120px">
+                <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
-                    <h1 ><a href="<? echo base_url() ?>"><strong>
+                    <h1 ><a href="<?php echo base_url() ?>"><strong>
                                 Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
-
-                    <ul>
-                        <li><a href="#" class="current">Lab Kota</a></li>
-                        <li><a href="#" >Lab Wilayah</a></li>
-                        <li><a href="#" >Lab Perencanaan</a></li>
+                    <ul class="sf-menu sf-navbar">
+                        <li><a class="sf-with-ul" href="#">Lab Kota</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+                        <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+						</li>
+						<li><a class="sf-with-ul" href="#" >Lab Perencanaan</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+						</li>
                     </ul>
                     <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
                 </div>
