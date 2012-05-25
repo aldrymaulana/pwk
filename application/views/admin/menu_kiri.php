@@ -46,7 +46,7 @@ $this->load->helper('html'); ?>
                 <?= anchor(site_url('admin/foto'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Foto'); ?>
         </div>
 
-        <p class="menu_head"><?= anchor(site_url(''),'Keluar'); ?></p>	
+        <p class="menu_head"><?= anchor(site_url('login/logout'),'Keluar'); ?></p>	
 
 
 
