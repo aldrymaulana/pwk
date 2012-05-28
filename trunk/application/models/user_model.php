@@ -9,18 +9,13 @@ class User_model extends CI_Model {
 	}
 	
 	function insert($data){
-		//$this->db->select("*");
-		//$this->db->from('ARTIKEL');
-		//$this->db->where("STATUS > 0 ");
-		//$query = $this->db->get();
-		//return $query;*/
-		$this->db->insert('ARTIKEL',$data);
+		$this->db->insert('USER',$data);
 	}
 	
 	//list flexy
-	function get_data_artikel(){
+	function get_data_user(){
 		//Select table name
-		$table_name = "ARTIKEL";
+		$table_name = "USER";
 		
 		//Build contents query
 		$this->db->select('*')->from($table_name);
