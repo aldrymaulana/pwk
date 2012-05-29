@@ -97,17 +97,38 @@ class Foto extends CI_Controller {
         $this->output->set_header($this->config->item('json_header'));
         $new_tab = 'target="_blank"';
         $no = 0;
+        
         foreach ($records['records']->result() as $row) {
+            $status_aktif = "";
+            if ($row->status_slide == 0) {
+                $status_aktif = "" . base_url() . "images/grid/unaktif.png'";
+            } else{
+                $status_aktif = "" . base_url() . "images/grid/aktif.png'";
+            }
+
             $record_items[] = array(
                 $row->id_foto,
                 $no = $no + 1,
                 $row->nama_foto,
                 $row->lokasi,
-                '<a href=\'' . base_url() . 'index.php/admin/artikel/edit/' . $row->id_foto . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/aktif.png\'></a> ',
+                //remove a hreff
+                '<a href=\'' . base_url() . 'index.php/admin/foto/status_slide/' . $row->id_foto . '\'><img border=\'0\' src=\'' . $status_aktif . '\'></a> ',
                 '<a href= \'' . $row->lokasi . '\' ' . $new_tab . '><img border=\'0\' src=\'' . $row->lokasi . '\' height=\'50\'></a> ',
                 '<a href=\'' . base_url() . 'index.php/admin/foto/edit/' . $row->id_foto . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
             );
         }
+        
+//        foreach ($records['records']->result() as $row) {
+//            $record_items[] = array(
+//                $row->id_foto,
+//                $no = $no + 1,
+//                $row->nama_foto,
+//                $row->lokasi,
+//                '<a href=\'' . base_url() . 'index.php/admin/foto/edit/' . $row->id_foto . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/aktif.png\'></a> ',
+//                '<a href= \'' . $row->lokasi . '\' ' . $new_tab . '><img border=\'0\' src=\'' . $row->lokasi . '\' height=\'50\'></a> ',
+//                '<a href=\'' . base_url() . 'index.php/admin/foto/edit/' . $row->id_foto . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
+//            );
+//        }
 
         if (isset($record_items))
             $this->output->set_output($this->flexigrid->json_build($records['record_count'], $record_items));
@@ -147,7 +168,7 @@ class Foto extends CI_Controller {
             $data = array(
                 'NAMA_FOTO' => $this->input->post('nama_foto'),
                 'LOKASI' => $path[0],
-                'STATUS' => 1
+                'STATUS_SLIDE' => 0
             );
             $this->foto_model->insert($data);
             redirect('admin/foto');
@@ -204,6 +225,26 @@ class Foto extends CI_Controller {
             );
             $this->foto_model->update($id, $data);
             redirect('admin/foto');
+        }
+    }
+
+    public function status_slide($id) {
+        //get status foto
+        $data_foto = $this->foto_model->selectone($id);
+        foreach ($data_foto->result() as $foto) {
+            if ($foto->status_slide == 0) {
+                $data = array(
+                    'STATUS_SLIDE' => 1
+                );
+                $this->foto_model->update($id, $data);
+                redirect('admin/foto');
+            } else {
+                $data = array(
+                    'STATUS_SLIDE' => 0
+                );
+                $this->foto_model->update($id, $data);
+                redirect('admin/foto');
+            }
         }
     }
 
