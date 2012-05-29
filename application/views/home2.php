@@ -138,7 +138,7 @@
                     <param name="quality" value="high">
                     <param name="wmode" value="opaque">
                     <param name="swfversion" value="8.0.35.0">
-                    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you donï¿½t want users to see the prompt. -->
                     <param name="expressinstall" value="Scripts/expressInstall.swf">
                     <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
                     <!--[if !IE]>-->
@@ -194,11 +194,12 @@
             <div class="clearfix">
                 <section id="gallery">
                     <div class="pics">
-                        <img src="<?php echo base_url() ?>/images/images/slide1.jpg" alt="" width="495" height="329">
-                        <img src="<?php echo base_url() ?>/images/images/slide3.jpg" alt="" width="495" height="329">
-                        <img src="<?php echo base_url() ?>/images/images/slide2.jpg" alt="" width="495" height="329">
-                        <img src="<?php echo base_url() ?>/images/images/slide4.jpg" alt="" width="495" height="329">
-                        <img src="<?php echo base_url() ?>/images/images/slide5.jpg" alt="" width="495" height="329">
+                        
+                        <?php
+                        foreach ($foto_slide->result() as $foto) {
+                            echo '<img src="'.$foto->lokasi.'" alt="" width="495" height="329">';
+                        }
+                        ?>
                     </div>
                     <a href="#" id="prev"></a>
                     <a href="#" id="next"></a>
