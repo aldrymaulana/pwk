@@ -24,8 +24,8 @@ $this->load->helper('html'); ?>
 
         <p class="menu_head">Pengelolaan Pengguna</p>
         <div class="menu_body">
-                <?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Pengguna'); ?>
-                <?= anchor(site_url('admin/home/#'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Pengguna'); ?>
+                <?= anchor(site_url('admin/user/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Pengguna'); ?>
+                <?= anchor(site_url('admin/user'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Pengguna'); ?>
         </div>				
 
         <p class="menu_head">Artikel</p>

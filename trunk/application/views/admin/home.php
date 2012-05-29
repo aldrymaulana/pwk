@@ -27,7 +27,7 @@ $this->load->helper('html'); ?>
 <table width="1002" border="0">
   <tr>
     <td width="88">&nbsp;</td>
-    <td width="546"><p align="justify" style="font-size:16px; color:#000000">Sugeng rawuh. </p></td>
+    <td width="546"><p align="justify" style="font-size:16px; color:#000000">Selamat datang di Admin Panel Website PWK ITS. </p></td>
     <td width="65">&nbsp;</td>
     <td width="285"><img src="<?= base_url() ?>images/main/bangku_kosong_128.png" alt="" width="128" height="128" border="0"/></td>
   </tr>

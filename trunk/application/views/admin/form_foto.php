@@ -52,10 +52,7 @@ $this->load->helper('html');
                                     <tr>
                                         <td width="80">Nama Foto</td>
                                         <td width="208"><input name="nama_foto" type="text" size="50" value="<?= $value['nama_foto'] ?>"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="80">Foto</td>
-                                        <td width="208"> &nbsp;</td>
+                                        <td><? echo form_error('nama_foto');?></td>
                                     </tr>
                                     
                                     <?
@@ -77,7 +74,7 @@ $this->load->helper('html');
                                         <tr>
                                         <td>Foto</td>
                                         <td><input type="file" name="foto" size="30"/></td>
-                                        <td></td>
+                                        <td>'.form_error("foto").'</td>
                                         </tr>                                            
                                         ';
                                     }
