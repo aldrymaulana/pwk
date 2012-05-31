@@ -197,7 +197,8 @@
                         
                         <?php
                         foreach ($foto_slide->result() as $foto) {
-                            echo '<img src="'.$foto->lokasi.'" alt="" width="495" height="329">';
+                            $lokasi_foto = base_url().$foto->lokasi;
+                            echo '<img src="'.$lokasi_foto.'" alt="" width="495" height="329">';
                         }
                         ?>
                     </div>
