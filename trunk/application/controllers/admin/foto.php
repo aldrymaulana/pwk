@@ -106,15 +106,17 @@ class Foto extends CI_Controller {
             } else {
                 $status_aktif = "" . base_url() . "images/grid/aktif.png'";
             }
+            
+            $lokasi_foto = base_url().$row->lokasi;
 
             $record_items[] = array(
                 $row->id_foto,
                 $no = $no + 1,
                 $row->nama_foto,
-                $row->lokasi,
+                $lokasi_foto,
                 //remove a hreff
                 '<a href=\'' . base_url() . 'index.php/admin/foto/status_slide/' . $row->id_foto . '\'><img border=\'0\' src=\'' . $status_aktif . '\'></a> ',
-                '<a href= \'' . $row->lokasi . '\' ' . $new_tab . '><img border=\'0\' src=\'' . $row->lokasi . '\' height=\'50\'></a> ',
+                '<a href= \'' . $lokasi_foto . '\' ' . $new_tab . '><img border=\'0\' src=\'' . $lokasi_foto . '\' height=\'50\'></a> ',
                 '<a href=\'' . base_url() . 'index.php/admin/foto/edit/' . $row->id_foto . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
             );
         }
@@ -165,7 +167,7 @@ class Foto extends CI_Controller {
             } else {
                 $data = $this->upload->data($field_name); //get file_name
                 $file_name = $data['file_name'];
-                $path[0] = base_url() . 'file/' . $file_name;
+                $path[0] = 'file/' . $file_name;
                 $path[1] = $file_name;
                 //return $path;
 
@@ -186,7 +188,7 @@ class Foto extends CI_Controller {
         foreach ($record_artikel->result() as $artikel) {
             $data['id_foto'] = $artikel->id_foto;
             $data['nama_foto'] = $artikel->nama_foto;
-            $data['lokasi'] = $artikel->lokasi;
+            $data['lokasi'] = base_url().$artikel->lokasi;
         }
         //$data['status'] = 'new';
         $data['failed'] = false;
@@ -211,7 +213,7 @@ class Foto extends CI_Controller {
             if (!$files) {
                 $data = $this->upload->data($field_name); //get file_name
                 $file_name = $data['file_name'];
-                $path[0] = base_url() . 'file/' . $file_name;
+                $path[0] = 'file/' . $file_name;
                 $path[1] = $file_name;
                 //return $path;
 
@@ -223,7 +225,7 @@ class Foto extends CI_Controller {
             } else {
                 $data = $this->upload->data($field_name); //get file_name
                 $file_name = $data['file_name'];
-                $path[0] = base_url() . 'file/' . $file_name;
+                $path[0] = 'file/' . $file_name;
                 $path[1] = $file_name;
                 //return $path;
 
