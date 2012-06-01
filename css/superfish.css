@@ -68,8 +68,8 @@ ul.sf-menu li li li.sfHover ul {
 
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 	color:			#fff;
-	font-family: 'ColaborateThinRegular';
-    font-size: 12px;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 11.5px;
 }
 .sf-menu li {
 	/*background:		#BDD2FF;*/
