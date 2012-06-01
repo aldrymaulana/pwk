@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Lokasi Kampus - Website Resmi Program Studi Perencanaan Wilayah dan Kota ITS</title>
         <meta charset="utf-8">
         <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
@@ -23,8 +23,8 @@
 				}); 
 			}); 
 		</script>
-        <!-- Demo only -->
-        <link href="<?php echo base_url() ?>demo/demo.css" media="screen" rel="stylesheet">
+        <!-- Demo only >
+        <!--link href="<?php //echo base_url() ?>demo/demo.css" media="screen" rel="stylesheet">
         <style>
             /* Dimensions set via css in MovingBoxes version 2.2.2+ */
             #slider { width: 500px; }
@@ -45,7 +45,7 @@
                 });
 
             });
-        </script>
+        </script-->
 
         <!--[if lt IE 9]>
               <script type="text/javascript" src="js/html5.js"></script>
@@ -141,7 +141,7 @@
         }
 
         .arrowlistmenu ul li a:hover{ /*hover state CSS*/
-                                      color: #A70303;
+                                      color: #fff;
                                       background-color: #F3F3F3;
                                       font-family: ColaborateThinRegular;
         }
@@ -152,7 +152,7 @@
     <body>
     <header>
         <nav>
-            <div class="container">
+            <div class="containerhead">
                 <div class="header" align="left" style="color: #D4D0C8; position: absolute">
                     <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                         <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
@@ -182,7 +182,7 @@
                 <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
                     <h1 ><a href="<?php echo base_url() ?>"><strong>
-                                Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
+                                Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                     <ul class="sf-menu sf-navbar">
                         <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
@@ -217,17 +217,17 @@
                         <iframe width="650" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=institut+teknologi+sepuluh+november&amp;ie=UTF8&amp;hq=institut+teknologi+sepuluh+november&amp;hnear=&amp;ll=-6.774774,109.787417&amp;spn=1.016871,6.015165&amp;t=h" style="color:#0000FF;text-align:center"></a></small>
                     </div>
                     <div class="grid3">
-
+						<ul class="categories">
                         <div class="arrowlistmenu">
 
                             <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="#">Visi & Misi</a></li>
-                                <li><a href="<? echo base_url() ?>index.php/sejarah_c">Sejarah</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/visimisi">Visi & Misi</a></li><li>
+                                <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
-                                <li><a href="#">Kerja Sama</a></li>
-                                <li><a href="#">Lokasi Kampus</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/kerjasama">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/lokasikampus">Lokasi Kampus</a></li>
                                 <li><a href="#">Forum Tanya Jawab</a></li>
                             </ul>
 

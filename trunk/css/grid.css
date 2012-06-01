@@ -3,6 +3,14 @@
 	margin: 0 auto;
 	position:relative;
 }
+
+.containerhead {
+	width: 1000px;
+	margin: 0 auto;
+	position:relative;
+	height:inherit;
+}
+
 .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
 	float: left;
 	margin-left: 30px;

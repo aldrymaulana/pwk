@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Website Resmi Program Studi Perencanaan Wilayah dan Kota ITS</title>
         <meta charset="utf-8">
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
@@ -109,7 +109,7 @@
             text-decoration: none;
             font-weight: bold;
             border-bottom: 1px solid #dadada;
-            font-size: 100%;
+            font-size: 14px;
 
         }
 
@@ -119,7 +119,7 @@
         }
 
         .arrowlistmenu ul li a:hover{ /*hover state CSS*/
-                                      color: #A70303;
+                                      color: #fff;
                                       background-color: #F3F3F3;
                                       font-family: ColaborateThinRegular;
         }
@@ -131,7 +131,7 @@
 <body>
 <header>
     <nav>
-        <div class="container">
+        <div class="containerhead">
             <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
@@ -161,7 +161,7 @@
             <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
-                            Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
+                            Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul class="sf-menu sf-navbar">
                     <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
@@ -207,7 +207,7 @@
                 </section>
                 <section id="intro">
                     <div class="inner">
-                        <h2>Jurusan Perencanaan Wilayah & Tata Kota</h2>
+                        <h2>Program Studi Perencanaan Wilayah & Tata Kota</h2>
                         <h3>Jl.Teknik Kimia </br> Surabaya 60111</h3>
                         <a href="#" class="extra-button">Tentang Kita</a>
                     </div>
@@ -224,10 +224,10 @@
                             <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
-                                <li><a href="#">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                                 <li><a href="#">Forum Tanya Jawab</a></li>
                             </ul>

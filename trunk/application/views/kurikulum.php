@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Jurusan Perencanaan Wilayah & Kota</title>
+        <title>Kurikulum - Website Resmi Program Studi Perencanaan Wilayah dan Kota ITS</title>
         <meta charset="utf-8">
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
 		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
@@ -59,7 +59,7 @@
 
         <style type="text/css">
 
-            .arrowlistmenu{
+        .arrowlistmenu{
             width: 180px; /*width of accordion menu*/
         }
 
@@ -107,7 +107,7 @@
             text-decoration: none;
             font-weight: bold;
             border-bottom: 1px solid #dadada;
-            font-size: 100%;
+            font-size: 14px;
 
         }
 
@@ -117,7 +117,7 @@
         }
 
         .arrowlistmenu ul li a:hover{ /*hover state CSS*/
-                                      color: #A70303;
+                                      color: #fff;
                                       background-color: #F3F3F3;
                                       font-family: ColaborateThinRegular;
         }
@@ -129,7 +129,7 @@
     <header>
         <nav>
         
-            <div class="container">
+            <div class="containerhead">
             
 <div class="header" align="left" style="color: #D4D0C8; position: absolute">
 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
@@ -159,8 +159,8 @@
                 </div>
                 <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
-                    <h1 ><a href="<?php echo base_url() ?>"><strong>
-                                Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
+                    <h1 ><a href="<?php echo base_url() ?>">
+						<strong>Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                     <ul class="sf-menu sf-navbar">
                         <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
@@ -214,17 +214,17 @@
 						</ul>
                     </div>
                     <div class="grid3">
-
+						<ul class="categories">
                         <div class="arrowlistmenu">
 
                             <h3 class="menuheader " ><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
-                                <li><a href="<?echo base_url()?>index.php/sejarah">Sejarah</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="#">Struktur Organisasi</a></li>
-                                <li><a href="#">Kerja Sama</a></li>
-                                <li><a href="<?echo base_url()?>index.php/lokasikampus">Lokasi Kampus</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/lokasikampus">Lokasi Kampus</a></li>
                                 <li><a href="#">Forum Tanya Jawab</a></li>
                             </ul>
 
@@ -250,7 +250,7 @@
                                 <li><a href="<? echo base_url() ?>index.php/berita_c">Berita</a></li>
                             </ul>
                         </div>
-
+						</ul>
                     </div>
                 </div>
             </div>
@@ -291,7 +291,7 @@
     <footer>
         <div class="container">
             <div class="wrapper">
-                <div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div>
+                <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
                 <address class="phone">
         	Hubungi Kami di <strong>1-123-456-7890</strong>
                 </address>
