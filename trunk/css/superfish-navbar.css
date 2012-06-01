@@ -6,9 +6,9 @@
 	padding-bottom:	1em;
 	position:		relative;
 	float: right;
-	padding: 0px 0px 0 0;
-	top: 8px;
+	padding: 0px 0px 0 0px;
 	right: 10%;
+	top:8px;
 }
 .sf-navbar li {
 	/*background:		#AABDE6;*/

@@ -9,11 +9,16 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>css/grid.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
+		<link rel="stylesheet" href="<?php echo base_url() ?>css/default/default.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php echo base_url() ?>css/nivo-slider.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>js/jquery.nivo.slider.js"></script>
 		<script src="<?php echo base_url() ?>js/hoverIntent.js"></script> 
 		<script src="<?php echo base_url() ?>js/superfish.js"></script>
 		 
@@ -26,6 +31,11 @@
     }); 
  
 </script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
         <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 
         <!--[if lt IE 9]>
@@ -191,28 +201,17 @@
 <section id="content">
     <div class="top">
         <div class="container">
-            <div class="clearfix">
-                <section id="gallery">
-                    <div class="pics">
-                        
-                        <?php
-                        foreach ($foto_slide->result() as $foto) {
-                            $lokasi_foto = base_url().$foto->lokasi;
-                            echo '<img src="'.$lokasi_foto.'" alt="" width="495" height="329">';
-                        }
-                        ?>
-                    </div>
-                    <a href="#" id="prev"></a>
-                    <a href="#" id="next"></a>
-                </section>
-                <section id="intro">
-                    <div class="inner">
-                        <h2>Program Studi Perencanaan Wilayah & Tata Kota</h2>
-                        <h3>Jl.Teknik Kimia </br> Surabaya 60111</h3>
-                        <a href="#" class="extra-button">Tentang Kita</a>
-                    </div>
-                </section>
+            <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="<?php echo base_url()?>file/toystory.jpg" data-thumb="<?php echo base_url()?>file/toystory.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="<?php echo base_url()?>file/up.jpg" data-thumb="<?php echo base_url()?>file/up.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="<?php echo base_url()?>file/walle.jpg" data-thumb="<?php echo base_url()?>file/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="<?php echo base_url()?>file/nemo.jpg" data-thumb="<?php echo base_url()?>file/nemo.jpg" alt="" title="#htmlcaption" />
             </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+        </div>
         </div>
     </div>
     <div class="middle">
