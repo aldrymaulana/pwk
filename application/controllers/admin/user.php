@@ -51,7 +51,7 @@ class User extends CI_Controller {
 			if (com=='hapus')
 				{
 				   if($('.trSelected',grid).length>0){
-					   if(confirm('Anda yakin menghapus ' + $('.trSelected',grid).length + ' artikel?')){
+					   if(confirm('Anda yakin menghapus ' + $('.trSelected',grid).length + ' user?')){
 							var items = $('.trSelected',grid);
 							var itemlist ='';
 							for(i=0;i<items.length;i++){
@@ -59,7 +59,7 @@ class User extends CI_Controller {
 							}
 							$.ajax({
 							   type: 'POST',
-							   url: '" . base_url() . "index.php/admin/artikel/delete" . "',
+							   url: '" . base_url() . "index.php/admin/user/delete" . "',
 							   data: 'items='+itemlist,
 							   success: function(data){
 								$('#flex1').flexReload();
@@ -94,7 +94,7 @@ class User extends CI_Controller {
                 $row->id_user,
                 $no = $no + 1,
                 $row->username,
-                '<a href=\'' . base_url() . 'index.php/admin/artikel/edit/' . $row->id_user . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
+                '<a href=\'' . base_url() . 'index.php/admin/user/edit/' . $row->id_user . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
             );
         }
 
@@ -128,86 +128,51 @@ class User extends CI_Controller {
 
     public function edit($id) {
         $data['status'] = 'edit';
-        $record_artikel = $this->artikel_model->selectone($id);
+        $record_artikel = $this->user_model->selectone($id);
         foreach ($record_artikel->result() as $artikel) {
-            $data['id_artikel'] = $artikel->id_artikel;
-            $data['judul'] = $artikel->judul;
-            $data['isi'] = $artikel->isi;
+            $data['id_user'] = $artikel->id_user;
+            $data['username'] = $artikel->username;
+            $data['password'] = $artikel->password;
         }
         //$data['status'] = 'new';
         $data['failed'] = false;
         $data['aa'] = '';
-        $data['content'] = $this->load->view('admin/form_artikel', $data, true);
+        $data['content'] = $this->load->view('admin/form_user', $data, true);
         $this->load->view('admin/main', $data);
     }
 
     function update($id) {
-        $data = array(
-            'JUDUL' => $this->input->post('judul'),
-            'ISI' => $this->input->post('isi')
-        );
-        $this->artikel_model->update($id, $data);
-        redirect('admin/artikel');
-    }
-
-    function update_status_aktif($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
+        //get password lama
+        $record_artikel = $this->user_model->selectone($id);
         foreach ($record_artikel->result() as $artikel) {
-            if ($artikel->status == 0) {
-                $data = array(
-                    'STATUS' => 1
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            } else {
-                $data = array(
-                    'STATUS' => 0
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            }
+            $data_lama['password'] = $artikel->password;
+        }
+        //cek password lama
+        if ($data_lama['password'] != md5($this->input->post('konfirm_password'))) {
+            $this->edit($id);
+        } else {
+            $data = array(
+                'USERNAME' => $this->input->post('username'),
+                'PASSWORD' => md5($this->input->post('password'))
+            );
+            $this->user_model->update($id, $data);
+            redirect('admin/user');
         }
     }
 
-    function update_status_high($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            if ($artikel->status == 1) {
-                $data = array(
-                    'STATUS' => 2
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            } else if ($artikel->status == 2) {
-                $data = array(
-                    'STATUS' => 1
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            }
-        }
-    }
-
+    
     function delete() {
         $spt_ids_post_array = split(",", $this->input->post('items'));
         //$this->load->model('pengolahan/data_model');
         //$msg='akun berhasil dihapus';
         foreach ($spt_ids_post_array as $index => $id) {
             if (isset($id) && $id != '') {
-                $this->artikel_model->delete($id);
+                $this->user_model->delete($id);
             }//end if
         }//end foreach
     }
 
-    function test($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            //$data['id_artikel'] = $artikel->id_artikel;
-            $data['judul'] = $artikel->judul;
-            $data['isi'] = $artikel->isi;
-        }
-        $this->load->view('artikel', $data);
-    }
+    
 
     function cek_validasi() {
         // Setting Rules

@@ -23,6 +23,7 @@ $this->load->helper('html'); ?>
 <?
     //Setting Value Jika Prosedur yang dilakukan adalah prosedur input biasa.
 	$value = array(
+		'baru'			=> "",
 		'id_user'			=> "",
 		'username'					=> "",
 		'password'				=> "",
@@ -31,10 +32,11 @@ $this->load->helper('html'); ?>
 	
 	//Setting Value pada form Jika melakukan prosedur Edit terhadap data tertentu.
 	if($status == "edit"){
-			$value['id_artikel'] = $id_artikel;
-			$value['judul'] = $judul;
-			$value['isi'] = $isi;
-			$value['act_form'] = "admin/artikel/update/".$value['id_artikel'];			
+			$value['baru'] = "baru";
+			$value['id_user'] = $id_user;
+			$value['username'] = $username;
+			$value['password'] = $password;
+			$value['act_form'] = "admin/user/update/".$value['id_user'];
 	}//end if
 ?>
 <?= form_open($value["act_form"]); ?>
@@ -51,16 +53,28 @@ $this->load->helper('html'); ?>
                 <td width="208"><input name="username" type="text" size="30" value="<?=$value['username']?>"/></td>
                 <td width="400"><? echo form_error('username');?></td>
               </tr>
+
+              <?
+                if($status == "edit"){
+                    echo'
+                        <tr>
+                            <td width="80">Password Lama</td>
+                            <td width="208"><input name="konfirm_password" type="password" size="30" value=""/></td>
+                          </tr>
+                        ';
+                }
+
+              ?>
               
               <tr>
-                <td width="80">Password</td>
-                <td width="208"><input name="password" type="password" size="30" value="<?=$value['password']?>"/></td>      	       
+                <td width="80">Password <?=$value['baru']?></td>
+                <td width="208"><input name="password" type="password" size="30" value=""/></td>      	       
                 <td width="400"><? echo form_error('password');?></td>
               </tr>
               
               <tr>
                 <td width="80">Konfirmasi Password</td>
-                <td width="208"><input name="password_konfirm" type="password" size="30" value="<?=$value['password']?>"/></td>
+                <td width="208"><input name="password_konfirm" type="password" size="30" value=""/></td>
                 <td width="400"><? echo form_error('password_konfirm');?></td>
               </tr>
                 
