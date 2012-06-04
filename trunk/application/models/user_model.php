@@ -47,21 +47,21 @@ class User_model extends CI_Model {
 	
 	
 	function delete($id){
-		$this->db->where('ID_ARTIKEL', $id);
-		$this->db->delete('ARTIKEL'); 
+		$this->db->where('ID_USER', $id);
+		$this->db->delete('USER');
 	}
 	
 	function selectone($id){
 		$this->db->select("*");
-		$this->db->from('ARTIKEL');
-		$this->db->where('ID_ARTIKEL',$id);
+		$this->db->from('USER');
+		$this->db->where('ID_USER',$id);
 		$query = $this->db->get();
 		return $query;
 	}
 	
 	function update($id, $data){
-		$this->db->where('ID_ARTIKEL',$id);
-		$this->db->update('ARTIKEL',$data);
+		$this->db->where('ID_USER',$id);
+		$this->db->update('USER',$data);
 	}
         
         function get_user(){
