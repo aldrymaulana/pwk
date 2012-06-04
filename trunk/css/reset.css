@@ -34,11 +34,11 @@ var{
 blockquote, q {
 	quotes: none;
 }
-table, table td { 
+/*table, table td {
 	padding:0;
 	border:none;
 	border-collapse:collapse;
-}
+}*/
 img {
 	vertical-align:top; 
 }

@@ -203,10 +203,26 @@
         <div class="container">
             <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-                <img src="<?php echo base_url()?>file/toystory.jpg" data-thumb="<?php echo base_url()?>file/toystory.jpg" alt="" />
-                <a href="http://dev7studios.com"><img src="<?php echo base_url()?>file/up.jpg" data-thumb="<?php echo base_url()?>file/up.jpg" alt="" title="This is an example of a caption" /></a>
+<!--            start of image-->
+
+
+                    <?php
+//                        foreach ($foto_slide->result() as $foto) {
+//                            $lokasi_foto = base_url().$foto->lokasi;
+//                            echo '<img src="'.$lokasi_foto.'" alt="" width="495" height="329">';
+//                            echo
+//                            '
+//                                <a href="http://dev7studios.com"><img src="'.$lokasi_foto.'"  alt="" title="Contoh" /></a>
+//                            ';
+//                        }
+                    ?>
+
+
+                
+                
                 <img src="<?php echo base_url()?>file/walle.jpg" data-thumb="<?php echo base_url()?>file/walle.jpg" alt="" data-transition="slideInLeft" />
                 <img src="<?php echo base_url()?>file/nemo.jpg" data-thumb="<?php echo base_url()?>file/nemo.jpg" alt="" title="#htmlcaption" />
+<!--                end of image-->
             </div>
             <div id="htmlcaption" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
@@ -252,7 +268,7 @@
                             </ul>
                             <h3 class="menuheader expandable">Berita & Agenda</h3>
                             <ul class="categoryitems">
-                                <li><a href="">Berita</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita">Berita</a></li>
                                 <li><a href="">Highlights</a></li>
                                 <li><a href="">Komentar</a></li>
                             </ul>
