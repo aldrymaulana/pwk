@@ -25,7 +25,7 @@ $(document).pngFix( );
 
 	<!-- start logo -->
 	<div id="logo-login">
-		<a href=""><img src="" width="158" height="50" alt="" /></a>
+		<a href="<?=base_url()?>"><img src="<?=base_url()?>images/header_login.PNG" alt="" /></a>
         </div>
 	<!-- end logo -->
 	
