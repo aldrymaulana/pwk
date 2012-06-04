@@ -63,6 +63,14 @@ class Artikel_model extends CI_Model {
 		$query = $this->db->get();
 		return $query;
 	}
+
+        function get_all_artikel(){
+		$this->db->select("*");
+		$this->db->from('ARTIKEL');
+		$this->db->where('STATUS > 0');
+		$query = $this->db->get();
+		return $query;
+	}
 	
 	function update($id, $data){
 		$this->db->where('ID_ARTIKEL',$id);
