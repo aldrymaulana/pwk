@@ -204,27 +204,23 @@
             <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
 
-                <img src="<?php echo base_url()?>file/gedungpwk.jpg" data-thumb="<?php echo base_url()?>file/gedungpwk.jpg" alt="" />
-                <a href="http://dev7studios.com"><img src="<?php echo base_url()?>file/Windows_8_wallpaper_31.jpg" data-thumb="<?php echo base_url()?>file/Windows_8_wallpaper_31.jpg" alt="" title="#htmlcaption1" /></a>
+                
 
 
 
                     <?php
-//                        foreach ($foto_slide->result() as $foto) {
-//                            $lokasi_foto = base_url().$foto->lokasi;
-//                            echo '<img src="'.$lokasi_foto.'" alt="" width="495" height="329">';
-//                            echo
-//                            '
-//                                <a href="http://dev7studios.com"><img src="'.$lokasi_foto.'"  alt="" title="Contoh" /></a>
-//                            ';
-//                        }
+                        foreach ($foto_slide->result() as $foto) {
+                            $lokasi_foto = base_url().$foto->lokasi;
+                            echo
+                            '
+                                <img width="1000" height="340" src="'.$lokasi_foto.'" data-thumb="'.$lokasi_foto.'" alt="" title="#htmlcaption2"/>
+                            ';
+                       }
                     ?>
-
+<!--                woco-->
+                
 
                 
-                
-                <img src="<?php echo base_url()?>file/walle.jpg" data-thumb="<?php echo base_url()?>file/walle.jpg" alt="" data-transition="slideInLeft" />
-                <img src="<?php echo base_url()?>file/nemo.jpg" data-thumb="<?php echo base_url()?>file/nemo.jpg" alt="" title="#htmlcaption2" />
 <!--                end of image-->
             </div>
             <div id="htmlcaption1" class="nivo-html-caption">
