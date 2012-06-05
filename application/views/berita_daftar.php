@@ -212,23 +212,29 @@
                                 padding:5px;
                                 border-collapse: collapse;
                             }
+                             a:link {color:#000000;}    /* unvisited link */
+                             a:visited {color:#000000;} /* visited link */
+                             a:hover {color:#000000;}   /* mouse over link */
+                             a:active {color:#000000;}  /* selected link */
                         </style>
 
                    
                         <table border="5" class="isitabel" id="sub">
                             <tr>
                                 <td class="isitabel" id="sub">No.</td>
-                                <td class="isitabel" id="sub">Judul Berita</td>
+                                <td align="center" width="400" class="isitabel" id="sub">Judul Berita</td>
                             </tr>
                             <?php
                             $no=1;
                                 foreach ($artikel->result() as $artikel) {
+                                    $id_artikel = $artikel->id_artikel;
                                     $judul_artikel = $artikel->judul;
+
                                     
                                     echo '
                                         <tr>
                                             <td class="isitabel" id="sub">'.$no.'.</td>
-                                            <td class="isitabel" id="sub">'.$judul_artikel.'</td>
+                                            <td class="isitabel" id="sub"><a  href="'.base_url().'index.php/artikel/index/'.$id_artikel .'">'.$judul_artikel.'</a></td>
                                         </tr>
                                         ';
                                     $no++;
