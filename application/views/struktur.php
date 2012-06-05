@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Struktur Organisasi - Website Resmi Program Studi Perencanaan Wilayah dan Kota ITS</title>
         <meta charset="utf-8">
+		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
+		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/grid.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
-        <script type="text/javascript" src=<?php echo base_url(); ?>js/ddaccordion.js></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
-        <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-
-
+		<script src="<?php echo base_url() ?>js/hoverIntent.js"></script> 
+		<script src="<?php echo base_url() ?>js/superfish.js"></script>
+		<script> 
+			$(document).ready(function(){ 
+				$("ul.sf-menu").superfish({ 
+					pathClass:  'current' 
+				}); 
+			}); 
+		</script>
         <!--[if lt IE 9]>
               <script type="text/javascript" src="js/html5.js"></script>
         <![endif]-->
@@ -51,59 +59,68 @@
 
         <style type="text/css">
 
-            .arrowlistmenu{
-                width: 180px; /*width of accordion menu*/
-            }
+        .arrowlistmenu{
+            width: 180px; /*width of accordion menu*/
+        }
 
-            .arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
-                                        font: bold 14px Arial;
-                                        color: white;
-                                        background: black url(titlebar.png) repeat-x center left;
-                                        margin-bottom: 10px; /*bottom spacing between header and rest of content*/
-                                        text-transform: uppercase;
-                                        padding: 4px 0 4px 10px; /*header text is indented 10px*/
-                                        cursor: hand;
-                                        cursor: pointer;
-            }
+        .arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+                                    font: bold 14px Arial;
+                                    color: white;
+                                    background: black url(titlebar.png) repeat-x center left;
+                                    -moz-border-radius-topright: 10px;
+                                    -moz-border-radius-bottomright: 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                    margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+                                    text-transform: uppercase;
+                                    padding: 4px 0 4px 10px; /*header text is indented 10px*/
+                                    cursor: hand;
+                                    cursor: pointer;
+        }
 
-            .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
-                                        background-image: url(titlebar-active.png);
-            }
+        .arrowlistmenu .menuheader a{
+            color:#fff;
+            text-decoration:none;
+        }
 
-            .arrowlistmenu ul{ /*CSS for UL of each sub menu*/
-                               list-style-type: none;
-                               margin: 0;
-                               padding: 0;
-                               margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
-            }
+        .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+                                    background-image: url(titlebar-active.png);
+        }
 
-            .arrowlistmenu ul li{
-                padding-bottom: 2px; /*bottom spacing between menu items*/
-            }
+        .arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+                           list-style-type: none;
+                           margin: 0;
+                           padding: 0;
+                           margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+        }
 
-            .arrowlistmenu ul li a{
-                color: #A70303;
-                background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
-                display: block;
-                padding: 2px 0;
-                padding-left: 19px; /*link text is indented 19px*/
-                text-decoration: none;
-                font-weight: bold;
-                border-bottom: 1px solid #dadada;
-                font-size: 90%;
+        .arrowlistmenu ul li{
+            padding-bottom: 2px; /*bottom spacing between menu items*/
+        }
 
-            }
+        .arrowlistmenu ul li a{
+            color: #A70303;
+            background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+            display: block;
+            padding: 2px 0;
+            padding-left: 19px; /*link text is indented 19px*/
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid #dadada;
+            font-size: 14px;
 
-            .arrowlistmenu ul li a:visited{
-                color: #A70303;
-                font-family: ColaborateThinRegular;
-            }
+        }
 
-            .arrowlistmenu ul li a:hover{ /*hover state CSS*/
-                                          color: #A70303;
-                                          background-color: #F3F3F3;
-                                          font-family: ColaborateThinRegular;
-            }
+        .arrowlistmenu ul li a:visited{
+            color: #A70303;
+            font-family: ColaborateThinRegular;
+        }
+
+        .arrowlistmenu ul li a:hover{ /*hover state CSS*/
+                                      color: #fff;
+                                      background-color: #F3F3F3;
+                                      font-family: ColaborateThinRegular;
+        }
 
         </style>
     </head>
@@ -112,7 +129,7 @@
     <header>
         <nav>
         
-            <div class="container">
+            <div class="containerhead">
             
 <div class="header" align="left" style="color: #D4D0C8; position: absolute">
 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
@@ -120,11 +137,11 @@
                         <param name="quality" value="high">
                         <param name="wmode" value="opaque">
                         <param name="swfversion" value="8.0.35.0">
-                        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you donâ€™t want users to see the prompt. -->
+                        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
                         <param name="expressinstall" value="Scripts/expressInstall.swf">
                         <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
                         <!--[if !IE]>-->
-                        <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="110" height="80">
+                        <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="137.5" height="100">
                             <!--<![endif]-->
                             <param name="quality" value="high">
                             <param name="wmode" value="opaque">
@@ -140,15 +157,28 @@
                         <!--<![endif]-->
                     </object>
                 </div>
-                <div class="wrapper" style="padding-left: 120px">
+                <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
 
-                    <h1 ><a href="<? echo base_url() ?>"><strong>
-                                Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
-
-                    <ul>
-                        <li><a href="#" class="current">Lab Kota</a></li>
-                        <li><a href="#" >Lab Wilayah</a></li>
-                        <li><a href="#" >Lab Perencanaan</a></li>
+                    <h1 ><a href="<?php echo base_url() ?>">
+						<strong>Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
+                    <ul class="sf-menu sf-navbar">
+                        <li><a class="sf-with-ul" href="#">Lab Kota</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+                        <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+						</li>
+						<li><a class="sf-with-ul" href="#" >Lab Perencanaan</a>
+						<ul>
+							<li><a href="#">Info1</a></li>
+							<li><a href="#aba">Info2</a></li>
+						</ul>
+						</li>
                     </ul>
                     <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
                 </div>
@@ -161,14 +191,17 @@
             <div class="container">
                 <div class="clearfix">
                     <div class="grid9 first">
-                        <h2><strong><?=$judul?></strong></h2>
-                        <p><?=$isi?></p>
+                        <h2><strong>Struktur Organisasi</strong></h2>
+                        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat pellentesque erat, at pretium libero ultricies et. Integer molestie tempus odio, quis semper turpis lobortis a. Curabitur dui leo, condimentum eu gravida id, tempus eget tellus. Aliquam erat volutpat. Vivamus et eros at sem tempus scelerisque at non diam. Curabitur ut lobortis turpis. Curabitur volutpat elementum purus sed fringilla. Vestibulum in arcu nibh. In gravida vehicula tellus semper vestibulum. Sed tempus malesuada fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas tristique quam et urna dictum consectetur. Ut ac magna vel felis venenatis tincidunt sed sed nulla. Integer semper pulvinar commodo.
+                            Donec nibh ante, consectetur sed egestas ultricies, porttitor ac magna. In pulvinar pulvinar ipsum non auctor. Quisque ac massa lectus. In tempus, ligula vel faucibus ullamcorper, mauris libero sodales justo, id laoreet quam nunc sed sapien. Nullam rhoncus, libero et cursus congue, leo sem elementum turpis, eu varius lacus velit id nibh. Integer vel lorem sit amet purus tincidunt sollicitudin ac non orci. Pellentesque accumsan vulputate velit, sit amet feugiat nibh mattis quis. Vestibulum dolor ligula, luctus ut pretium vel, luctus at elit. Nulla facilisi.
+                            Quisque rutrum ipsum vel nunc varius quis pellentesque lectus varius. Nulla laoreet risus lorem. Cras eu lectus a turpis blandit condimentum non nec odio. Maecenas dui erat, cursus in ultricies a, luctus sed magna. Quisque nisi tortor, faucibus vitae porttitor a, fermentum non felis. Vivamus tempus fermentum imperdiet. Nunc ultrices hendrerit metus at varius. Ut in molestie eros. Integer sit amet dolor non massa suscipit ultrices. Donec egestas massa eget enim suscipit volutpat. Donec dui augue, fermentum pharetra blandit vitae, viverra ut lectus. Sed a erat vitae nibh auctor dictum et laoreet nulla.
+                            </p>
                     </div>
                     <div class="grid3">
-<ul class="categories">
+						<ul class="categories">
                         <div class="arrowlistmenu">
 
-                            <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
+                            <h3 class="menuheader " ><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
@@ -200,7 +233,7 @@
                                 <li><a href="<? echo base_url() ?>index.php/berita_c">Berita</a></li>
                             </ul>
                         </div>
-</ul>
+						</ul>
                     </div>
                 </div>
             </div>
@@ -241,7 +274,7 @@
     <footer>
         <div class="container">
             <div class="wrapper">
-                <div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div>
+                <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
                 <address class="phone">
         	Hubungi Kami di <strong>1-123-456-7890</strong>
                 </address>
