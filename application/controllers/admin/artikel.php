@@ -15,44 +15,47 @@ class Artikel extends CI_Controller {
 //end Main
     //load Grid
     function index() {
-        $colModel['no'] = array('No', 30, TRUE, 'center', 0);
-        $colModel['Judul'] = array('Judul Artikel', 300, TRUE, 'center', 1);
-        $colModel['Homepage'] = array('Highlights Artikel', 150, TRUE, 'center', 0);
-        $colModel['Status'] = array('Status Artikel', 90, TRUE, 'center', 0);
-        $colModel['Detail'] = array('Preview', 40, TRUE, 'center', 0);
-        $colModel['Edit'] = array('Edit', 30, TRUE, 'center', 0);
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $colModel['no'] = array('No', 30, TRUE, 'center', 0);
+            $colModel['Judul'] = array('Judul Artikel', 300, TRUE, 'center', 1);
+            $colModel['Homepage'] = array('Highlights Artikel', 150, TRUE, 'center', 0);
+            $colModel['Status'] = array('Status Artikel', 90, TRUE, 'center', 0);
+            $colModel['Detail'] = array('Preview', 40, TRUE, 'center', 0);
+            $colModel['Edit'] = array('Edit', 30, TRUE, 'center', 0);
 
-        //$colModel['Delete'] = array('Delete',30,TRUE,'center',0);
-
-
-        $gridParams = array(
-            'width' => 'auto',
-            'height' => 300,
-            'rp' => 10,
-            'rpOptions' => '[5,10,15,20,25,40]',
-            'pagestat' => 'Menampilkan: {from} hingga {to} dari {total} data.',
-            'blockOpacity' => 0.5,
-            'title' => 'Daftar Artikel',
-            'showTableToggleBtn' => true
-        );
-
-        $buttons[] = array('tambah', 'add', 'spt_js');
-        $buttons[] = array('separator');
-        $buttons[] = array('hapus', 'delete', 'spt_js');
+            //$colModel['Delete'] = array('Delete',30,TRUE,'center',0);
 
 
-        // mengambil data dari file controler ajax pada method grid_berkas
-        $grid_js = build_grid_js('flex1', site_url("admin/artikel/grid_artikel"), $colModel, 'Judul', 'asc', $gridParams, $buttons);
+            $gridParams = array(
+                'width' => 'auto',
+                'height' => 300,
+                'rp' => 10,
+                'rpOptions' => '[5,10,15,20,25,40]',
+                'pagestat' => 'Menampilkan: {from} hingga {to} dari {total} data.',
+                'blockOpacity' => 0.5,
+                'title' => 'Daftar Artikel',
+                'showTableToggleBtn' => true
+            );
 
-        $data['added_js'] =
-                "<script type='text/javascript'>
+            $buttons[] = array('tambah', 'add', 'spt_js');
+            $buttons[] = array('separator');
+            $buttons[] = array('hapus', 'delete', 'spt_js');
+
+
+            // mengambil data dari file controler ajax pada method grid_berkas
+            $grid_js = build_grid_js('flex1', site_url("admin/artikel/grid_artikel"), $colModel, 'Judul', 'asc', $gridParams, $buttons);
+
+            $data['added_js'] =
+                    "<script type='text/javascript'>
 		function spt_js(com,grid)
 		{
 			if (com=='tambah')
 			{
-				location.href='" . base_url() . "index.php/admin/artikel/form'; 
+				location.href='" . base_url() . "index.php/admin/artikel/form';
 			}
-			
+
 			if (com=='hapus')
 				{
 				   if($('.trSelected',grid).length>0){
@@ -73,21 +76,22 @@ class Artikel extends CI_Controller {
 						}
 					} else {
 						return false;
-					} 
+					}
 				}
-				
-		} 
+
+		}
 		</script>
 		";
 
 
-        $data['js_grid'] = $grid_js;
+            $data['js_grid'] = $grid_js;
 
-        //rendering view
-        //$data['title'] = 'Daftar Peserta';
-        //$data['js_grid']=$grid_js;
-        $data['content'] = $this->load->view('admin/grid', $data, true);
-        $this->load->view('admin/main', $data);
+            //rendering view
+            //$data['title'] = 'Daftar Peserta';
+            //$data['js_grid']=$grid_js;
+            $data['content'] = $this->load->view('admin/grid', $data, true);
+            $this->load->view('admin/main', $data);
+        }
     }
 
     function grid_artikel() {
@@ -135,104 +139,136 @@ class Artikel extends CI_Controller {
     }
 
     function form() {
-        $data['status'] = 'new';
-        $data['failed'] = false;
-        $data['aa'] = '';
-        $data['content'] = $this->load->view('admin/form_artikel', $data, true);
-        $this->load->view('admin/main', $data);
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $data['status'] = 'new';
+            $data['failed'] = false;
+            $data['aa'] = '';
+            $data['content'] = $this->load->view('admin/form_artikel', $data, true);
+            $this->load->view('admin/main', $data);
+        }
     }
 
     function add() {
-        $data = array(
-            'JUDUL' => $this->input->post('judul'),
-            'ISI' => $this->input->post('isi'),
-            'STATUS' => 1
-        );
-        $this->artikel_model->insert($data);
-        redirect('admin/artikel');
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $data = array(
+                'JUDUL' => $this->input->post('judul'),
+                'ISI' => $this->input->post('isi'),
+                'STATUS' => 1
+            );
+            $this->artikel_model->insert($data);
+            redirect('admin/artikel');
+        }
     }
 
     public function edit($id) {
-        $data['status'] = 'edit';
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            $data['id_artikel'] = $artikel->id_artikel;
-            $data['judul'] = $artikel->judul;
-            $data['isi'] = $artikel->isi;
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $data['status'] = 'edit';
+            $record_artikel = $this->artikel_model->selectone($id);
+            foreach ($record_artikel->result() as $artikel) {
+                $data['id_artikel'] = $artikel->id_artikel;
+                $data['judul'] = $artikel->judul;
+                $data['isi'] = $artikel->isi;
+            }
+            //$data['status'] = 'new';
+            $data['failed'] = false;
+            $data['aa'] = '';
+            $data['content'] = $this->load->view('admin/form_artikel', $data, true);
+            $this->load->view('admin/main', $data);
         }
-        //$data['status'] = 'new';
-        $data['failed'] = false;
-        $data['aa'] = '';
-        $data['content'] = $this->load->view('admin/form_artikel', $data, true);
-        $this->load->view('admin/main', $data);
     }
 
     function update($id) {
-        $data = array(
-            'JUDUL' => $this->input->post('judul'),
-            'ISI' => $this->input->post('isi')
-        );
-        $this->artikel_model->update($id, $data);
-        redirect('admin/artikel');
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $data = array(
+                'JUDUL' => $this->input->post('judul'),
+                'ISI' => $this->input->post('isi')
+            );
+            $this->artikel_model->update($id, $data);
+            redirect('admin/artikel');
+        }
     }
 
     function update_status_aktif($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            if ($artikel->status == 0) {
-                $data = array(
-                    'STATUS' => 1
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            } else {
-                $data = array(
-                    'STATUS' => 0
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $record_artikel = $this->artikel_model->selectone($id);
+            foreach ($record_artikel->result() as $artikel) {
+                if ($artikel->status == 0) {
+                    $data = array(
+                        'STATUS' => 1
+                    );
+                    $this->artikel_model->update($id, $data);
+                    redirect('admin/artikel');
+                } else {
+                    $data = array(
+                        'STATUS' => 0
+                    );
+                    $this->artikel_model->update($id, $data);
+                    redirect('admin/artikel');
+                }
             }
         }
     }
 
     function update_status_high($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            if ($artikel->status == 1) {
-                $data = array(
-                    'STATUS' => 2
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
-            } else if ($artikel->status == 2) {
-                $data = array(
-                    'STATUS' => 1
-                );
-                $this->artikel_model->update($id, $data);
-                redirect('admin/artikel');
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $record_artikel = $this->artikel_model->selectone($id);
+            foreach ($record_artikel->result() as $artikel) {
+                if ($artikel->status == 1) {
+                    $data = array(
+                        'STATUS' => 2
+                    );
+                    $this->artikel_model->update($id, $data);
+                    redirect('admin/artikel');
+                } else if ($artikel->status == 2) {
+                    $data = array(
+                        'STATUS' => 1
+                    );
+                    $this->artikel_model->update($id, $data);
+                    redirect('admin/artikel');
+                }
             }
         }
     }
 
     function delete() {
-        $spt_ids_post_array = split(",", $this->input->post('items'));
-        //$this->load->model('pengolahan/data_model');
-        //$msg='akun berhasil dihapus';
-        foreach ($spt_ids_post_array as $index => $id) {
-            if (isset($id) && $id != '') {
-                $this->artikel_model->delete($id);
-            }//end if
-        }//end foreach
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $spt_ids_post_array = split(",", $this->input->post('items'));
+            //$this->load->model('pengolahan/data_model');
+            //$msg='akun berhasil dihapus';
+            foreach ($spt_ids_post_array as $index => $id) {
+                if (isset($id) && $id != '') {
+                    $this->artikel_model->delete($id);
+                }//end if
+            }//end foreach
+        }
     }
 
     function test($id) {
-        $record_artikel = $this->artikel_model->selectone($id);
-        foreach ($record_artikel->result() as $artikel) {
-            //$data['id_artikel'] = $artikel->id_artikel;
-            $data['judul'] = $artikel->judul;
-            $data['isi'] = $artikel->isi;
+        if ($this->session->userdata('username') == NULL) {
+            redirect('login');
+        } else {
+            $record_artikel = $this->artikel_model->selectone($id);
+            foreach ($record_artikel->result() as $artikel) {
+                //$data['id_artikel'] = $artikel->id_artikel;
+                $data['judul'] = $artikel->judul;
+                $data['isi'] = $artikel->isi;
+            }
+            $this->load->view('artikel', $data);
         }
-        $this->load->view('artikel', $data);
     }
 
 }
