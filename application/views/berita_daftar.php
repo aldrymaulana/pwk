@@ -195,46 +195,43 @@
                 <div class="clearfix">
                     <div class="grid9 first">
                         <h2><strong>Daftar Berita</strong></h2>
-                        
                         <style type="text/css">
-                            .judul{
-                                font-size:17px;
-                                font-weight: bold;
-                                text-align:center;
-                            }
-
-                            table, td, th .isitabel
+                            .isitabel
                             {
                                 border-width: 1px;
                                 border-spacing: 0;
                                 border-style: solid;
-                                border-color: black;
+                                border-color: #000000;
                                 padding:5px;
-                                border-collapse: collapse;
+                                border-collapse:collapse;
                             }
-                             a:link {color:#000000;}    /* unvisited link */
-                             a:visited {color:#000000;} /* visited link */
-                             a:hover {color:#000000;}   /* mouse over link */
-                             a:active {color:#000000;}  /* selected link */
+							th
+							{
+								background-color: #D4AA55;
+								border-color: #000000;
+							}
+                            
+							a.linkartikel:link {color:#000000;}
+							a.linkartikel:visited {color:#ff0000;}
+							a.linkartikel:hover {color:#ff0000;}
+							
                         </style>
 
                    
-                        <table border="5" class="isitabel" id="sub">
+                        <table border="5" class="isitabel">
                             <tr>
-                                <td class="isitabel" id="sub">No.</td>
-                                <td align="center" width="400" class="isitabel" id="sub">Judul Berita</td>
+                                <th width="25px">No.</th>
+                                <th width="700px">Judul Berita</th>
                             </tr>
                             <?php
                             $no=1;
                                 foreach ($artikel->result() as $artikel) {
                                     $id_artikel = $artikel->id_artikel;
                                     $judul_artikel = $artikel->judul;
-
-                                    
                                     echo '
                                         <tr>
-                                            <td class="isitabel" id="sub">'.$no.'.</td>
-                                            <td class="isitabel" id="sub"><a  href="'.base_url().'index.php/artikel/index/'.$id_artikel .'">'.$judul_artikel.'</a></td>
+                                            <td class="isitabel">'.$no.'.</td>
+                                            <td class="isitabel"><a class="linkartikel" href="'.base_url().'index.php/artikel/index/'.$id_artikel .'">'.$judul_artikel.'</a></td>
                                         </tr>
                                         ';
                                     $no++;
