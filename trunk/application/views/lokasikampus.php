@@ -223,12 +223,11 @@
                             <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?php echo base_url() ?>index.php/visimisi">Visi & Misi</a></li><li>
+                                <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
-                                <li><a href="#">Struktur Organisasi</a></li>
-                                <li><a href="<?php echo base_url() ?>index.php/kerjasama">Kerja Sama</a></li>
-                                <li><a href="<?php echo base_url()?>index.php/lokasikampus">Lokasi Kampus</a></li>
-                                <li><a href="#">Forum Tanya Jawab</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/struktur">Struktur Organisasi</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                             </ul>
 
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
