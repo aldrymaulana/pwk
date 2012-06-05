@@ -361,7 +361,6 @@ header h1 a {
 header h1 strong {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;;
     font-weight:bold;
-    color:#fff;
 }
 
 header h3 {
@@ -834,7 +833,7 @@ footer .phone strong {
 ========================================== */
 @media screen, projection, print {
     * {
-        font-family:verdana, arial, helvetica, sans-serif;
+        font-family:Verdana, Geneva, sans-serif;
         font-size:100.01%;
     }
     html {
