@@ -361,6 +361,7 @@ header h1 a {
 header h1 strong {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;;
     font-weight:bold;
+    color:#fff;
 }
 
 header h3 {

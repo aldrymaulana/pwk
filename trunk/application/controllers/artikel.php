@@ -21,7 +21,7 @@ class Artikel extends CI_Controller {
             $data['judul'] = $artikel->judul;
             $data['isi'] = $artikel->isi;
         }
-        $this->load->view('artikel', $data);
+        $this->load->view('berita', $data);
     }
 
 
