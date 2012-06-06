@@ -34,7 +34,7 @@ class upload_foto_dosen extends CI_Controller {
         $data['failed'] = false;
         $data['aa'] = '';
         $data['content'] = $this->load->view('admin/foto_dosen', $data, true);
-        $this->load->view('admin/main', $data);
+        $this->load->view('admin/main',$data);
     }
 
 }
