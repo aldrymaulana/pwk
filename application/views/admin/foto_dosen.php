@@ -25,16 +25,18 @@ $this->load->helper('html');
             //Setting Value Jika Prosedur yang dilakukan adalah prosedur input biasa.
             $value = array(
                 'id_foto' => "",
-                'nama_foto' => "",
-                'lokasi' => "",
+                'nama_dosen' => "",
+                'email' => "",
+                'bidang_ilmu' => "",
                 'act_form' => "admin/foto/upload/"
             );
 
             //Setting Value pada form Jika melakukan prosedur Edit terhadap data tertentu.
             if ($status == "edit") {
                 $value['id_foto'] = $id_foto;
-                $value['nama_foto'] = $nama_foto;
-                $value['lokasi'] = $lokasi;
+                $value['nama_dosen'] = $nama_dosen;
+                $value['email'] = $email;
+                $value['bidang_ilmu'] = $bidang_ilmu;
                 $value['act_form'] = "admin/foto/update/" . $value['id_foto'];
             }//end if
             ?>
@@ -48,16 +50,16 @@ $this->load->helper('html');
                             <div align="center">
                                 <table width="850" border="0">
                                     <tr>
-                                        <td width="80">Nama Foto</td>
-                                        <td width="208"><input name="nama_foto" type="text" size="50" value="<?= $value['nama_foto'] ?>"/></td>
-                                    </tr>
-                                    <tr>
                                         <td width="80">Nama Dosen</td>
-                                        <td width="208"><input name="nama_dosen" type="text" size="50" value="<?= $value['nama_dosen'] ?>"/></td>
+                                        <td width="208"><input name="nama_foto" type="text" size="50" value="<?= $value['nama_dosen'] ?>"/></td>
                                     </tr>
                                     <tr>
-                                        <td width="80">Bidang Minat</td>
-                                        <td width="208"><input name="nama_dosen" type="text" size="50" value="<?= $value['bidang_minat'] ?>"/></td>
+                                        <td width="80">email</td>
+                                        <td width="208"><input name="nama_dosen" type="text" size="50" value="<?= $value['email'] ?>"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="80">Bidang Ilmu</td>
+                                        <td width="208"><input name="bidang_minat" type="text" size="50" value="<?= $value['bidang_ilmu'] ?>"/></td>
                                     </tr>
                                     <tr>
                                         <td width="80">Foto</td>
