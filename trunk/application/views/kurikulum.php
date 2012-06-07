@@ -212,6 +212,7 @@
 							<li>Tahap Persiapan, sebanyak 36 sks</li>
     <li>Tahap Sarjana, sebanyak 108 sks</li>
 						</ul>
+						<p></p>
                     </div>
                     <div class="grid3">
 						<ul class="categories">
