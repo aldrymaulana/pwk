@@ -270,8 +270,7 @@
                             <h3 class="menuheader expandable">Berita & Agenda</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita">Berita</a></li>
-                                <li><a href="">Highlights</a></li>
-                                <li><a href="">Komentar</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita_high"">Highlights</a></li>
                             </ul>
                         </div>
 
