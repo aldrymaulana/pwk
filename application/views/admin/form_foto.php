@@ -18,7 +18,7 @@ $this->load->helper('html');
     <fieldset class="fieldset">
         <legend class="legend">
 
-		| Halaman Tambah Artikel|</legend>
+		| Halaman Tambah Foto|</legend>
 
         <div id="contentform" style="border:solid thin #BBBBBB; height:350px; background-color:#F9F9F9; -moz-border-radius: 5px;  padding-top:10px; padding-bottom:0.3px; margin-right:100px; margin-left:100px;">
 
@@ -61,12 +61,10 @@ $this->load->helper('html');
                                     <tr>
                                         <td width="80">Deskripsi Foto</td>
                                         <td width="208"><input name="deskripsi" type="text" size="50" value="<?= $value['deskripsi'] ?>"/></td>
-                                        <td><? echo form_error('nama_foto');?></td>
                                     </tr>
                                     <tr>
                                         <td width="80">Link Deskripsi Foto</td>
                                         <td width="208"><input name="link_deskripsi" type="text" size="50" value="<?= $value['link_deskripsi'] ?>"/></td>
-                                        <td><? echo form_error('nama_foto');?></td>
                                     </tr>
                                     
                                     <?

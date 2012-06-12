@@ -11,8 +11,8 @@ class dosen_c extends CI_Controller{
 
     }
     function  index(){
-        $test_foto = $this->dosen_model->get_dosen()->result();
-        $data['path_foto']=$test_foto;
+        
+        $data['data_dosen']= $this->dosen_model->get_dosen();
         $this->load->view('dosen',$data);
 
     }

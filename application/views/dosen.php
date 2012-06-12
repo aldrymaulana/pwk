@@ -188,46 +188,27 @@
                         <h1>Tenaga Pengajar</h1>
                         <!-- MovingBoxes Slider -->
                         <ul id="slider">
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img2.jpg" alt="picture">
-                                    <h2>Ir. Heru Purwadio, MSP.</h2>
-                                    <p>heru@urplan.its.ac.id</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img1.jpg" alt="picture">
-                                    <h2>Dr. Ir. Nanang Setiawan, SE., MS. (Purna Tugas)</h2>
-                                    <p>rekapola94@yahoo.com</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img3.jpg" alt="picture">
-                                    <h2>Dr. Ir. Rimadewi Supriharjo, MIP.</h2>
-                                    <p>rimadewi54@yahoo.com</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img4.jpg" alt="picture">
-                                    <h2>Dr. Ing. Ir. Haryo Sulistyarso</h2>
-                                    <p>tenggilis44@gmail.com</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img5.jpg" alt="picture">
-                                    <h2>Ir. Sardjito, MT.</h2>
-                                    <p>sarjito@urplan.its.ac.id</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img6.jpg" alt="picture">
-                                    <h2>Ir. Putu Rudy Setiawan, M.Sc.</h2>
-                                    <p>puturudy@yahoo.com</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img7.jpg" alt="picture">
-                                    <h2>Ir. Eko Budi Santoso, Lic.Rer.Reg.</h2>
-                                    <p>eko_budi@urplan.its.ac.id</p>
-                                </li>
-                                                            <li>
-                                    <img src="<?php echo base_url()?>/gallery/dosen/img8.jpg" alt="picture">
-                                    <h2>Adjie Pamungkas, ST. M.Dev.Plg.</h2>
-                                    <p>a_pamungkas2000@yahoo.com</p>
-                                </li>
+
+
+                            
+<!--                            start dosen-->
+
+
+                                <?php
+                                    
+                                    foreach ($data_dosen->result() as $dosen) {
+                                        $lokasi_foto = base_url().$dosen->foto;
+                                        echo
+                                        '
+                                        <li>
+                                            <img src="'.$lokasi_foto.'" alt="picture">
+                                            <h2>'.$dosen->nama_dosen.'</h2>
+                                            <p>'.$dosen->email.'</p>
+                                        </li>
+                                        ';
+                                        
+                                   }
+                                ?>
 
                         </ul> <!-- end Slider #1 -->
 

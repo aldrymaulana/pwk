@@ -13,7 +13,14 @@ class dosen_model extends CI_Model {
     }
 
     function insert($data) {
-        $this->db->insert('FOTO', $data);
+        $this->db->insert('DOSEN', $data);
+    }
+
+    function get_dosen() {
+        $this->db->select("*");
+        $this->db->from('DOSEN');
+        $query = $this->db->get();
+        return $query;
     }
 
     //list flexy
@@ -40,20 +47,20 @@ class dosen_model extends CI_Model {
 
     function delete($id) {
         $this->db->where('ID_DOSEN', $id);
-        $this->db->delete('dosen');
+        $this->db->delete('DOSEN');
     }
 
     function selectone($id) {
         $this->db->select("*");
-        $this->db->from('FOTO');
-        $this->db->where('ID_FOTO', $id);
+        $this->db->from('DOSEN');
+        $this->db->where('ID_DOSEN', $id);
         $query = $this->db->get();
         return $query;
     }
 
     function update($id, $data) {
-        $this->db->where('ID_FOTO', $id);
-        $this->db->update('FOTO', $data);
+        $this->db->where('ID_DOSEN', $id);
+        $this->db->update('DOSEN', $data);
     }
 
 }
