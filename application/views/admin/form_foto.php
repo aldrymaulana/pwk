@@ -28,6 +28,8 @@ $this->load->helper('html');
             $value = array(
                 'id_foto' => "",
                 'nama_foto' => "",
+                'deskripsi' => "",
+                'link_deskripsi' => "",
                 'lokasi' => "",
                 'act_form' => "admin/foto/upload/"
             );
@@ -36,6 +38,8 @@ $this->load->helper('html');
             if ($status == "edit") {
                 $value['id_foto'] = $id_foto;
                 $value['nama_foto'] = $nama_foto;
+                $value['deskripsi'] = $deskripsi;
+                $value['link_deskripsi'] = $link_deskripsi;
                 $value['lokasi'] = $lokasi;
                 $value['act_form'] = "admin/foto/update/" . $value['id_foto'];
             }//end if
@@ -51,7 +55,17 @@ $this->load->helper('html');
                                 <table width="850" border="0">
                                     <tr>
                                         <td width="80">Nama Foto</td>
-                                        <td width="208"><input name="nama_foto" type="text" size="50" value="<?= $value['nama_foto'] ?>"/></td>
+                                        <td width="208"><input name="nama_foto" type="text" size="50" value="<?= $value['deskripsi'] ?>"/></td>
+                                        <td><? echo form_error('nama_foto');?></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="80">Deskripsi Foto</td>
+                                        <td width="208"><input name="deskripsi" type="text" size="50" value="<?= $value['link_deskripsi'] ?>"/></td>
+                                        <td><? echo form_error('nama_foto');?></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="80">Link Deskripsi Foto</td>
+                                        <td width="208"><input name="link_deskripsi" type="text" size="50" value="<?= $value['nama_foto'] ?>"/></td>
                                         <td><? echo form_error('nama_foto');?></td>
                                     </tr>
                                     

@@ -203,32 +203,30 @@
         <div class="container">
             <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-
-                
-
-
-
                     <?php
+                        $counter = 1;
                         foreach ($foto_slide->result() as $foto) {
                             $lokasi_foto = base_url().$foto->lokasi;
                             echo
                             '
                                 <img width="1000" height="340" src="'.$lokasi_foto.'" data-thumb="'.$lokasi_foto.'" alt="" title="#htmlcaption2"/>
                             ';
+                            echo
+                            '
+                                <div id="htmlcaption'.$counter.'" class="nivo-html-caption">
+                                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                                </div>
+                            ';
+                            $counter++;
                        }
                     ?>
-<!--                woco-->
-                
-
-                
 <!--                end of image-->
             </div>
-            <div id="htmlcaption1" class="nivo-html-caption">
-                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
-            </div>
-			<div id="htmlcaption2" class="nivo-html-caption">
+            
+                
+<!--            <div id="htmlcaption2" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption. 
-            </div>
+            </div>-->
         </div>
         </div>
     </div>

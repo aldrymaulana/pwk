@@ -20,6 +20,9 @@ class Foto extends CI_Controller {
             redirect('login');
         } else {
             $colModel['no'] = array('No', 30, TRUE, 'center', 0);
+            $colModel['Nama_Foto'] = array('Nama Foto', 150, TRUE, 'center', 1);
+            $colModel['Deskripsi_Foto'] = array('Deskripsi Foto', 200, TRUE, 'center', 1);
+            $colModel['Link_Deskripsi_Foto'] = array('Link Deskripsi Foto', 200, TRUE, 'center', 1);
             $colModel['Nama_Foto'] = array('Nama Foto', 200, TRUE, 'center', 1);
             $colModel['Lokasi'] = array('Link Foto', 300, TRUE, 'left', 0);
             $colModel['Slide'] = array('Set Foto Slide', 90, TRUE, 'center', 0);
@@ -96,7 +99,7 @@ class Foto extends CI_Controller {
     }
 
     function grid_foto() {
-        $valid_fields = array('Nama_Foto', 'Lokasi');
+        $valid_fields = array('Nama_Foto', 'Lokasi', 'Deskripsi_Foto', 'Link_Deskripsi_Foto');
         $this->flexigrid->validate_post('Nama_Foto', 'asc', $valid_fields);
         $records = $this->foto_model->get_data_foto();
         $this->output->set_header($this->config->item('json_header'));
@@ -117,6 +120,8 @@ class Foto extends CI_Controller {
                 $row->id_foto,
                 $no = $no + 1,
                 $row->nama_foto,
+                $row->deskripsi,
+                $row->link_deskripsi,
                 $lokasi_foto,
                 //remove a hreff
                 '<a href=\'' . base_url() . 'index.php/admin/foto/status_slide/' . $row->id_foto . '\'><img border=\'0\' src=\'' . $status_aktif . '\'></a> ',
@@ -184,6 +189,8 @@ class Foto extends CI_Controller {
 
                     $data = array(
                         'NAMA_FOTO' => $this->input->post('nama_foto'),
+                        'DESKRIPSI' => $this->input->post('deskripsi'),
+                        'LINK_DESKRIPSI' => $this->input->post('link_deskripsi'),
                         'LOKASI' => $path[0],
                         'STATUS_SLIDE' => 0
                     );
@@ -203,6 +210,8 @@ class Foto extends CI_Controller {
             foreach ($record_artikel->result() as $artikel) {
                 $data['id_foto'] = $artikel->id_foto;
                 $data['nama_foto'] = $artikel->nama_foto;
+                $data['deskripsi'] = $artikel->deskripsi;
+                $data['link_deskripsi'] = $artikel->link_deskripsi;
                 $data['lokasi'] = base_url() . $artikel->lokasi;
             }
             //$data['status'] = 'new';
@@ -237,7 +246,9 @@ class Foto extends CI_Controller {
                     //return $path;
 
                     $data = array(
-                        'NAMA_FOTO' => $this->input->post('nama_foto')
+                        'NAMA_FOTO' => $this->input->post('nama_foto'),
+                        'DESKRIPSI' => $this->input->post('deskripsi'),
+                        'LINK_DESKRIPSI' => $this->input->post('link_deskripsi')
                     );
                     $this->foto_model->update($id, $data);
                     redirect('admin/foto');
@@ -250,6 +261,8 @@ class Foto extends CI_Controller {
 
                     $data = array(
                         'NAMA_FOTO' => $this->input->post('nama_foto'),
+                        'DESKRIPSI' => $this->input->post('deskripsi'),
+                        'LINK_DESKRIPSI' => $this->input->post('link_deskripsi'),
                         'LOKASI' => $path[0]
                     );
                     $this->foto_model->update($id, $data);
