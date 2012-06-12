@@ -37,7 +37,7 @@ $this->load->helper('html'); ?>
         <p class="menu_head">Dosen</p>
         <div class="menu_body">
                 <?= anchor(site_url('admin/upload_foto_dosen/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Tambah Biodata Dosen'); ?>
-                <?= anchor(site_url('admin/upload_foto_dosen/form'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Biodata Dosen'); ?>
+                <?= anchor(site_url('admin/list_foto_dosen'),img(array('src'=>'images/main/77.png','border'=>'0','alt'=>'')).' Daftar Biodata Dosen'); ?>
         </div>
         
         <p class="menu_head">Pengelolaan Foto</p>
