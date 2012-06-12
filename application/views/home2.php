@@ -207,14 +207,17 @@
                         $counter = 1;
                         foreach ($foto_slide->result() as $foto) {
                             $lokasi_foto = base_url().$foto->lokasi;
+                            $deskripsi = $foto->deskripsi;
+                            $link = $foto->link_deskripsi;
                             echo
                             '
-                                <img width="1000" height="340" src="'.$lokasi_foto.'" data-thumb="'.$lokasi_foto.'" alt="" title="#htmlcaption2"/>
+                                <img width="1000" height="340" src="'.$lokasi_foto.'" data-thumb="'.$lokasi_foto.'" alt="" title="#htmlcaption'.$counter.'"/>
                             ';
                             echo
                             '
                                 <div id="htmlcaption'.$counter.'" class="nivo-html-caption">
-                                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                                    
+                                    <a href="'.$link.'">'.$deskripsi.'</a>
                                 </div>
                             ';
                             $counter++;
