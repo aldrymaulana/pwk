@@ -190,25 +190,6 @@
                     <div class="grid9 first">
 						<h1>Mahasiswa</h1>
 						<!-- Content Here -->
-							
-		<!-- This is all the XHTML ImageFlow needs -->
-		<div id="myImageFlow" class="imageflow">
-			<img src="<? echo base_url() ?>images/img/img1.png" longdesc="<? echo base_url() ?>images/img/img1.png" width="400" height="300" alt="Image 1" />
-			<img src="<? echo base_url() ?>images/img/img2.png" longdesc="<? echo base_url() ?>images/img/img2.png" width="300" height="400" alt="Image 2" />
-			<img src="<? echo base_url() ?>images/img/img3.png" longdesc="<? echo base_url() ?>images/img/img3.png" width="400" height="400" alt="Image 3" />
-			<img src="<? echo base_url() ?>images/img/img1.png" longdesc="<? echo base_url() ?>images/img/img1.png" width="400" height="300" alt="Image 4" />
-			<img src="<? echo base_url() ?>images/img/img2.png" longdesc="<? echo base_url() ?>images/img/img2.png" width="300" height="400" alt="Image 5" />
-			<img src="<? echo base_url() ?>images/img/img1.png" longdesc="<? echo base_url() ?>images/img/img1.png" width="400" height="300" alt="Image 6" />
-			<img src="<? echo base_url() ?>images/img/img2.png" longdesc="<? echo base_url() ?>images/img/img2.png" width="300" height="400" alt="Image 7" />
-			<img src="<? echo base_url() ?>images/img/img3.png" longdesc="<? echo base_url() ?>images/img/img3.png" width="400" height="400" alt="Image 8" />
-			<img src="<? echo base_url() ?>images/img/img1.png" longdesc="<? echo base_url() ?>images/img/img1.png" width="400" height="300" alt="Image 9" />
-			<img src="<? echo base_url() ?>images/img/img1.png" longdesc="<? echo base_url() ?>images/img/img1.png" width="400" height="300" alt="Image 10" />
-			<img src="<? echo base_url() ?>images/img/img2.png" longdesc="<? echo base_url() ?>images/img/img2.png" width="300" height="400" alt="Image 11" />
-			<img src="<? echo base_url() ?>images/img/img3.png" longdesc="<? echo base_url() ?>images/img/img3.png" width="400" height="400" alt="Image 12" />
-			<img src="<? echo base_url() ?>images/img/img2.png" longdesc="<? echo base_url() ?>images/img/img2.png" width="300" height="400" alt="Image 13" />
-			<img src="<? echo base_url() ?>images/img/img3.png" longdesc="<? echo base_url() ?>images/img/img3.png" width="400" height="400" alt="Image 14" />
-			<img src="<? echo base_url() ?>images/img/img3.png" longdesc="<? echo base_url() ?>images/img/img3.png" width="400" height="400" alt="Image 15" />
-		</div>
 
 
                     </div>

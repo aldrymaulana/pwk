@@ -28,7 +28,7 @@ $this->load->helper('html');
                 'nama_dosen' => "",
                 'email' => "",
                 'bidang_ilmu' => "",
-                'act_form' => "admin/foto/upload/"
+                'foto_dosen' => ""
             );
 
             //Setting Value pada form Jika melakukan prosedur Edit terhadap data tertentu.
@@ -37,10 +37,10 @@ $this->load->helper('html');
                 $value['nama_dosen'] = $nama_dosen;
                 $value['email'] = $email;
                 $value['bidang_ilmu'] = $bidang_ilmu;
-                $value['act_form'] = "admin/foto/update/" . $value['id_foto'];
+                $value['foto_dosen'] = $foto_dosen;
             }//end if
             ?>
-            <?= form_open_multipart($value["act_form"]); ?>
+           
             <!-- End value -->
 
             <table width="847" border="0" bordercolor="#F0F0F0">
@@ -63,7 +63,7 @@ $this->load->helper('html');
                                     </tr>
                                     <tr>
                                         <td width="80">Foto</td>
-                                        <td width="208"> &nbsp;</td>
+                                        <td width="208"><input name="foto_dosen" type="text" size="50" value="<?= $value['foto_dosen'] ?>"/></td>
                                     </tr>
 
                                     <tr>
