@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class list_foto_dosen extends CI_Controller {
+class Dosen extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -21,10 +21,10 @@ class list_foto_dosen extends CI_Controller {
         } else {
             $colModel['no'] = array('No', 30, TRUE, 'center', 0);
             $colModel['Foto'] = array('Foto Dosen', 60, TRUE, 'center', 0);
-            $colModel['Nama_Dosen'] = array('Nama Dosen', 200, TRUE, 'left', 1);
-            $colModel['Bidang_Ilmu'] = array('Bidang Ilmu', 300, TRUE, 'left', 0);
-            $colModel['Email'] = array('Email', 150, TRUE, 'center', 0);
-            $colModel['Link'] = array('Link', 60, TRUE, 'center', 0);
+            $colModel['Nama_Dosen'] = array('Nama Dosen', 250, TRUE, 'center', 1);
+            $colModel['Bidang_Ilmu'] = array('Bidang Ilmu', 300, TRUE, 'left', 1);
+            $colModel['Email'] = array('Email', 160, TRUE, 'center', 1);
+            $colModel['Link'] = array('Link', 150, TRUE, 'center', 0);
             $colModel['Edit'] = array('Edit', 30, TRUE, 'center', 0);
 
             //$colModel['Delete'] = array('Delete',30,TRUE,'center',0);
@@ -47,7 +47,7 @@ class list_foto_dosen extends CI_Controller {
 
 
             // mengambil data dari file controler ajax pada method grid_berkas
-            $grid_js = build_grid_js('flex1', site_url("admin/list_foto_dosen/grid_foto"), $colModel, 'Nama_Dosen', 'asc', $gridParams, $buttons);
+            $grid_js = build_grid_js('flex1', site_url("admin/dosen/grid_foto"), $colModel, 'Nama_Dosen', 'asc', $gridParams, $buttons);
 
             $data['added_js'] =
                     "<script type='text/javascript'>
@@ -55,13 +55,13 @@ class list_foto_dosen extends CI_Controller {
         {
                 if (com=='tambah')
                 {
-                        location.href='" . base_url() . "index.php/admin/foto/form';
+                        location.href='" . base_url() . "index.php/admin/dosen/form';
                 }
 
                 if (com=='hapus')
                         {
                            if($('.trSelected',grid).length>0){
-                                   if(confirm('Anda yakin menghapus ' + $('.trSelected',grid).length + ' foto?')){
+                                   if(confirm('Anda yakin menghapus ' + $('.trSelected',grid).length + ' dosen?')){
                                                 var items = $('.trSelected',grid);
                                                 var itemlist ='';
                                                 for(i=0;i<items.length;i++){
@@ -69,7 +69,7 @@ class list_foto_dosen extends CI_Controller {
                                                 }
                                                 $.ajax({
                                                    type: 'POST',
-                                                   url: '" . base_url() . "index.php/admin/foto/delete" . "',
+                                                   url: '" . base_url() . "index.php/admin/dosen/delete" . "',
                                                    data: 'items='+itemlist,
                                                    success: function(data){
                                                         $('#flex1').flexReload();
@@ -97,7 +97,7 @@ class list_foto_dosen extends CI_Controller {
     }
 
     function grid_foto() {
-        $valid_fields = array('Foto','Nama_Dosen', 'Bidang_Ilmu','Email', 'Link');
+        $valid_fields = array('Foto', 'Nama_Dosen', 'Bidang_Ilmu', 'Email', 'Link');
         $this->flexigrid->validate_post('Foto', 'asc', $valid_fields);
         $records = $this->dosen_model->get_data_dosen();
         $this->output->set_header($this->config->item('json_header'));
@@ -107,17 +107,18 @@ class list_foto_dosen extends CI_Controller {
         foreach ($records['records']->result() as $row) {
             $status_aktif = "";
             $lokasi_foto = base_url() . $row->foto;
+            $new_tab = 'target="_blank"';
 
             $record_items[] = array(
                 $row->id_dosen,
                 $no = $no + 1,
-                $row->foto,
+                //$row->foto,
+                '<a href= \'' . $lokasi_foto . '\' ' . $new_tab . '><img border=\'0\' src=\'' . $lokasi_foto . '\' height=\'50\'></a> ',
                 $row->nama_dosen,
                 $row->bidang_ilmu,
                 $row->email,
                 $row->link,
-                '<a href=\'' . base_url() . 'index.php/admin/list_foto_dosen/edit/' . $row->id_dosen . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
-                             
+                '<a href=\'' . base_url() . 'index.php/admin/dosen/edit/' . $row->id_dosen . '\'><img border=\'0\' src=\'' . base_url() . 'images/grid/edit.png\'></a> '
             );
         }
 
@@ -146,7 +147,7 @@ class list_foto_dosen extends CI_Controller {
             $data['status'] = 'new';
             $data['failed'] = false;
             $data['aa'] = '';
-            $data['content'] = $this->load->view('admin/form_foto', $data, true);
+            $data['content'] = $this->load->view('admin/form_dosen', $data, true);
             $this->load->view('admin/main', $data);
         }
     }
@@ -159,7 +160,7 @@ class list_foto_dosen extends CI_Controller {
                 $this->form();
             } else {
                 $field_name = 'foto';
-                $config['upload_path'] = "file";
+                $config['upload_path'] = "gallery\dosen";
                 $config['allowed_types'] = '*';
                 //$config['allowed_types'] ='jpg';
 
@@ -174,17 +175,19 @@ class list_foto_dosen extends CI_Controller {
                 } else {
                     $data = $this->upload->data($field_name); //get file_name
                     $file_name = $data['file_name'];
-                    $path[0] = 'file/' . $file_name;
+                    $path[0] = 'gallery/dosen/' . $file_name;
                     $path[1] = $file_name;
                     //return $path;
 
                     $data = array(
-                        'NAMA_FOTO' => $this->input->post('nama_foto'),
-                        'LOKASI' => $path[0],
-                        'STATUS_SLIDE' => 0
+                        'NAMA_DOSEN' => $this->input->post('nama'),
+                        'EMAIL' => $this->input->post('email'),
+                        'BIDANG_ILMU' => $this->input->post('bidang_ilmu'),
+                        'LINK' => $this->input->post('link'),
+                        'FOTO' => $path[0]
                     );
                     $this->dosen_model->insert($data);
-                    redirect('admin/foto');
+                    redirect('admin/dosen');
                 }
             }
         }
@@ -197,14 +200,17 @@ class list_foto_dosen extends CI_Controller {
             $data['status'] = 'edit';
             $record_artikel = $this->dosen_model->selectone($id);
             foreach ($record_artikel->result() as $artikel) {
-                $data['id_foto'] = $artikel->id_foto;
-                $data['nama_foto'] = $artikel->nama_foto;
-                $data['lokasi'] = base_url() . $artikel->lokasi;
+                $data['id_dosen'] = $artikel->id_dosen;
+                $data['nama_dosen'] = $artikel->nama_dosen;
+                $data['email'] = $artikel->email;
+                $data['bidang_ilmu'] = $artikel->bidang_ilmu;
+                $data['link'] = $artikel->link;
+                $data['foto'] = base_url() . $artikel->foto;
             }
             //$data['status'] = 'new';
             $data['failed'] = false;
             $data['aa'] = '';
-            $data['content'] = $this->load->view('admin/form_foto', $data, true);
+            $data['content'] = $this->load->view('admin/form_dosen', $data, true);
             $this->load->view('admin/main', $data);
         }
     }
@@ -217,7 +223,7 @@ class list_foto_dosen extends CI_Controller {
                 $this->edit($id);
             } else {
                 $field_name = 'foto';
-                $config['upload_path'] = "file";
+                $config['upload_path'] = "gallery\dosen";
                 $config['allowed_types'] = '*';
                 //$config['allowed_types'] ='jpg';
 
@@ -228,34 +234,39 @@ class list_foto_dosen extends CI_Controller {
                 if (!$files) {
                     $data = $this->upload->data($field_name); //get file_name
                     $file_name = $data['file_name'];
-                    $path[0] = 'file/' . $file_name;
+                    $path[0] = 'gallery/dosen/' . $file_name;
                     $path[1] = $file_name;
                     //return $path;
 
                     $data = array(
-                        'NAMA_FOTO' => $this->input->post('nama_foto')
+                        'NAMA_DOSEN' => $this->input->post('nama'),
+                        'EMAIL' => $this->input->post('email'),
+                        'BIDANG_ILMU' => $this->input->post('bidang_ilmu'),
+                        'LINK' => $this->input->post('link')
                     );
                     $this->dosen_model->update($id, $data);
-                    redirect('admin/foto');
+                    redirect('admin/dosen');
                 } else {
                     $data = $this->upload->data($field_name); //get file_name
                     $file_name = $data['file_name'];
-                    $path[0] = 'file/' . $file_name;
+                    $path[0] = 'gallery/dosen/' . $file_name;
                     $path[1] = $file_name;
                     //return $path;
 
                     $data = array(
-                        'NAMA_FOTO' => $this->input->post('nama_foto'),
-                        'LOKASI' => $path[0]
+                        'NAMA_DOSEN' => $this->input->post('nama'),
+                        'EMAIL' => $this->input->post('email'),
+                        'BIDANG_ILMU' => $this->input->post('bidang_ilmu'),
+                        'LINK' => $this->input->post('link'),
+                        'FOTO' => $path[0]
                     );
                     $this->dosen_model->update($id, $data);
-                    redirect('admin/foto');
+                    redirect('admin/dosen');
                 }
             }
         }
     }
 
-   
     function delete() {
         if ($this->session->userdata('username') == NULL) {
             redirect('login');
@@ -273,7 +284,9 @@ class list_foto_dosen extends CI_Controller {
 
     function cek_validasi() {
         // Setting Rules
-        $this->form_validation->set_rules('nama_foto', 'Nama Foto', 'required');
+        $this->form_validation->set_rules('nama', 'Nama Dosen', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('bidang_ilmu', 'Bidang Ilmu', 'required');
 
         //Setting Error Message
         $this->form_validation->set_message('required', 'Field %s harus diisi.');
