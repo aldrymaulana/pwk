@@ -157,7 +157,7 @@
     <header>
         <nav>
         
-            <<div class="containerhead">
+            <div class="containerhead">
             <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
@@ -238,9 +238,9 @@
                                         echo
                                         '
                                         <li>
-                                            <img src="'.$lokasi_foto.'" alt="picture">
-                                            <h2>'.$dosen->nama_dosen.'</h2>
-                                            <p>'.$dosen->email.'</p>
+                                            <center><img src="'.$lokasi_foto.'" alt="picture" width="200px" height="240px"></center>
+                                            <h3 style="text-align:justify;">'.$dosen->nama_dosen.'</h3>
+                                            <p style="text-align:justify;font-size:12px;">'.$dosen->email.'</p>
                                         </li>
                                         ';
                                         
