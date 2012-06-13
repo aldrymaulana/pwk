@@ -175,20 +175,23 @@
                 <ul class="sf-menu sf-navbar">
                     <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
-							<li><a href="#">Info1</a></li>
-							<li><a href="#aba">Info2</a></li>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
 						</ul>
 					</li>
                     <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
 						<ul>
-							<li><a href="#">Info1</a></li>
-							<li><a href="#aba">Info2</a></li>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
 						</ul>
 					</li>
-                    <li><a class="sf-with-ul" href="#" >Lab Perencanaan</a>
+                    <li><a class="sf-with-ul" href="#" >Lab Komputasi</a>
 						<ul>
-							<li><a href="#">Info1</a></li>
-							<li><a href="#aba">Info2</a></li>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
 						</ul>
 					</li>
                 </ul>
@@ -271,7 +274,7 @@
                             <h3 class="menuheader expandable">Berita & Agenda</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita">Berita</a></li>
-                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita_high"">Highlights</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita_high">Highlights</a></li>
                             </ul>
                         </div>
 
