@@ -23,6 +23,8 @@
 }
 .grid3 {
 	width: 181px;
+	border-style:double;
+	border-color:#000;
 }
 .grid4 {
 	width: 306px;

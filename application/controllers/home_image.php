@@ -22,7 +22,7 @@ class home_image extends CI_Controller {
     function get_image($image_slider) {
         $this->db->select('*');
         $this->db->from('gamber');
-        return $this->db - get();
+        return $this->db->get();
     }
 
 }

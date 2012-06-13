@@ -112,47 +112,63 @@
     <header>
         <nav>
         
-            <div class="container">
-            
-<div class="header" align="left" style="color: #D4D0C8; position: absolute">
-<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
-                        <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
+            <div class="containerhead">
+            <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
+                <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
+                    <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
+                    <param name="quality" value="high">
+                    <param name="wmode" value="opaque">
+                    <param name="swfversion" value="8.0.35.0">
+                    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don�t want users to see the prompt. -->
+                    <param name="expressinstall" value="Scripts/expressInstall.swf">
+                    <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                    <!--[if !IE]>-->
+                    <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="137.5" height="100">
+                        <!--<![endif]-->
                         <param name="quality" value="high">
                         <param name="wmode" value="opaque">
                         <param name="swfversion" value="8.0.35.0">
-                        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
                         <param name="expressinstall" value="Scripts/expressInstall.swf">
-                        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                        <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                        <div>
+                            <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                        </div>
                         <!--[if !IE]>-->
-                        <object type="application/x-shockwave-flash" data="<?php echo base_url() ?>gallery/logo.swf" width="110" height="80">
-                            <!--<![endif]-->
-                            <param name="quality" value="high">
-                            <param name="wmode" value="opaque">
-                            <param name="swfversion" value="8.0.35.0">
-                            <param name="expressinstall" value="Scripts/expressInstall.swf">
-                            <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
-                            <div>
-                                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-                                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
-                            </div>
-                            <!--[if !IE]>-->
-                        </object>
-                        <!--<![endif]-->
                     </object>
-                </div>
-                <div class="wrapper" style="padding-left: 120px">
-
-                    <h1 ><a href="<? echo base_url() ?>"><strong>
-                                Jurusan Perencanaan Wilayah dan Kota</strong></a></h1>
-
-                    <ul>
-                        <li><a href="#" class="current">Lab Kota</a></li>
-                        <li><a href="#" >Lab Wilayah</a></li>
-                        <li><a href="#" >Lab Perencanaan</a></li>
-                    </ul>
-                    <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
-                </div>
+                    <!--<![endif]-->
+                </object>
             </div>
+            <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
+
+                <h1 ><a href="<?php echo base_url() ?>"><strong>
+                            Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
+                <ul class="sf-menu sf-navbar">
+                    <li><a class="sf-with-ul" href="#">Lab Kota</a>
+						<ul>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
+						</ul>
+					</li>
+                    <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
+						<ul>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
+						</ul>
+					</li>
+                    <li><a class="sf-with-ul" href="#" >Lab Komputasi</a>
+						<ul>
+							<li><a href="#">Profil</a></li>
+							<li><a href="#aba">Anggota</a></li>
+							<li><a href="#aba">Riset dan Publikasi</a></li>
+						</ul>
+					</li>
+                </ul>
+                <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
+            </div>
+        </div>
         </nav>
 
     </header>
@@ -165,10 +181,9 @@
                         <p><?=$isi?></p>
                     </div>
                     <div class="grid3">
-<ul class="categories">
+						<ul class="categories">
                         <div class="arrowlistmenu">
-
-                            <h3 class="menuheader " ><a href="<? echo base_url() ?>">Home</a></h3>
+                            <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
@@ -177,30 +192,34 @@
                                 <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                             </ul>
-
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
-                                <li><a href="#">Dosen</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
                                 <li><a href="#">Karyawan</a></li>
-                                <li><a href="#">Mahasiswa</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/mhs_c">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
                             </ul>
-
                             <h3 class="menuheader expandable">Sumber Daya</h3>
                             <ul class="categoryitems">
-                                <li><a href="" >Fasilitas</a></li>
-                                <li><a href="">Kurikulum</a></li>
+                                <li><a href="">Fasilitas</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/kurikulum">Kurikulum</a></li>
                                 <li><a href="">Jurnal</a></li>
                                 <li><a href="">Media</a></li>
+                                <li><a href="">Budaya Kampus</a></li>
                                 <li><a href="">Ormawa</a></li>
                             </ul>
-                            <h3 class="menuheader expandable">Lainnya</h3>
+                            <h3 class="menuheader expandable">Jalur Penerimaan</h3>
                             <ul class="categoryitems">
-                                <li><a href="" >Jalur Penerimaan</a></li>
-                                <li><a href="<? echo base_url() ?>index.php/berita_c">Berita</a></li>
+                                <li><a href="http://smits.its.ac.id/">SMITS</a></li>
+                            </ul>
+                            <h3 class="menuheader expandable">Berita & Agenda</h3>
+                            <ul class="categoryitems">
+                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita">Berita</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/artikel/daftar_berita_high">Highlights</a></li>
                             </ul>
                         </div>
-</ul>
+
+                    </ul>
                     </div>
                 </div>
             </div>
