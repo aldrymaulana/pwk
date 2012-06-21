@@ -110,8 +110,8 @@
                                     <li><a href="#">Anggota</a></li>
                                     <li><a href="#">Roadmap Riset</a></li>
                                     <li><a href="#">Riset + Publikasi</a></li>
-                                    <li><a href="#">Berita + Agenda</a></li>
-                                </ul>
+                                </ul>    
+                                
                             </li>
                             <li>
                                 <a href="#">Lab Perencanaan</a>
@@ -120,7 +120,6 @@
                                     <li><a href="#">Anggota</a></li>
                                     <li><a href="#">Roadmap Riset</a></li>
                                     <li><a href="#">Riset + Publikasi</a></li>
-                                    <li><a href="#">Berita + Agenda</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -130,8 +129,8 @@
                                     <li><a href="#">Anggota</a></li>
                                     <li><a href="#">Roadmap Riset</a></li>
                                     <li><a href="#">Riset + Publikasi</a></li>
-                                    <li><a href="#">Berita + Agenda</a></li>
-                                </ul>
+                                </ul>    
+                                
                             </li>
                         </ul>
                     </div>
