@@ -686,7 +686,27 @@
                 afterChange: function(){},
                 slideshowEnd: function(){},
         lastSlide: function(){},
-        afterLoad: function(){}
+        afterLoad: function(){
+		//round top left corner and bottom left corner of first slice
+    $('.nivo-slice').first().css({
+      '-webkit-border-bottom-left-radius': '10px',
+      '-webkit-border-top-left-radius': '10px',
+      '-moz-border-radius-bottomleft': '10px',
+      '-moz-border-radius-topleft': '10px',
+      'border-bottom-left-radius': '10px',
+      'border-top-left-radius': '10px'
+    });
+    
+   //round top right corner and bottom right corner of lastslice
+    $('.nivo-slice').last().css({
+      '-webkit-border-bottom-right-radius': '10px',
+      '-webkit-border-top-right-radius': '10px',
+      '-moz-border-radius-bottomright': '10px',
+      '-moz-border-radius-topright': '10px',
+      'border-bottom-right-radius': '10px',
+      'border-top-right-radius': '10px'
+    });
+		}
         };
         
         $.fn._reverse = [].reverse;
