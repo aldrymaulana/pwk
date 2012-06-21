@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Website Program Studi Perencanaan Wilayah Tata & Kota</title>
+	<title>Website Program Studi Perencanaan Wilayah dan Kota</title>
 
 	<!-- Link CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>public/css/flexigrid.css" media="screen, tv, projection" title="Default" />
@@ -98,7 +98,7 @@
 	<div id="logo"><img src="<?= base_url() ?>images/main/psb_online.png" width="100" height="80" border="0"></img></div>
 	<div id="logo_tut"><img src="<?= base_url() ?>images/main/tutwuri.png" width="94" height="80" border="0"></img></div>
 	<div id="header1">
-			Admin Panel Website Program Studi Perencanaan Wilayah Tata & Kota
+			Admin Panel Website Program Studi Perencanaan Wilayah dan Kota
 		</div>
 	</div>
 </div> 
