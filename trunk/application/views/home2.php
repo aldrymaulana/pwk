@@ -3,39 +3,39 @@
     <head>
         <title>Website Resmi Program Studi Perencanaan Wilayah dan Kota ITS</title>
         <meta charset="utf-8">
-		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" /> 
-		<link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish.css" />
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>css/superfish-navbar.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/grid.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
-		<link rel="stylesheet" href="<?php echo base_url() ?>css/default/default.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php echo base_url() ?>css/nivo-slider.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>css/default/default.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>css/nivo-slider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
         <link href="<?php echo base_url() ?>css/jquery-ui.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.4.2.min.js" ></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/ddaccordion.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-ui-1.8.5.custom.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url() ?>js/jquery.nivo.slider.js"></script>
-		<script src="<?php echo base_url() ?>js/hoverIntent.js"></script> 
-		<script src="<?php echo base_url() ?>js/superfish.js"></script>
-		 
-<script> 
- 
-    $(document).ready(function(){ 
-        $("ul.sf-menu").superfish({ 
-            pathClass:  'current' 
-        }); 
-    }); 
- 
-</script>
-<script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script>
+        <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.nivo.slider.js"></script>
+        <script src="<?php echo base_url() ?>js/hoverIntent.js"></script>
+        <script src="<?php echo base_url() ?>js/superfish.js"></script>
+
+        <script>
+
+            $(document).ready(function(){
+                $("ul.sf-menu").superfish({
+                    pathClass:  'current'
+                });
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+        </script>
         <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 
         <!--[if lt IE 9]>
@@ -143,7 +143,7 @@
     <nav>
         <div class="containerhead">
             <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
-                <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
+                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
                     <param name="movie" value="<?php echo base_url() ?>/gallery/logo.swf">
                     <param name="quality" value="high">
                     <param name="wmode" value="opaque">
@@ -174,26 +174,26 @@
                             Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul class="sf-menu sf-navbar">
                     <li><a class="sf-with-ul" href="#">Lab Kota</a>
-						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
-					</li>
+                        <ul>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#aba">Anggota</a></li>
+                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                        </ul>
+                    </li>
                     <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
-						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
-					</li>
+                        <ul>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#aba">Anggota</a></li>
+                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                        </ul>
+                    </li>
                     <li><a class="sf-with-ul" href="#" >Lab Komputasi</a>
-						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
-					</li>
+                        <ul>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#aba">Anggota</a></li>
+                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
             </div>
@@ -205,35 +205,35 @@
     <div class="top">
         <div class="container">
             <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
+                <div id="slider" class="nivoSlider">
                     <?php
-                        $counter = 1;
-                        foreach ($foto_slide->result() as $foto) {
-                            $lokasi_foto = base_url().$foto->lokasi;
-                            $deskripsi = $foto->deskripsi;
-                            $link = $foto->link_deskripsi;
-                            echo
-                            '
-                                <img width="1000" height="340" src="'.$lokasi_foto.'" data-thumb="'.$lokasi_foto.'" alt="" title="#htmlcaption'.$counter.'"/>
+                    $counter = 1;
+                    foreach ($foto_slide->result() as $foto) {
+                        $lokasi_foto = base_url() . $foto->lokasi;
+                        $deskripsi = $foto->deskripsi;
+                        $link = $foto->link_deskripsi;
+                        echo
+                        '
+                                <img width="1000" height="340" src="' . $lokasi_foto . '" data-thumb="' . $lokasi_foto . '" alt="" title="#htmlcaption' . $counter . '"/>
                             ';
-                            echo
-                            '
-                                <div id="htmlcaption'.$counter.'" class="nivo-html-caption">
-                                    
-                                    <a href="'.$link.'">'.$deskripsi.'</a>
+                        echo
+                        '
+                                <div id="htmlcaption' . $counter . '" class="nivo-html-caption">
+
+                                    <a href="' . $link . '">' . $deskripsi . '</a>
                                 </div>
                             ';
-                            $counter++;
-                       }
+                        $counter++;
+                    }
                     ?>
-<!--                end of image-->
+                    <!--                end of image-->
+                </div>
+
+
+                <!--            <div id="htmlcaption2" class="nivo-html-caption">
+                                <strong>This</strong> is an example of a <em>HTML</em> caption.
+                            </div>-->
             </div>
-            
-                
-<!--            <div id="htmlcaption2" class="nivo-html-caption">
-                <strong>This</strong> is an example of a <em>HTML</em> caption. 
-            </div>-->
-        </div>
         </div>
     </div>
     <div class="middle">
@@ -245,10 +245,10 @@
                             <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/visimisi">Visi & Misi</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/struktur">Struktur Organisasi</a></li>
-                                <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/kerjasama">Kerja Sama</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
@@ -286,12 +286,12 @@
                     <p align="justify"> Seiring dengan  pelaksanaan   otonomi daerah, kebutuhan sarjana Perencanaan Wilayah dan Kota juga   meningkat,  khususnya untuk memenuhi kebutuhan di Kawasan Timur&nbsp;   Indonesia. </p>
                     <p align="justify" >Pendidikan perencanaan  wilayah   dan kota yang dikembangkan di Program Studi Perencanaan Wilayah dan Kota    (PWK) FTSP-ITS, ditujukan untuk  mencetak sarjana PWK yang mempunyai   kompetensi sebagai perencana (planer) tata ruang wilayah  dan kota,   manajer pembangunankota dan pengembangan masyarakat, akademisi,   peneliti, dan membekali  lulusan yang ingin melanjtukan studi jenjang   yang lebih tinggi (S2 dan S3).</p>
                     <p align="justify" >Bidang kajian yang dikembangkan di Program Studi PWK meliputi :</p>
-                    <ul type="disc">	
-						<li>Perencanaan Wilayah  	      (Regional Planning)</li>
-						<li>Perencanaan dan Perancangan Kota  		    (Urban Planning and Urban Design) </li>
-                    <li>Manajemen Perkotaan  		    (Urban Management) </li>        <li>	Perencanaan dan Pengelolaan Kawasan Pesisir  		    (Urban Planning and Urban Design) </li>
-					</ul>
-					<p align="justify" ></p>
+                    <ul type="disc">
+                        <li>Perencanaan Wilayah               (Regional Planning)</li>
+                        <li>Perencanaan dan Perancangan Kota                (Urban Planning and Urban Design) </li>
+                        <li>Manajemen Perkotaan                 (Urban Management) </li>        <li>        Perencanaan dan Pengelolaan Kawasan Pesisir                 (Urban Planning and Urban Design) </li>
+                    </ul>
+                    <p align="justify" ></p>
                     <section class="images">
                         <figure><img src="<?php echo base_url() ?>/images/images/1page-img2.jpg" alt=""></figure>
                         <figure><img src="<?php echo base_url() ?>/images/images/1page-img1.jpg" alt=""></figure>
@@ -339,7 +339,7 @@
         <div class="wrapper">
             <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
             <address class="phone">
-        	Hubungi Kami di <strong>1-123-456-7890</strong>
+                Hubungi Kami di <strong>1-123-456-7890</strong>
             </address>
         </div>
     </div>

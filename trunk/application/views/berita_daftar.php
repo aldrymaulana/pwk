@@ -222,8 +222,8 @@
                    
                         <table border="5" class="isitabel">
                             <tr>
-                                <th width="25px">No.</th>
-                                <th width="700px">Judul Berita</th>
+                                <th width="25px"></th>
+                                <th width="700px">Index Berita</th>
                             </tr>
                             <?php
                             $no=1;
