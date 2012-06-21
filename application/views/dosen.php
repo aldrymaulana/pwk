@@ -241,6 +241,8 @@
                                             <center><img src="'.$lokasi_foto.'" alt="picture" width="200px" height="240px"></center>
                                             <h3 style="text-align:justify;">'.$dosen->nama_dosen.'</h3>
                                             <p style="text-align:justify;font-size:12px;">'.$dosen->email.'</p>
+                                                <p style="text-align:justify;font-size:11px;">'.$dosen->bidang_ilmu.'</p>
+                                                    <h4 style="text-align:justify;font-size:1-px;font-color:black;"><a href="'.$dosen->link.'">Penelitian</a></h4>
                                         </li>
                                         ';
                                         

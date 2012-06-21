@@ -254,7 +254,7 @@
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
-                                <li><a href="#">Karyawan</a></li>
+                                <li><a href="<?php echo base_url()?>index.php/karyawan">Karyawan</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/mhs_c">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
                             </ul>
@@ -320,15 +320,20 @@
                     </ul>
                 </div>
                 <div class="grid3">
-                    <h3>Pusat Download</h3>
+                    <h3>Pemkab Links</h3>
                     <ul class="list2">
-                        <li><a href="#">Content 1</a></li>
-                        <li><a href="#">Content 2</a></li>
-                        <li><a href="#">Content 3</a></li>
+                        <li><a href="http://gresikkab.go.id/">Gresik</a></li>
+                        <li><a href="http://www.bangkalankab.go.id/">Bangkalan</a></li>
+                        <li><a href="http://www.mojokertokab.go.id/">Mojokerto</a></li>
+                        <li><a href="http://www.sumenep.go.id/">Sumenep</a></li>
+                        <li><a href="http://www.sidoarjokab.go.id/">Sidoarjo</a></li>
+                        <li><a href="http://www.lamongan.go.id/">Lamongan</a></li>
                     </ul>
                 </div>
                 <div class="grid3">
-                    <div id="datepicker"></div>
+                    <div id="datepicker">
+                 test
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,21 +349,6 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.pics').cycle({
-            fx: 'toss',
-            next:   '#next',
-            prev:   '#prev'
-        });
 
-        // Datepicker
-        $('#datepicker').datepicker({
-            inline: true
-        });
-
-    });
-    swfobject.registerObject("FlashID");
-</script>
 </body>
 </html>
