@@ -315,8 +315,8 @@
                     <h3>Quick Links</h3>
                     <ul class="list2">
                         <li><a href="http://www.its.ac.id">Institut Teknologi Sepuluh November</a></li>
-                        <li><a href="#">Dinas Pariwisata</a></li>
-                        <li><a href="#">Bapedda Jatim</a></li>
+                        <li><a href="http://www.budpar.go.id/budpar/asp/content.asp?id=86">Dinas Pariwisata</a></li>
+                        <li><a href="http://bappeda.jatimprov.go.id/">Bapedda Jatim</a></li>
                     </ul>
                 </div>
                 <div class="grid3">
