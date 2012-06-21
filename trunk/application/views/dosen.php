@@ -238,11 +238,11 @@
                                         echo
                                         '
                                         <li>
-                                            <center><img src="'.$lokasi_foto.'" alt="picture" width="200px" height="240px"></center>
-                                            <h3 style="text-align:justify;">'.$dosen->nama_dosen.'</h3>
-                                            <p style="text-align:justify;font-size:12px;">'.$dosen->email.'</p>
-                                                <p style="text-align:justify;font-size:11px;">'.$dosen->bidang_ilmu.'</p>
-                                                    <h4 style="text-align:justify;font-size:1-px;font-color:black;"><a href="'.$dosen->link.'">Penelitian</a></h4>
+                                            <center><img src="'.$lokasi_foto.'" alt="picture" width="180px" height="225px"></center>
+                                            <h3 style="text-align:center; font-size:16px;">'.$dosen->nama_dosen.'</h3>
+                                            <p style="text-align:center;font-size:12px;">'.$dosen->email.'</p>
+                                                <p style="text-align:center;font-size:12px;"><strong>'.$dosen->bidang_ilmu.'</strong></p>
+                                                    <h4 style="text-align:center;"><a style="font-size:12px;color:#E83709;" href="'.$dosen->link.'">Penelitian</a></h4>
                                         </li>
                                         ';
                                         
@@ -332,10 +332,7 @@
     <footer>
         <div class="container">
             <div class="wrapper">
-                <div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div>
-                <address class="phone">
-        	Hubungi Kami di <strong>1-123-456-7890</strong>
-                </address>
+                <center><div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div></center>
             </div>
         </div>
     </footer>
