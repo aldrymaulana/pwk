@@ -254,7 +254,7 @@
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
-                                <li><a href="<?php echo base_url()?>index.php/karyawan">Karyawan</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/karyawan">Karyawan</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/mhs_c">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
                             </ul>
@@ -332,7 +332,10 @@
                 </div>
                 <div class="grid3">
                     <div id="datepicker">
-                 test
+                        <video width="768" height="240" controls="controls">
+                            <source src="<?php echo base_url()?>gallery/urban.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
