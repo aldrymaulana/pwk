@@ -173,25 +173,25 @@
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul class="sf-menu sf-navbar">
-                    <li><a class="sf-with-ul" href="#">Lab Kota</a>
+                    <li><a class="sf-with-ul" >Lab Kota</a>
                         <ul>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#aba">Anggota</a></li>
-                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotaprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotaanggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotariset">Riset dan Publikasi</a></li>
                         </ul>
                     </li>
-                    <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
+                    <li><a class="sf-with-ul"  >Lab Wilayah</a>
                         <ul>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#aba">Anggota</a></li>
-                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahanggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahriset">Riset dan Publikasi</a></li>
                         </ul>
                     </li>
-                    <li><a class="sf-with-ul" href="#" >Lab Komputasi</a>
+                    <li><a class="sf-with-ul"  >Lab Komputasi</a>
                         <ul>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#aba">Anggota</a></li>
-                            <li><a href="#aba">Riset dan Publikasi</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasiprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasianggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasiriset">Riset dan Publikasi</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -260,11 +260,11 @@
                             </ul>
                             <h3 class="menuheader expandable">Sumber Daya</h3>
                             <ul class="categoryitems">
-                                <li><a href="">Fasilitas</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/fasilitas">Fasilitas</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/kurikulum">Kurikulum</a></li>
-                                <li><a href="">Jurnal</a></li>
-                                <li><a href="">Media</a></li>
-                                <li><a href="">Budaya Kampus</a></li>
+                                <li><a href="http://share.its.ac.id/">Jurnal</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/media">Media</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/budayakampus">Budaya Kampus</a></li>
                                 <li><a href="">Ormawa</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Jalur Penerimaan</h3>
