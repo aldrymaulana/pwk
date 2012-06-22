@@ -345,7 +345,7 @@
 <footer>
     <div class="container">
         <div class="wrapper">
-            <div class="copy"><center>&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></center></div>
+            <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
         </div>
     </div>
 </footer>

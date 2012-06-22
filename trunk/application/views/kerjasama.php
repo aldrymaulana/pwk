@@ -31,8 +31,6 @@
 
 
         <script type="text/javascript">
-
-
             ddaccordion.init({
                 headerclass: "expandable", //Shared CSS class name of headers group that are expandable
                 contentclass: "categoryitems", //Shared CSS class name of contents group
@@ -53,12 +51,8 @@
                     //do nothing
                 }
             })
-
-
         </script>
-
         <style type="text/css">
-
         .arrowlistmenu{
             width: 180px; /*width of accordion menu*/
         }
@@ -127,8 +121,7 @@
 
     <body>
     <header>
-        <nav>
-        
+        <nav>  
             <div class="containerhead">
             <div class="header" align="left" style="color: #D4D0C8; position: absolute"; z-index:-1;>
                 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="110" height="80">
@@ -157,30 +150,29 @@
                 </object>
             </div>
             <div class="wrapper" style="padding-left: 135px; padding-top: 10px">
-
                 <h1 ><a href="<?php echo base_url() ?>"><strong>
                             Program Studi Perencanaan Wilayah dan Kota</strong></a></h1>
                 <ul class="sf-menu sf-navbar">
                     <li><a class="sf-with-ul" href="#">Lab Kota</a>
 						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
-					</li>
-                    <li><a class="sf-with-ul" href="#" >Lab Wilayah</a>
-						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
-					</li>
-                    <li><a class="sf-with-ul" href="#" >Lab Komputasi</a>
-						<ul>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#aba">Anggota</a></li>
-							<li><a href="#aba">Riset dan Publikasi</a></li>
-						</ul>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotaprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotaanggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkotariset">Riset dan Publikasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="sf-with-ul"  >Lab Wilayah</a>
+                        <ul>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahanggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labwilayahriset">Riset dan Publikasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="sf-with-ul"  >Lab Komputasi</a>
+                        <ul>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasiprofil">Profil</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasianggota">Anggota</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/labkomputasiriset">Riset dan Publikasi</a></li>
+                        </ul>
 					</li>
                 </ul>
                 <h3>Fakultas Teknik Sipil dan Perencanaan ITS</h3>
@@ -206,26 +198,26 @@
                             <h3 class="menuheader expendable"><a href="<?php echo base_url() ?>">Home</a></h3>
                             <h3 class="menuheader expandable">Profil</h3>
                             <ul class="categoryitems">
-                                <li><a href="<?php echo base_url()?>index.php/visimisi">Visi & Misi</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/visimisi">Visi & Misi</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/sejarah">Sejarah</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/struktur">Struktur Organisasi</a></li>
-                                <li><a href="<?php echo base_url()?>index.php/kerjasama">Kerja Sama</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/kerjasama">Kerja Sama</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/lokasikampus">Lokasi Kampus</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Civitas Akademika</h3>
                             <ul class="categoryitems">
                                 <li><a href="<?php echo base_url() ?>index.php/dosen_c">Dosen</a></li>
-                                <li><a href="#">Karyawan</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/karyawan">Karyawan</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/mhs_c">Mahasiswa</a></li>
                                 <li><a href="#">Alumni</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Sumber Daya</h3>
                             <ul class="categoryitems">
-                                <li><a href="">Fasilitas</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/fasilitas">Fasilitas</a></li>
                                 <li><a href="<?php echo base_url() ?>index.php/kurikulum">Kurikulum</a></li>
-                                <li><a href="">Jurnal</a></li>
-                                <li><a href="">Media</a></li>
-                                <li><a href="">Budaya Kampus</a></li>
+                                <li><a href="http://share.its.ac.id/">Jurnal</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/media">Media</a></li>
+                                <li><a href="<?php echo base_url() ?>index.php/budayakampus">Budaya Kampus</a></li>
                                 <li><a href="">Ormawa</a></li>
                             </ul>
                             <h3 class="menuheader expandable">Jalur Penerimaan</h3>
@@ -244,11 +236,9 @@
                 </div>
             </div>
         </div>
-
         <div class="bottom">
             <div class="container">
-                <div class="wrapper">
-                    <div class="grid3 first">
+                <div class="grid3 first">
                         <h3>Follow Us</h3>
                         <ul class="list1">
                             <li><a href="#">Facebook</a></li>
@@ -256,20 +246,24 @@
                         </ul>
                     </div>
                     <div class="grid3">
-                        <h3>Quick Links</h3>
-                        <ul class="list2">
-                            <li><a href="#">Dinas Pariwisata</a></li>
-                            <li><a href="#">Bapedda Jatim</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid3">
-                        <h3>Pusat Download</h3>
-                        <ul class="list2">
-                            <li><a href="#">Content 1</a></li>
-                            <li><a href="#">Content 2</a></li>
-                            <li><a href="#">Content 3</a></li>
-                        </ul>
-                    </div>
+                    <h3>Quick Links</h3>
+                    <ul class="list2">
+                        <li><a href="http://www.its.ac.id">Institut Teknologi Sepuluh November</a></li>
+                        <li><a href="http://www.budpar.go.id/budpar/asp/content.asp?id=86">Dinas Pariwisata</a></li>
+                        <li><a href="http://bappeda.jatimprov.go.id/">Bapedda Jatim</a></li>
+                    </ul>
+                </div>
+                <div class="grid3">
+                    <h3>Pemkab Links</h3>
+                    <ul class="list2">
+                        <li><a href="http://gresikkab.go.id/">Gresik</a></li>
+                        <li><a href="http://www.bangkalankab.go.id/">Bangkalan</a></li>
+                        <li><a href="http://www.mojokertokab.go.id/">Mojokerto</a></li>
+                        <li><a href="http://www.sumenep.go.id/">Sumenep</a></li>
+                        <li><a href="http://www.sidoarjokab.go.id/">Sidoarjo</a></li>
+                        <li><a href="http://www.lamongan.go.id/">Lamongan</a></li>
+                    </ul>
+                </div>
                     <div class="grid3">
                         <div id="datepicker"></div>
                     </div>
@@ -281,9 +275,6 @@
         <div class="container">
             <div class="wrapper">
                 <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
-                <address class="phone">
-        	Hubungi Kami di <strong>1-123-456-7890</strong>
-                </address>
             </div>
         </div>
     </footer>

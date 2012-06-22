@@ -726,9 +726,11 @@ footer .container{
     padding:10px 0 16px 0;
     font-family: 'ColaborateThinRegular';
 }
+
 footer .copy {
-    float:left;
+text-align: center;
 }
+
 footer .copy a {
     color:#666666;
     text-decoration:none;

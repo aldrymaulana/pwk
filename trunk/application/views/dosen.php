@@ -337,7 +337,7 @@
     <footer>
         <div class="container">
             <div class="wrapper">
-                <center><div class="copy">Site Building <a href="http://dts-itsolution.com">DTS</a></div></center>
+                <div class="copy">&copy; Copyright by <a href="http://dts-itsolution.com">DTS</a></div>
             </div>
         </div>
     </footer>
